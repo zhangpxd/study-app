@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 180" width="200" height="180">
+  <polygon points="100,10 190,170 10,170" fill="#4ECDC4" stroke="#2C3E50" stroke-width="3"/>
+  <text x="100" y="165" text-anchor="middle" font-size="16" fill="#2C3E50" font-weight="bold">三角形</text>
+</svg>

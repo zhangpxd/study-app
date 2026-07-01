@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- 田字格 -->
+  <rect x="5" y="5" width="110" height="110" fill="none" stroke="#DDD" stroke-width="1.5"/>
+  <line x1="60" y1="5" x2="60" y2="115" stroke="#DDD" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="5" y1="60" x2="115" y2="60" stroke="#DDD" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="60" y="80" text-anchor="middle" font-size="60" fill="#2C3E50" font-weight="normal">字</text>
+</svg>

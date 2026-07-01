@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="200" height="120">
+  <!-- Number line -->
+  <line x1="20" y1="60" x2="180" y2="60" stroke="#2C3E50" stroke-width="2"/>
+  <!-- Tick marks and numbers -->
+  <g text-anchor="middle" font-size="14" fill="#2C3E50">
+    <line x1="20" y1="55" x2="20" y2="65" stroke="#2C3E50" stroke-width="2"/><text x="20" y="85">1</text>
+    <line x1="60" y1="55" x2="60" y2="65" stroke="#2C3E50" stroke-width="2"/><text x="60" y="85">2</text>
+    <line x1="100" y1="55" x2="100" y2="65" stroke="#2C3E50" stroke-width="2"/><text x="100" y="85">3</text>
+    <line x1="140" y1="55" x2="140" y2="65" stroke="#2C3E50" stroke-width="2"/><text x="140" y="85">4</text>
+    <line x1="180" y1="55" x2="180" y2="65" stroke="#2C3E50" stroke-width="2"/><text x="180" y="85">5</text>
+  </g>
+  <text x="100" y="110" text-anchor="middle" font-size="13" fill="#7F8C8D">数轴</text>
+</svg>

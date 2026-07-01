@@ -1,0 +1,2067 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>能力提升计划 - 测试版</title>
+  <script src="https://unpkg.com/vue@3.2.47/dist/vue.global.prod.js"></script>
+  <script src="https://unpkg.com/vuex@4.1.0/dist/vuex.global.prod.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #F5F7FA;
+      color: #333;
+      font-size: 14px;
+      -webkit-font-smoothing: antialiased;
+    }
+    #app { max-width: 750px; margin: 0 auto; min-height: 100vh; }
+    .page { padding: 15px; }
+
+    /* Nav Bar */
+    .nav-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: linear-gradient(135deg, #4A90D9, #357ABD);
+      color: #fff;
+      padding: 6px 12px 8px;
+    }
+    .nav-bar .title-row {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 2px 0;
+    }
+    .nav-bar .btn-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 4px;
+    }
+    .nav-bar .btn {
+      font-size: 13px;
+      padding: 3px 14px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 14px;
+      cursor: pointer;
+      white-space: nowrap;
+      display: inline-block;
+    }
+    /* 给页面内容顶部加间隙，避免被固定导航挡住 */
+    .page-content {
+      min-height: calc(100vh - 60px);
+    }
+
+    /* Hero */
+    .hero { text-align: center; padding: 30px 0 20px; }
+    .hero-icon { font-size: 50px; margin-bottom: 10px; }
+    .hero-title { font-size: 24px; font-weight: bold; color: #2C3E50; display: block; }
+    .hero-desc { font-size: 13px; color: #7F8C8D; margin-top: 6px; display: block; }
+
+    /* Section */
+    .section-title { font-size: 16px; font-weight: 600; color: #2C3E50; margin: 12px 0; padding-left: 6px; border-left: 4px solid #4A90D9; }
+
+    /* Cards */
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-bottom: 12px;
+      border: 2px solid #E8E8E8;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+    .card.active { border-color: #4A90D9; background: #F0F7FF; }
+    .card.completed { border-color: #2ECC71; background: #F0FFF4; }
+    .card-title { font-size: 16px; font-weight: 600; color: #2C3E50; }
+    .card-desc { font-size: 12px; color: #95A5A6; margin-top: 4px; display: block; }
+
+    /* Grid */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+    /* Buttons */
+    .btn {
+      display: block;
+      width: 100%;
+      height: 44px;
+      line-height: 44px;
+      text-align: center;
+      border-radius: 22px;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      margin-top: 12px;
+    }
+    .btn-primary { background: linear-gradient(135deg, #4A90D9, #357ABD); color: #fff; }
+    .btn-primary:disabled { background: #BDC3C7; cursor: not-allowed; }
+    .btn-success { background: linear-gradient(135deg, #2ECC71, #27AE60); color: #fff; }
+    .btn-outline { background: #fff; color: #4A90D9; border: 2px solid #4A90D9; }
+    .btn-sm { height: 36px; line-height: 36px; font-size: 13px; width: auto; display: inline-block; padding: 0 16px; margin: 0; }
+
+    /* Tab bar */
+    /* Tab bar - 固定底部常驻 */
+    .tab-bar {
+      display: flex;
+      background: #fff;
+      border-top: 1px solid #E8E8E8;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      max-width: 750px;
+      width: 100%;
+      z-index: 200;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.06);
+    }
+    .tab-item { flex: 1; text-align: center; padding: 8px 0; cursor: pointer; transition: all .15s; }
+    .tab-item:hover { background: #F5F7FA; }
+    .tab-item.active { color: #4A90D9; }
+    .tab-item .tab-icon { font-size: 22px; display: block; }
+    .tab-item .tab-label { font-size: 11px; margin-top: 2px; display: block; }
+    /* 内容区底部留出 tab bar 高度 */
+    .page-content { padding-bottom: 60px; }
+    /* app容器底部留白 */
+    #app { padding-bottom: 50px; }
+      display: flex;
+      background: #fff;
+      border-top: 1px solid #E8E8E8;
+      position: fixed;
+      bottom: 0;
+      max-width: 750px;
+      width: 100%;
+    }
+    .tab-item { flex: 1; text-align: center; padding: 8px 0; cursor: pointer; }
+    .tab-item.active { color: #4A90D9; }
+    .tab-item .tab-icon { font-size: 22px; display: block; }
+    .tab-item .tab-label { font-size: 11px; margin-top: 2px; display: block; }
+
+    .page-content { padding-bottom: 60px; }
+
+    /* Styled elements */
+    .subject-card { display: flex; align-items: center; }
+    .subject-icon { width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 28px; margin-right: 12px; }
+    .subject-info { flex: 1; }
+    .tag { display: inline-block; font-size: 11px; color: #666; background: #F0F2F5; padding: 2px 10px; border-radius: 4px; margin: 2px; }
+
+    .ability-item { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; }
+    .check { width: 22px; height: 22px; border-radius: 50%; border: 2px solid #DDD; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #fff; }
+    .check.checked { background: #4A90D9; border-color: #4A90D9; }
+
+    .plan-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+    .week-title { font-size: 16px; font-weight: 600; }
+    .stats-badge { background: #4A90D9; color: #fff; padding: 4px 12px; border-radius: 12px; font-size: 11px; }
+
+    .day-card { margin-bottom: 12px; }
+    .day-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .day-name { font-size: 15px; font-weight: 600; }
+    .day-date { font-size: 12px; color: #95A5A6; margin-left: 8px; }
+    .badge { font-size: 11px; padding: 2px 10px; border-radius: 8px; background: #4A90D9; color: #fff; }
+    .badge.green { background: #2ECC71; }
+    .task-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+    .task-tag { font-size: 12px; padding: 4px 10px; background: #F5F7FA; border-radius: 6px; display: flex; align-items: center; gap: 4px; }
+    .task-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+    .progress { height: 6px; background: #E8E8E8; border-radius: 3px; overflow: hidden; }
+    .progress-fill { height: 100%; background: linear-gradient(90deg, #4A90D9, #2ECC71); border-radius: 3px; transition: width 0.3s; }
+
+    .q-card { padding: 16px; margin-bottom: 12px; }
+    .q-type { display: inline-block; background: #E8F4FD; color: #4A90D9; font-size: 11px; padding: 2px 10px; border-radius: 4px; margin-bottom: 8px; }
+    .q-text { font-size: 15px; line-height: 1.6; }
+    .char-big { font-size: 48px; font-weight: bold; text-align: center; display: block; padding: 10px 0; }
+    .char-info { font-size: 13px; color: #555; text-align: center; display: block; }
+
+    .answer-box { background: #FFF8E1; padding: 10px; border-radius: 8px; margin: 10px 0; font-size: 13px; }
+    .q-actions { display: flex; gap: 10px; }
+
+    .stat-grid { display: flex; gap: 10px; margin-bottom: 15px; }
+    .stat-item { flex: 1; background: #fff; border-radius: 10px; padding: 15px; text-align: center; border: 2px solid #E8E8E8; }
+    .stat-num { font-size: 28px; font-weight: bold; }
+    .stat-label { font-size: 12px; color: #95A5A6; margin-top: 4px; }
+
+    .badge-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .badge-item { text-align: center; padding: 12px; background: #fff; border-radius: 10px; border: 2px solid #E8E8E8; }
+    .badge-item.locked { opacity: 0.4; }
+    .badge-icon { font-size: 28px; }
+    .badge-name { font-size: 12px; font-weight: 500; margin-top: 4px; }
+    .badge-desc { font-size: 10px; color: #95A5A6; }
+
+    .progress-header { background: linear-gradient(135deg, #4A90D9, #357ABD); margin: -15px -15px 15px; padding: 30px 15px 20px; color: #fff; border-radius: 0 0 20px 20px; }
+    .progress-header .day-title { font-size: 18px; font-weight: bold; }
+    .progress-header .prog-text { font-size: 13px; color: rgba(255,255,255,0.8); margin-top: 8px; }
+    .progress-header .prog-bar { height: 8px; background: rgba(255,255,255,0.2); border-radius: 4px; margin-top: 10px; overflow: hidden; }
+    .progress-header .prog-bar-fill { height: 100%; background: #fff; border-radius: 4px; transition: width 0.5s; }
+
+    .empty { text-align: center; padding: 60px 0; }
+    .empty-icon { font-size: 50px; }
+    .empty-text { font-size: 15px; color: #95A5A6; margin-top: 10px; }
+
+    .choice-btn:hover { border-color: #4A90D9; }
+    .choice-btn.selected { border-color: #4A90D9; background: #E8F4FD; color: #4A90D9; font-weight:600; }
+    .result-banner.correct { background: #F0FFF4; border: 1px solid #2ECC71; }
+    .result-banner.incorrect { background: #FFF5F5; border: 1px solid #E74C3C; }
+    .speaker-btn { cursor: pointer; font-size: 20px; padding: 2px 6px; border-radius: 50%; transition: all .15s; display:inline-flex;align-items:center; }
+    .speaker-btn:hover { background: rgba(74,144,217,0.15); transform: scale(1.15); }
+    .speaker-btn:active { transform: scale(0.95); }
+    .btn-xs { font-size: 12px; padding: 2px 10px; }
+  </style>
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="referrer" content="never">
+  <script>
+    // WeChat X5 browser compatibility
+    if (typeof WeixinJSBridge !== 'undefined') {
+      // Force https
+    }
+    // Handle audio context for iOS/WeChat
+    document.addEventListener('WeixinJSBridgeReady', function() {
+      // Audio ready
+    });
+  </script>
+</head>
+<body>
+<div id="app">
+  <!-- 导航栏（固定顶部，双行布局） -->
+  <div class="nav-bar">
+    <div class="title-row">{{ pageTitle }}</div>
+    <div class="btn-row" v-if="showBackButton">
+      <span class="btn" @click="goBack">← 返回</span>
+      <span class="btn" @click="resetData" style="opacity:0.7" v-if="currentPage !== 'home'">重置</span>
+    </div>
+  </div>
+
+  <!-- 主内容区 -->
+  <div class="page-content">
+    <!-- === 首页：年级选择 === -->
+    <div v-if="currentPage === 'home'" class="page">
+      <div class="hero">
+        <div class="hero-icon">🎯</div>
+        <span class="hero-title">能力提升计划</span>
+        <span class="hero-desc">选择孩子现在的年级，定制专属学习计划</span>
+      </div>
+      <div class="section-title">选择年级</div>
+      <div
+        v-for="g in grades" :key="g.id"
+        class="card"
+        :class="{ active: store.state.grade === g.id }"
+        @click="store.commit('SET_GRADE', g.id)"
+      >
+        <div style="display:flex;align-items:center;">
+          <span style="font-size:30px;margin-right:12px">{{ g.icon }}</span>
+          <div>
+            <div class="card-title">{{ g.name }}</div>
+            <span class="card-desc">{{ g.desc }}</span>
+          </div>
+          <span v-if="store.state.grade === g.id" style="margin-left:auto;width:24px;height:24px;background:#4A90D9;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;">✓</span>
+        </div>
+      </div>
+      <button class="btn btn-primary" :disabled="!store.state.grade" @click="goSubject">下一步：选择科目</button>
+    </div>
+
+    <!-- === 科目选择 === -->
+    <div v-if="currentPage === 'subject'" class="page">
+      <div style="padding:10px 0 15px">
+        <span style="font-size:20px;font-weight:bold;color:#2C3E50">选择学习科目</span>
+        <span style="display:block;font-size:13px;color:#95A5A6;margin-top:6px;">可选择一个或多个科目</span>
+      </div>
+      <div v-for="s in subjectList" :key="s.id" class="card subject-card"
+        :class="{ active: selectedSubjects.includes(s.id) }"
+        @click="toggleSubject(s.id)">
+        <div class="subject-icon" :style="{ background: s.color + '20' }">{{ s.icon }}</div>
+        <div class="subject-info">
+          <div class="card-title">{{ s.name }}</div>
+          <span class="card-desc">{{ s.desc }}</span>
+          <div style="margin-top:6px">
+            <span class="tag" v-for="ab in s.abilities" :key="ab">{{ ab }}</span>
+          </div>
+        </div>
+        <div class="check" :class="{ checked: selectedSubjects.includes(s.id) }" :style="selectedSubjects.includes(s.id) ? { background: s.color, borderColor: s.color } : {}">
+          {{ selectedSubjects.includes(s.id) ? '✓' : '' }}
+        </div>
+      </div>
+      <button class="btn btn-primary" :disabled="selectedSubjects.length === 0" @click="goAbilities">下一步：选择能力项</button>
+      <button class="btn btn-outline" style="margin-top:8px" @click="quickStart">快速开始（默认全部）</button>
+    </div>
+
+    <!-- === 能力项配置 === -->
+    <div v-if="currentPage === 'abilities'" class="page">
+      <div style="padding:10px 0 15px">
+        <span style="font-size:20px;font-weight:bold;color:#2C3E50">定制能力项</span>
+        <span style="display:block;font-size:13px;color:#95A5A6;margin-top:6px;">勾选本周想要练习的能力</span>
+      </div>
+      <div v-for="(group, sIdx) in abilityGroups" :key="sIdx" style="margin-bottom:20px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+          <span style="font-size:16px;font-weight:600;color:#2C3E50">{{ group.icon }} {{ group.name }}</span>
+          <span style="font-size:13px;color:#4A90D9;cursor:pointer" @click="toggleAllAbilities(group.id)">{{ isAllAbilitiesSelected(group.id) ? '取消全选' : '全选' }}</span>
+        </div>
+        <div v-for="ab in group.abilities" :key="ab.id"
+          class="card ability-item"
+          :class="{ active: isAbilityChecked(group.id, ab.id) }"
+          @click="toggleAbility(group.id, ab.id)"
+          style="padding:10px 14px;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span>{{ ab.icon }}</span>
+            <div>
+              <span style="font-size:14px;font-weight:500">{{ ab.name }}</span>
+              <span style="display:block;font-size:11px;color:#95A5A6">{{ ab.desc }}</span>
+            </div>
+          </div>
+          <div class="check" :class="{ checked: isAbilityChecked(group.id, ab.id) }"
+            :style="isAbilityChecked(group.id, ab.id) ? { background: group.color, borderColor: group.color } : {}">
+            {{ isAbilityChecked(group.id, ab.id) ? '✓' : '' }}
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary" @click="generateAndGo">生成本周计划</button>
+    </div>
+
+    <!-- === 周计划 === -->
+    <div v-if="currentPage === 'plan'" class="page">
+      <div class="plan-header">
+        <span class="week-title">{{ weekTitle }}</span>
+        <span class="stats-badge">{{ store.state.stats.totalDays }}天 / {{ store.state.stats.totalQuestions }}题</span>
+      </div>
+      <div v-for="day in weekPlan" :key="day.day" class="card day-card"
+        :class="{ active: day.day === todayDay, completed: day.percent >= 100 && day.total > 0 }"
+        @click="goDaily(day.day)">
+        <div class="day-header">
+          <div>
+            <span class="day-name">{{ getDayName(day.day) }}</span>
+            <span class="day-date">{{ day.date }}</span>
+          </div>
+          <div>
+            <span v-if="day.total > 0" style="font-size:12px;color:#7F8C8D;margin-right:6px">{{ day.done }}/{{ day.total }}</span>
+            <span class="badge" v-if="day.day === todayDay">今天</span>
+            <span class="badge green" v-if="day.percent >= 100 && day.total > 0">✓</span>
+          </div>
+        </div>
+        <div class="task-row" v-if="day.items.length > 0">
+          <span class="task-tag" v-for="t in day.items" :key="t.abilityId">
+            <span class="task-dot" :style="{ background: getSubjectColor(t.subject) }"></span>
+            {{ t.abilityName }}
+            <span style="color:#95A5A6;font-size:11px">{{ t.questions.length }}题</span>
+          </span>
+        </div>
+        <div v-else style="font-size:12px;color:#BDC3C7;padding:4px 0">休息日</div>
+        <div class="progress" v-if="day.total > 0">
+          <div class="progress-fill" :style="{ width: day.percent + '%' }"></div>
+        </div>
+      </div>
+      <div style="display:flex;gap:10px;margin-top:15px;">
+        <button class="btn btn-outline" style="flex:1" @click="regeneratePlan">重新生成</button>
+        <button class="btn btn-primary" style="flex:2" @click="goToday">开始今日学习</button>
+      </div>
+    </div>
+
+    <!-- === 每日打卡 === -->
+    <div v-if="currentPage === 'daily'" class="page" style="padding:0">
+      <div class="progress-header">
+        <span class="day-title">{{ getDayName(currentDayNum) }} · {{ currentDayDate }}</span>
+        <div class="prog-text">已完成 {{ dailyProgress.done }}/{{ dailyProgress.total }} 题</div>
+        <div class="prog-bar">
+          <div class="prog-bar-fill" :style="{ width: dailyProgress.percent + '%' }"></div>
+        </div>
+      </div>
+      <div style="padding:15px">
+        <div v-for="(group, idx) in dailyTasks" :key="idx" style="margin-bottom:15px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+            <span style="font-size:15px;font-weight:600" :style="{ color: getSubjectColor(group.subject) }">
+              {{ getSubjectEmoji(group.subject) }} {{ getSubjectName(group.subject) }}
+            </span>
+            <span style="font-size:13px;color:#7F8C8D">— {{ group.abilityName }}</span>
+          </div>
+
+          <div v-for="q in group.questions" :key="q.id" class="card q-card" :class="{ completed: isDone(q.id) }">
+            <span class="q-type">{{ getTypeLabel(q) }}</span>
+
+            <!-- ====== 图片区域（看图写话/几何图形/钟表） ====== -->
+            <div v-if="q.image" style="text-align:center;margin:8px 0;">
+              <img :src="q.image" style="max-width:100%;border-radius:12px;max-height:300px;" @error="onImageError(q)" alt="场景图片">
+            </div>
+            <!-- 几何图形 / 钟表 / 比大小（根据题目内容自动匹配SVG） -->
+            <div v-else-if="isGeometryQ(q)" style="text-align:center;margin:8px 0;">
+              <img :src="getGeometrySvg(q)" style="max-width:180px;border-radius:8px;" alt="几何图形">
+            </div>
+            <div v-else-if="isClockQ(q)" style="text-align:center;margin:8px 0;">
+              <img src="geometry/clock.svg" style="max-width:180px;border-radius:8px;" alt="钟表">
+            </div>
+            <!-- 比大小（显示数轴） -->
+            <div v-else-if="isCompareQ(q)" style="text-align:center;margin:8px 0;">
+              <img src="geometry/number_line.svg" style="max-width:200px;border-radius:8px;" alt="数轴">
+            </div>
+            <!-- 人民币 -->
+            <div v-else-if="isMoneyQ(q)" style="text-align:center;margin:8px 0;">
+              <img src="geometry/money.svg" style="max-width:160px;border-radius:8px;" alt="人民币">
+            </div>
+
+            <!-- 生字 -->
+            <div v-if="q.character">
+              <div style="display:flex;align-items:center;justify-content:center;gap:16px;margin:4px 0;">
+                <img src="geometry/tianzige.svg" style="width:90px;height:90px;border-radius:4px;" alt="田字格">
+                <span class="char-big">{{ q.character }}</span>
+              </div>
+              <span class="char-info">拼音：{{ q.pinyin }} · {{ q.strokes }}画</span>
+              <span class="char-info" style="margin-top:6px">组词：{{ q.words?.join('、') }}</span>
+              <div style="margin-top:10px;padding:8px;background:#F5F7FA;border-radius:6px;font-size:13px;color:#555">
+                📖 {{ q.sentence }}
+              </div>
+            </div>
+
+            <!-- 数学/问答题 -->
+            <div v-else-if="q.question" class="q-text" style="margin-bottom:10px">{{ q.question }}</div>
+
+            <!-- 英语单词/句子（带语音和翻译）(排除CVC拼读，它在下方处理) -->
+            <div v-else-if="(q.word || q.english || q.sentence) && q.type !== 'CVC拼读'" style="margin-bottom:10px">
+              <!-- 单词+发音 -->
+              <div v-if="q.word" style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+                <span style="font-size:28px;font-weight:bold;color:#2C3E50">{{ q.word }}</span>
+                <span class="speaker-btn" @click.stop="speak(q.word)" title="点击朗读">🔊</span>
+              </div>
+              <!-- 中文释义 -->
+              <div v-if="q.meaning" style="font-size:15px;color:#555;">{{ q.meaning }}</div>
+              <!-- 英文例句+发音 -->
+              <div v-if="q.sentence" style="display:flex;align-items:center;gap:8px;margin-top:8px;padding:8px;background:#F0F8FF;border-radius:8px;">
+                <span style="font-size:14px;color:#2C3E50;flex:1">📖 {{ q.sentence }}</span>
+                <span class="speaker-btn" @click.stop="speak(q.sentence)" title="点击朗读">🔊</span>
+              </div>
+              <!-- 英文句子+翻译 -->
+              <div v-if="q.english" style="margin-top:6px;">
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <span style="font-size:18px;font-weight:500;color:#2C3E50">{{ q.english }}</span>
+                  <span class="speaker-btn" @click.stop="speak(q.english)" title="点击朗读">🔊</span>
+                </div>
+                <div v-if="q.chinese" style="font-size:14px;color:#7F8C8D;margin-top:4px;">📝 {{ q.chinese }}</div>
+              </div>
+            </div>
+
+            <!-- 阅读理解 -->
+            <div v-else-if="q.passage" style="background:#FFF9E6;padding:12px;border-radius:8px;border-left:4px solid #F39C12;font-size:13px;line-height:1.8;margin-bottom:10px">
+              {{ q.passage }}
+              <div v-if="q.questions" style="margin-top:10px;border-top:1px solid #F0E0A0;padding-top:10px">
+                <div v-for="(qa, qi) in q.questions" :key="qi" style="margin-bottom:6px;font-size:13px">
+                  ❓ {{ qa.q }}
+                </div>
+              </div>
+            </div>
+
+            <!-- 自然拼读 / 字母发音 -->
+            <div v-else-if="q.letter || q.type === '字母发音'" style="margin-bottom:10px">
+              <div style="display:flex;align-items:center;gap:16px;padding:8px;background:#F0F8FF;border-radius:10px;">
+                <span style="font-size:48px;font-weight:bold;color:#45B7D1;min-width:50px;text-align:center">{{ q.letter }}</span>
+                <div style="flex:1">
+                  <div style="font-size:16px;color:#2C3E50;font-weight:500">发音：{{ q.sound }}</div>
+                  <div v-if="q.example" style="font-size:13px;color:#555;margin-top:4px">例子：{{ q.example }}
+                    <span class="speaker-btn" @click.stop="speak(q.example)" title="点击朗读">🔊</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- CVC拼读 -->
+            <div v-else-if="q.type === 'CVC拼读' && q.word" style="margin-bottom:10px">
+              <div style="display:flex;align-items:center;gap:10px;padding:8px;background:#FFF9E6;border-radius:10px;">
+                <span style="font-size:22px;color:#2C3E50">拼读：<strong>{{ q.word }}</strong></span>
+                <span class="speaker-btn" @click.stop="speak(q.reading)" title="点击朗读">🔊</span>
+              </div>
+              <div style="font-size:14px;color:#555;margin-top:4px">→ 读作：<strong>{{ q.reading }}</strong></div>
+            </div>
+            <!-- 其他类型（对话、场景等） -->
+            <div v-else class="q-text" style="margin-bottom:10px">
+              <div v-if="q.scene" style="font-size:14px;color:#2C3E50">场景：{{ q.scene }}</div>
+              <div v-if="q.prompt" style="margin-top:4px;font-size:13px;color:#555">{{ q.prompt }}</div>
+              <div v-if="q.question" style="margin-top:6px">{{ q.question }}</div>
+              <div v-if="q.english" style="margin-top:6px;font-size:16px">{{ q.english }}</div>
+              <div v-if="q.chinese && !q.english" style="margin-top:6px">{{ q.chinese }}</div>
+            </div>
+
+            <!-- ====== 交互答题区 ====== -->
+            <div v-if="!isDone(q.id)" class="q-input-area" style="margin:10px 0;padding:10px;background:#FAFBFC;border-radius:8px;border:1px dashed #D0D0D0;">
+
+              <!-- 多选题（A/B/C/D 选项） -->
+              <div v-if="getChoices(q).length > 0" class="choice-group" style="margin-bottom:8px">
+                <div
+                  v-for="opt in getChoices(q)"
+                  :key="opt"
+                  class="choice-btn"
+                  :class="{ selected: userAnswers[q.id] === opt }"
+                  @click="userAnswers[q.id] = opt"
+                  style="display:inline-block;padding:6px 16px;margin:4px;border-radius:16px;border:2px solid #DDD;font-size:13px;cursor:pointer;background:#fff;transition:all .15s">
+                  <span v-if="userAnswers[q.id] === opt" style="margin-right:4px">✓</span>{{ opt }}
+                </div>
+              </div>
+
+              <!-- 写作类（小作文/看图写话） -->
+              <textarea v-else-if="isWritingTask(q)"
+                v-model="userAnswers[q.id]"
+                placeholder="在这里写下你的答案..."
+                rows="3"
+                style="width:100%;padding:10px;border:1px solid #DDD;border-radius:8px;font-size:14px;resize:vertical;font-family:inherit;box-sizing:border-box">
+              </textarea>
+
+              <!-- 对话填空 -->
+              <div v-else-if="q.dialogue" style="margin-bottom:8px">
+                <input
+                  v-model="userAnswers[q.id]"
+                  placeholder="输入你的回答..."
+                  style="width:100%;padding:10px;border:1px solid #DDD;border-radius:8px;font-size:14px;box-sizing:border-box">
+              </div>
+
+              <!-- 生字书写输入 -->
+              <div v-else-if="q.character" style="margin-bottom:8px;text-align:center;">
+                <div style="font-size:13px;color:#555;margin-bottom:6px;">请在下方输入这个字：</div>
+                <input v-model="userAnswers[q.id]" placeholder="打字输入" style="width:120px;padding:12px;border:2px solid #4A90D9;border-radius:10px;font-size:30px;text-align:center;box-sizing:border-box;font-family:KaiTi,STKaiti,楷体,serif;">
+              </div>
+
+              <!-- 数字输入（数学计算） -->
+              <input v-else-if="q.question && isMathCalc(q)" type="number"
+                v-model.number="userAnswers[q.id]"
+                placeholder="输入数字答案"
+                style="width:100%;padding:10px;border:1px solid #DDD;border-radius:8px;font-size:16px;box-sizing:border-box">
+
+              <!-- 默认文本输入 -->
+              <input v-else
+                v-model="userAnswers[q.id]"
+                :placeholder="getInputPlaceholder(q)"
+                style="width:100%;padding:10px;border:1px solid #DDD;border-radius:8px;font-size:14px;box-sizing:border-box">
+
+              <!-- 检查答案和提示按钮 -->
+              <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
+                <button
+                  type="button"
+                  class="btn btn-sm btn-primary"
+                  :disabled="!userAnswers[q.id] && userAnswers[q.id] !== 0"
+                  @click="checkAnswer(q)"
+                  v-if="!answerChecked[q.id]"
+                  style="height:34px;line-height:34px;font-size:13px">检查答案</button>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-outline"
+                  @click="toggleHint(q.id)"
+                  style="height:34px;line-height:34px;font-size:13px;border-color:#F39C12;color:#F39C12">
+                  {{ showHint[q.id] ? '收起讲解' : '💡 提示' }}
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-outline"
+                  @click="toggleAnswer(q.id)"
+                  v-if="answerChecked[q.id] && !answerCorrect[q.id]"
+                  style="height:34px;line-height:34px;font-size:13px">{{ showAnswer[q.id] ? '收起答案' : '看答案' }}</button>
+              </div>
+            </div>
+
+            <!-- ====== 讲解提示区（非答案） ====== -->
+            <div v-if="showHint[q.id]" class="hint-box"
+              style="padding:12px;border-radius:8px;margin-bottom:10px;font-size:13px;line-height:1.7;background:#FFF8E1;border:1px solid #F0E0A0;">
+              <div style="font-weight:600;color:#E67E22;margin-bottom:4px">💡 小提示：</div>
+              <div style="color:#666">{{ getHint(q) }}</div>
+            </div>
+
+            <!-- ====== 检查结果 ====== -->
+            <div v-if="answerChecked[q.id]" class="result-banner"
+              :class="{ correct: answerCorrect[q.id], incorrect: !answerCorrect[q.id] }"
+              style="padding:10px;border-radius:8px;margin-bottom:10px;font-size:14px;text-align:center">
+
+              <div v-if="answerCorrect[q.id] === true" style="color:#2ECC71;font-weight:600;">
+                ✅ 回答正确！太棒了！
+              </div>
+              <div v-else-if="answerCorrect[q.id] === false" style="color:#E74C3C;font-weight:500;">
+                ❌ 不太对哦，再想想！
+                <div style="font-weight:400;font-size:12px;margin-top:4px;color:#888">
+                  参考答案：{{ getAnswer(q) }}
+                </div>
+              </div>
+              <div v-else style="color:#7F8C8D;font-weight:500;">
+                ⚡ 已提交
+              </div>
+            </div>
+
+            <!-- 参考答案（手动查看） -->
+            <div class="answer-box" v-if="showAnswer[q.id] && !answerChecked[q.id]">
+              <strong>参考答案：</strong> {{ getAnswer(q) }}
+            </div>
+
+            <!-- 底部按钮 -->
+            <div class="q-actions" style="margin-top:10px">
+              <button class="btn btn-sm" :class="isDone(q.id) ? 'btn-success' : 'btn-primary'"
+                :disabled="!answerChecked[q.id] && !isDone(q.id)"
+                @click.stop="doCheckIn(q)">
+                {{ isDone(q.id) ? '✓ 已打卡' : '打卡完成' }}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="empty" v-if="dailyTasks.length === 0">
+          <div class="empty-icon">🎉</div>
+          <div class="empty-text">今天没有学习任务，休息一天吧！</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- === 学习报告 === -->
+    <div v-if="currentPage === 'report'" class="page">
+      <div style="padding:10px 0 15px">
+        <span style="font-size:20px;font-weight:bold;color:#2C3E50">📊 学习报告</span>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-num">{{ store.state.stats.totalDays }}</div>
+          <div class="stat-label">学习天数</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">{{ store.state.stats.totalQuestions }}</div>
+          <div class="stat-label">完成题数</div>
+        </div>
+        <div class="stat-item" style="border-color:#F39C12;background:#FFFDF0">
+          <div class="stat-num" style="color:#F39C12">{{ store.state.stats.streakDays }}</div>
+          <div class="stat-label">连续打卡</div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:15px;">
+        <div class="section-title">本周完成情况</div>
+        <div v-for="day in weekPlan" :key="day.day" style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:12px;color:#555;width:50px">{{ getDayName(day.day) }}</span>
+          <div class="progress" style="flex:1;height:14px">
+            <div class="progress-fill" :style="{ width: day.percent + '%', background: day.percent >= 100 ? '#2ECC71' : '#4A90D9' }"></div>
+          </div>
+          <span style="font-size:11px;width:50px;text-align:right" :style="{ color: day.percent >= 100 ? '#2ECC71' : '#7F8C8D' }">
+            {{ day.done }}/{{ day.total }}
+          </span>
+        </div>
+      </div>
+
+      <div style="margin-bottom:15px;">
+        <div class="section-title">🏆 成就墙</div>
+        <div class="badge-grid">
+          <div class="badge-item" :class="{ locked: store.state.stats.totalDays < 1 }">
+            <div class="badge-icon">🌱</div>
+            <div class="badge-name">开始学习</div>
+            <div class="badge-desc">第1天</div>
+          </div>
+          <div class="badge-item" :class="{ locked: store.state.stats.totalDays < 3 }">
+            <div class="badge-icon">🔥</div>
+            <div class="badge-name">渐入佳境</div>
+            <div class="badge-desc">3天</div>
+          </div>
+          <div class="badge-item" :class="{ locked: store.state.stats.totalDays < 7 }">
+            <div class="badge-icon">⭐</div>
+            <div class="badge-name">坚持一周</div>
+            <div class="badge-desc">7天</div>
+          </div>
+          <div class="badge-item" :class="{ locked: store.state.stats.streakDays < 3 }">
+            <div class="badge-icon">💪</div>
+            <div class="badge-name">连续打卡</div>
+            <div class="badge-desc">3天</div>
+          </div>
+          <div class="badge-item" :class="{ locked: store.state.stats.totalQuestions < 50 }">
+            <div class="badge-icon">🧠</div>
+            <div class="badge-name">学霸新手</div>
+            <div class="badge-desc">50题</div>
+          </div>
+          <div class="badge-item" :class="{ locked: store.state.stats.totalQuestions < 100 }">
+            <div class="badge-icon">🏅</div>
+            <div class="badge-name">小学霸</div>
+            <div class="badge-desc">100题</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:20px;text-align:center;">
+        <button class="btn btn-outline" style="color:#E74C3C;border-color:#E74C3C;font-size:13px;padding:8px 20px;" @click="clearAllData">🗑️ 清除全部缓存</button>
+        <div style="font-size:11px;color:#95A5A6;margin-top:6px;">清除后将清空所有学习记录和数据</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab Bar -->
+  <div class="tab-bar" v-if="showTabBar">
+    <div class="tab-item" :class="{ active: currentPage === 'home' }" @click="goHome">
+      <span class="tab-icon">🏠</span>
+      <span class="tab-label">首页</span>
+    </div>
+    <div class="tab-item" :class="{ active: currentPage === 'plan' }" @click="goPlan">
+      <span class="tab-icon">📋</span>
+      <span class="tab-label">计划</span>
+    </div>
+    <div class="tab-item" :class="{ active: currentPage === 'daily' }" @click="goToday">
+      <span class="tab-icon">📝</span>
+      <span class="tab-label">今日</span>
+    </div>
+    <div class="tab-item" :class="{ active: currentPage === 'report' }" @click="currentPage = 'report'">
+      <span class="tab-icon">📊</span>
+      <span class="tab-label">报告</span>
+    </div>
+  </div>
+</div>
+
+<script>
+// ====================== 题库数据 ======================
+// ====== 题库数据加载（从外部 JSON 文件动态加载）======
+var QUESTION_BANK = { chinese: {}, math: {}, english: {} };
+var _bankLoadedCount = 0;
+var _bankTotal = 3;
+function _checkBanksLoaded() {
+  _bankLoadedCount++;
+  if (_bankLoadedCount >= _bankTotal && window._onBanksReady) {
+    window._onBanksReady();
+  }
+}
+['chinese','math','english'].forEach(function(sub) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', sub+'.json?'+Date.now(), true);
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      try { QUESTION_BANK[sub] = JSON.parse(xhr.responseText); }
+      catch(e) { console.error('加载'+sub+'.json失败:', e); }
+    }
+    _checkBanksLoaded();
+  };
+  xhr.onerror = function() { _checkBanksLoaded(); };
+  xhr.send();
+});
+
+
+
+// ====================== Vuex Store ======================
+const ABILITY_DEFS = {
+  "chinese": [
+    {
+      "id": "c1",
+      "name": "写生字",
+      "desc": "规范书写常用汉字",
+      "icon": "✍️",
+      "grades": [
+        "1-2",
+        "2-3"
+      ]
+    },
+    {
+      "id": "c2",
+      "name": "练句子",
+      "desc": "句子练习",
+      "icon": "📝",
+      "grades": [
+        "1-2",
+        "2-3"
+      ]
+    },
+    {
+      "id": "c3",
+      "name": "看图写话",
+      "desc": "观察图片写句子",
+      "icon": "🖼️",
+      "grades": [
+        "1-2",
+        "2-3"
+      ]
+    },
+    {
+      "id": "c4",
+      "name": "阅读理解",
+      "desc": "阅读短文回答问题",
+      "icon": "📖",
+      "grades": [
+        "1-2",
+        "2-3",
+        "3-4",
+        "4-5",
+        "5-6"
+      ]
+    },
+    {
+      "id": "c5",
+      "name": "拼音巩固",
+      "desc": "拼音拼读",
+      "icon": "🔤",
+      "grades": [
+        "1-2"
+      ]
+    },
+    {
+      "id": "c6",
+      "name": "词语运用",
+      "desc": "成语近反义词",
+      "icon": "📚",
+      "grades": [
+        "2-3",
+        "3-4"
+      ]
+    },
+    {
+      "id": "c7",
+      "name": "句型转换",
+      "desc": "把字句被字句、反问陈述互换、修辞",
+      "icon": "🔄",
+      "grades": [
+        "2-3",
+        "3-4",
+        "4-5"
+      ]
+    },
+    {
+      "id": "c8",
+      "name": "古诗文积累",
+      "desc": "必背古诗、日积月累",
+      "icon": "📜",
+      "grades": [
+        "2-3",
+        "3-4",
+        "4-5",
+        "5-6"
+      ]
+    },
+    {
+      "id": "c9",
+      "name": "阅读理解进阶",
+      "desc": "概括段意、体会情感、非连续文本",
+      "icon": "📖",
+      "grades": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ]
+    },
+    {
+      "id": "c10",
+      "name": "习作训练",
+      "desc": "记叙文、应用文、想象作文",
+      "icon": "✏️",
+      "grades": [
+        "2-3",
+        "3-4",
+        "4-5",
+        "5-6"
+      ]
+    },
+    {
+      "id": "c11",
+      "name": "综合性学习",
+      "desc": "汉字文化、传统节日",
+      "icon": "🎯",
+      "grades": [
+        "2-3",
+        "3-4"
+      ]
+    },
+    {
+      "id": "c12",
+      "name": "修改病句",
+      "desc": "常见病句类型修改",
+      "icon": "🔧",
+      "grades": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ]
+    },
+    {
+      "id": "c13",
+      "name": "标点与关联词",
+      "desc": "标点符号运用、关联词填空",
+      "icon": "🔖",
+      "grades": [
+        "3-4",
+        "4-5"
+      ]
+    }
+  ],
+  "math": [
+    {
+      "id": "m1",
+      "name": "20以内加减",
+      "desc": "20以内加减法口算",
+      "icon": "🔢",
+      "grades": [
+        "1-2"
+      ]
+    },
+    {
+      "id": "m2",
+      "name": "100以内加减",
+      "desc": "100以内进退位加减",
+      "icon": "🧮",
+      "grades": [
+        "1-2",
+        "2-3"
+      ]
+    },
+    {
+      "id": "m3",
+      "name": "比一比",
+      "desc": "大小多少轻重比较",
+      "icon": "⚖️",
+      "grades": [
+        "1-2",
+        "2-3"
+      ]
+    },
+    {
+      "id": "m4",
+      "name": "表内乘除法",
+      "desc": "乘法口诀及除法",
+      "icon": "✖️",
+      "grades": [
+        "1-2",
+        "2-3"
+      ]
+    },
+    {
+      "id": "m5",
+      "name": "应用题",
+      "desc": "一步两步应用题",
+      "icon": "🧩",
+      "grades": [
+        "1-2",
+        "2-3",
+        "3-4",
+        "4-5",
+        "5-6"
+      ]
+    },
+    {
+      "id": "m6",
+      "name": "图形与时间",
+      "desc": "图形钟表人民币",
+      "icon": "📐",
+      "grades": [
+        "1-2",
+        "2-3"
+      ]
+    },
+    {
+      "id": "m7",
+      "name": "分数初步",
+      "desc": "分数认识与简单计算",
+      "icon": "½",
+      "grades": [
+        "3-4"
+      ]
+    },
+    {
+      "id": "m8",
+      "name": "小数认识",
+      "desc": "小数初步",
+      "icon": "0.5",
+      "grades": [
+        "3-4"
+      ]
+    },
+    {
+      "id": "m9",
+      "name": "四则混合",
+      "desc": "含括号混合运算",
+      "icon": "🧮",
+      "grades": [
+        "4-5"
+      ]
+    },
+    {
+      "id": "m10",
+      "name": "单位换算",
+      "desc": "长度质量时间",
+      "icon": "📏",
+      "grades": [
+        "2-3",
+        "3-4"
+      ]
+    },
+    {
+      "id": "m13",
+      "name": "万以内加减",
+      "desc": "万以内加减法与验算",
+      "icon": "📊",
+      "grades": [
+        "2-3"
+      ]
+    },
+    {
+      "id": "m14",
+      "name": "倍数与应用",
+      "desc": "倍的认识与简单应用",
+      "icon": "🔄",
+      "grades": [
+        "2-3"
+      ]
+    },
+    {
+      "id": "m15",
+      "name": "多位数乘除",
+      "desc": "多位数乘一位数、除数一位除法",
+      "icon": "✖️",
+      "grades": [
+        "2-3",
+        "3-4"
+      ]
+    },
+    {
+      "id": "m16",
+      "name": "时间与测量",
+      "desc": "时分秒年月日、长度质量单位",
+      "icon": "⏱️",
+      "grades": [
+        "2-3",
+        "3-4"
+      ]
+    },
+    {
+      "id": "m17",
+      "name": "周长与面积",
+      "desc": "长方形正方形周长面积",
+      "icon": "📐",
+      "grades": [
+        "2-3",
+        "3-4"
+      ]
+    },
+    {
+      "id": "m18",
+      "name": "位置与统计",
+      "desc": "方位识别、复式统计",
+      "icon": "📍",
+      "grades": [
+        "2-3"
+      ]
+    },
+    {
+      "id": "m19",
+      "name": "大数认识",
+      "desc": "亿以内大数读写",
+      "icon": "🔟",
+      "grades": [
+        "3-4"
+      ]
+    },
+    {
+      "id": "m20",
+      "name": "三位数乘除",
+      "desc": "三位数乘两位数、除数是两位数",
+      "icon": "🧮",
+      "grades": [
+        "3-4"
+      ]
+    },
+    {
+      "id": "m21",
+      "name": "运算定律",
+      "desc": "交换律结合律分配律",
+      "icon": "📐",
+      "grades": [
+        "3-4"
+      ]
+    },
+    {
+      "id": "m22",
+      "name": "小数意义计算",
+      "desc": "小数意义加减法",
+      "icon": "0.5",
+      "grades": [
+        "3-4",
+        "4-5"
+      ]
+    },
+    {
+      "id": "m23",
+      "name": "三角形与图形",
+      "desc": "角、三角形、平行四边形、梯形",
+      "icon": "📐",
+      "grades": [
+        "3-4"
+      ]
+    },
+    {
+      "id": "m24",
+      "name": "轴对称与统计",
+      "desc": "轴对称平移、平均数条形图",
+      "icon": "💹",
+      "grades": [
+        "3-4"
+      ]
+    },
+    {
+      "id": "m25",
+      "name": "小数乘除法",
+      "desc": "小数乘法与除法",
+      "icon": "🧮",
+      "grades": [
+        "4-5"
+      ]
+    },
+    {
+      "id": "m26",
+      "name": "简易方程",
+      "desc": "用字母表示数、解方程",
+      "icon": "✏️",
+      "grades": [
+        "4-5"
+      ]
+    },
+    {
+      "id": "m27",
+      "name": "因数倍数",
+      "desc": "因数倍数、质数合数",
+      "icon": "🔢",
+      "grades": [
+        "4-5"
+      ]
+    },
+    {
+      "id": "m28",
+      "name": "分数意义加减",
+      "desc": "分数意义约分通分加减",
+      "icon": "½",
+      "grades": [
+        "4-5"
+      ]
+    },
+    {
+      "id": "m29",
+      "name": "长方体和正方体",
+      "desc": "表面积体积容积",
+      "icon": "📦",
+      "grades": [
+        "4-5"
+      ]
+    },
+    {
+      "id": "m30",
+      "name": "折线统计与植树",
+      "desc": "折线图、数对、植树问题",
+      "icon": "📈",
+      "grades": [
+        "4-5"
+      ]
+    },
+    {
+      "id": "m31",
+      "name": "分数乘除法",
+      "desc": "分数乘除与混合",
+      "icon": "½",
+      "grades": [
+        "5-6"
+      ]
+    },
+    {
+      "id": "m32",
+      "name": "百分数与比",
+      "desc": "百分率折扣比、比例分配",
+      "icon": "%",
+      "grades": [
+        "5-6"
+      ]
+    },
+    {
+      "id": "m33",
+      "name": "圆",
+      "desc": "圆的周长与面积",
+      "icon": "⭕",
+      "grades": [
+        "5-6"
+      ]
+    },
+    {
+      "id": "m34",
+      "name": "圆柱圆锥",
+      "desc": "柱体锥体表面积体积",
+      "icon": "🥫",
+      "grades": [
+        "5-6"
+      ]
+    },
+    {
+      "id": "m35",
+      "name": "比例",
+      "desc": "正反比例、比例尺、解比例",
+      "icon": "⚖️",
+      "grades": [
+        "5-6"
+      ]
+    },
+    {
+      "id": "m36",
+      "name": "负数与综合",
+      "desc": "负数认识、数与代数综合",
+      "icon": "±",
+      "grades": [
+        "5-6"
+      ]
+    }
+  ],
+  "english": [
+    {
+      "id": "e1",
+      "name": "认单词",
+      "desc": "分类词汇认读",
+      "icon": "🔤",
+      "grades": [
+        "1-2",
+        "2-3",
+        "3-4"
+      ]
+    },
+    {
+      "id": "e2",
+      "name": "说句子",
+      "desc": "日常句子",
+      "icon": "🗣️",
+      "grades": [
+        "1-2",
+        "2-3",
+        "3-4"
+      ]
+    },
+    {
+      "id": "e3",
+      "name": "自然拼读",
+      "desc": "字母发音与CVC",
+      "icon": "🎵",
+      "grades": [
+        "1-2",
+        "2-3"
+      ]
+    },
+    {
+      "id": "e4",
+      "name": "简单对话",
+      "desc": "情景对话",
+      "icon": "💬",
+      "grades": [
+        "1-2",
+        "2-3",
+        "3-4"
+      ]
+    },
+    {
+      "id": "e5",
+      "name": "小作文",
+      "desc": "看图说话自我介绍",
+      "icon": "✏️",
+      "grades": [
+        "1-2",
+        "2-3",
+        "3-4",
+        "4-5",
+        "5-6"
+      ]
+    },
+    {
+      "id": "e6",
+      "name": "语音语法",
+      "desc": "字母组合发音、基本语法",
+      "icon": "📚",
+      "grades": [
+        "3-4",
+        "4-5"
+      ]
+    },
+    {
+      "id": "e7",
+      "name": "四大时态",
+      "desc": "一般现在/过去/将来、现在进行",
+      "icon": "⏰",
+      "grades": [
+        "4-5",
+        "5-6"
+      ]
+    },
+    {
+      "id": "e8",
+      "name": "听力理解",
+      "desc": "听音选词、听音判断",
+      "icon": "🎧",
+      "grades": [
+        "3-4",
+        "4-5"
+      ]
+    },
+    {
+      "id": "e9",
+      "name": "阅读理解进阶",
+      "desc": "短文理解判断选择",
+      "icon": "📖",
+      "grades": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ]
+    },
+    {
+      "id": "e10",
+      "name": "交际运用",
+      "desc": "问路购物打电话场景",
+      "icon": "💬",
+      "grades": [
+        "3-4",
+        "4-5",
+        "5-6"
+      ]
+    }
+  ]
+};
+
+function formatDate(d) {
+  var y = d.getFullYear(), m = String(d.getMonth()+1).padStart(2,'0'), day = String(d.getDate()).padStart(2,'0');
+  return y+'-'+m+'-'+day;
+}
+function addDays(ds, n) {
+  var d = new Date(ds); d.setDate(d.getDate()+n); return formatDate(d);
+}
+function getMondayDate() {
+  var d = new Date(); var day = d.getDay(); var diff = d.getDate() - day + (day===0?-6:1);
+  return formatDate(new Date(d.setDate(diff)));
+}
+
+const store = new Vuex.Store({
+  // 从 localStorage 恢复状态
+  state: {
+    grade: '',
+    subjects: [],
+    abilities: {},
+    weeklyPlan: null,
+    checkIns: {},
+    usedQuestions: {},
+    stats: { totalDays: 0, totalQuestions: 0, streakDays: 0 }
+  },
+  mutations: {
+    SET_GRADE: function(s, g) { s.grade = g; },
+    SET_SUBJECTS: function(s, v) { s.subjects = v; },
+    SET_ABILITIES: function(s, p) {
+      s.abilities[p.subject] = p.abilities || {};
+    },
+    SET_WEEKLY_PLAN: function(s, p) { s.weeklyPlan = p; },
+    CHECK_IN: function(s, p) {
+      if (!s.checkIns[p.date]) s.checkIns[p.date] = {};
+      if (!s.checkIns[p.date][p.subject]) s.checkIns[p.date][p.subject] = [];
+      if (!s.checkIns[p.date][p.subject].includes(p.qId)) s.checkIns[p.date][p.subject].push(p.qId);
+    },
+    UPDATE_STATS: function(s) {
+      var dates = Object.keys(s.checkIns).sort();
+      s.stats.totalDays = dates.length;
+      var total = 0;
+      Object.values(s.checkIns).forEach(function(d) { Object.values(d).forEach(function(qs) { total += qs.length; }); });
+      s.stats.totalQuestions = total;
+      var streak = 0, today = formatDate(new Date());
+      for (var i=0;i<365;i++) { var d=addDays(today,-i); if(s.checkIns[d]) streak++; else break; }
+      s.stats.streakDays = streak;
+    },
+    ADD_USED_QUESTION: function(s, p) {
+      if (!s.usedQuestions[p.date]) s.usedQuestions[p.date] = {};
+      if (!s.usedQuestions[p.date][p.subject]) s.usedQuestions[p.date][p.subject] = [];
+      if (!s.usedQuestions[p.date][p.subject].includes(p.qId)) s.usedQuestions[p.date][p.subject].push(p.qId);
+    }
+  },
+  actions: {
+    generatePlan: function(ctx) {
+      // 确保题库已加载
+      var hasData = Object.keys(QUESTION_BANK.chinese).length > 0 || Object.keys(QUESTION_BANK.math).length > 0 || Object.keys(QUESTION_BANK.english).length > 0;
+      if (!hasData) {
+        console.warn('题库尚未加载完成，请等待...');
+        return;
+      }
+      var weekStart = getMondayDate();
+      var enabled = ctx.getters.enabledAbilities;
+      var allAbilities = [];
+      ctx.state.subjects.forEach(function(subject) {
+        (enabled[subject]||[]).forEach(function(ab) {
+          allAbilities.push({subject:subject, abilityId:ab.id, abilityName:ab.name});
+        });
+      });
+      if (allAbilities.length === 0) return;
+
+      // 收集所有已用过的题目ID（跨日期、跨学科）
+      var usedIdSet = {};
+      Object.keys(ctx.state.usedQuestions).forEach(function(date) {
+        var subjects = ctx.state.usedQuestions[date] || {};
+        Object.keys(subjects).forEach(function(sub) {
+          (subjects[sub]||[]).forEach(function(qId) { usedIdSet[qId] = true; });
+        });
+      });
+
+      var items = [];
+      var abilityWeights = {
+        chinese: { c1: 4, c2: 3, c3: 1, c4: 1, c5: 4, c6: 2, c7: 3, c8: 3, c9: 1, c10: 1, c11: 1, c12: 2, c13: 2 },
+        math: { m1: 5, m2: 4, m3: 2, m4: 2, m5: 3, m6: 2, m7: 2, m8: 2, m9: 2, m10: 2, m11: 2, m12: 2,
+                m13: 3, m14: 2, m15: 3, m16: 2, m17: 2, m18: 1,
+                m19: 2, m20: 3, m21: 2, m22: 2, m23: 2, m24: 1,
+                m25: 3, m26: 2, m27: 2, m28: 2, m29: 2, m30: 1,
+                m31: 3, m32: 2, m33: 2, m34: 2, m35: 2, m36: 1 },
+        english: { e1: 4, e2: 3, e3: 2, e4: 2, e5: 1, e6: 2, e7: 2, e8: 2, e9: 2, e10: 2 }
+      };
+      var exhaustedAbilities = {}; // 记录哪些能力题库已用完
+
+      for (var day=1; day<=7; day++) {
+        allAbilities.forEach(function(ab) {
+          var qb = (QUESTION_BANK[ab.subject]||{})[ab.abilityId]||[];
+          if (qb.length === 0) return;
+
+          // 过滤掉已用过的题目
+          var available = qb.filter(function(q) { return !usedIdSet[q.id]; });
+          if (available.length === 0) {
+            exhaustedAbilities[ab.abilityName] = true;
+            return;
+          }
+
+          var weight = (abilityWeights[ab.subject]||{})[ab.abilityId] || 3;
+          var cnt = Math.min(weight, available.length);
+
+          // 随机打乱后用前cnt个
+          var shuffled = available.slice().sort(function() { return Math.random() - 0.5; });
+          var picked = shuffled.slice(0, cnt);
+
+          if (picked.length>0) {
+            items.push({day:day, subject:ab.subject, abilityId:ab.abilityId, abilityName:ab.abilityName, questions:picked, difficulty:day<=2?1:day<=5?2:3});
+            // 记录本次已用题目到store
+            picked.forEach(function(q) {
+              usedIdSet[q.id] = true;
+              ctx.commit('ADD_USED_QUESTION', { date: weekStart, subject: ab.subject, qId: q.id });
+            });
+          }
+        });
+      }
+
+      // 如果有题库用完，弹出提示
+      var exhaustedNames = Object.keys(exhaustedAbilities);
+      if (exhaustedNames.length > 0) {
+        var msg = '以下能力题库已用完，请联系管理员添加题目：\n' + exhaustedNames.join('、');
+        setTimeout(function() { alert(msg); }, 100);
+      }
+
+      ctx.commit('SET_WEEKLY_PLAN', {weekStart:weekStart, generatedAt:formatDate(new Date()), items:items});
+      ctx.commit('UPDATE_STATS');
+    }
+  },
+  getters: {
+    enabledAbilities: function(s) {
+      var r = {};
+      Object.keys(s.abilities).forEach(function(sub) {
+        r[sub] = (ABILITY_DEFS[sub]||[]).filter(function(ab) { return s.abilities[sub] && s.abilities[sub][ab.id]; });
+      });
+      return r;
+    }
+
+  }
+});
+
+// 从 localStorage 恢复之前的做题数据（只保留做题记录，不恢复操作配置）
+var savedData = null;
+try { savedData = JSON.parse(localStorage.getItem('study_app_data')); } catch(e){}
+if (savedData) {
+  store.state.checkIns = savedData.checkIns || {};
+  store.state.usedQuestions = savedData.usedQuestions || {};
+  store.state.stats = savedData.stats || { totalDays: 0, totalQuestions: 0, streakDays: 0 };
+}
+
+// 每次修改状态时只保存做题数据到 localStorage（不保存操作配置）
+store.subscribe(function(mutation, state) {
+  var data = {
+    checkIns: state.checkIns,
+    usedQuestions: state.usedQuestions || {},
+    stats: state.stats
+  };
+  localStorage.setItem('study_app_data', JSON.stringify(data));
+});
+
+// ====================== Vue App ======================
+var app = Vue.createApp({
+  data: function() {
+    return {
+      currentPage: 'home',
+      showAnswer: {},
+      showHint: {},
+      userAnswers: {},
+      answerChecked: {},
+      answerCorrect: {},
+      currentDayNum: new Date().getDay() || 7,
+      grades: [
+        { id: '1-2', name: '一年级 → 二年级', desc: '适合即将升入二年级的小学生', icon: '🌱' },
+        { id: '2-3', name: '二年级 → 三年级', desc: '适合即将升入三年级的小学生', icon: '🌿' },
+        { id: '3-4', name: '三年级 → 四年级', desc: '适合即将升入四年级的小学生', icon: '🌳' },
+        { id: '4-5', name: '四年级 → 五年级', desc: '适合即将升入五年级的小学生', icon: '🍂' },
+        { id: '5-6', name: '五年级 → 六年级', desc: '适合即将升入六年级的小学生', icon: '⭐' }
+      ],
+      subjects: [
+        { id: 'chinese', name: '\u8bed\u6587', icon: '\ud83d\udcd6', color: '#FF6B6B', desc: '\u8bed\u6587\u5404\u9879\u80fd\u529b\u7ec3\u4e60' },
+        { id: 'math', name: '\u6570\u5b66', icon: '\ud83d\udd22', color: '#4ECDC4', desc: '\u6570\u5b66\u5404\u9879\u80fd\u529b\u7ec3\u4e60' },
+        { id: 'english', name: '\u82f1\u8bed', icon: '\ud83c\uddec\ud83c\udde7', color: '#45B7D1', desc: '\u82f1\u8bed\u5404\u9879\u80fd\u529b\u7ec3\u4e60' }
+      ]
+    };
+  },
+  computed: {
+    store: function() { return this.$store; },
+    pageTitle: function() {
+      var map = { home:'\u80fd\u529b\u63d0\u5347\u8ba1\u5212', subject:'\u9009\u62e9\u79d1\u76ee', abilities:'\u9009\u62e9\u80fd\u529b\u9879', plan:'\u672c\u5468\u5b66\u4e60\u8ba1\u5212', daily:'\u4eca\u65e5\u5b66\u4e60', report:'\u5b66\u4e60\u62a5\u544a' };
+      return map[this.currentPage] || '\u80fd\u529b\u63d0\u5347\u8ba1\u5212';
+    },
+    showTabBar: function() {
+      return true; // 底部导航栏常驻
+    },
+    showBackButton: function() {
+      return ['subject','abilities'].indexOf(this.currentPage) >= 0;
+    },
+    selectedSubjects: function() { return this.$store.state.subjects; },
+    subjectList: function() {
+      var grade = this.$store.state.grade || '1-2';
+      var subjects = this.subjects || [];
+      return subjects.map(function(s) {
+        var defs = ABILITY_DEFS[s.id] || [];
+        var gradeAbs = defs.filter(function(a) { return a.grades && a.grades.indexOf(grade) >= 0; });
+        return {
+          id: s.id, name: s.name, icon: s.icon, color: s.color,
+          desc: s.desc,
+          abilities: gradeAbs.map(function(a) { return a.name; })
+        };
+      });
+    },
+    abilityGroups: function() {
+      var that = this;
+      var colors = {chinese:'#FF6B6B', math:'#4ECDC4', english:'#45B7D1'};
+      var icons = {chinese:'\ud83d\udcd6', math:'\ud83d\udd22', english:'\ud83c\uddec\ud83c\udde7'};
+      var names = {chinese:'\u8bed\u6587', math:'\u6570\u5b66', english:'\u82f1\u8bed'};
+      var currentGrade = this.$store.state.grade || '1-2';
+      return this.$store.state.subjects.map(function(s) {
+        var allAbilities = ABILITY_DEFS[s] || [];
+        // 按年级过滤：只显示该年级适合的能力项
+        var gradeAbilities = allAbilities.filter(function(ab) {
+          return ab.grades && ab.grades.indexOf(currentGrade) >= 0;
+        });
+        return { id:s, name:names[s], icon:icons[s], color:colors[s], abilities: gradeAbilities };
+      });
+    },
+    weekTitle: function() {
+      var p = this.$store.state.weeklyPlan;
+      if (!p) return '\u672c\u5468\u8ba1\u5212';
+      var d = new Date(p.weekStart);
+      var d2 = new Date(d); d2.setDate(d2.getDate()+6);
+      return (d.getMonth()+1)+'\u6708'+d.getDate()+'\u65e5 - '+(d2.getMonth()+1)+'\u6708'+d2.getDate()+'\u65e5';
+    },
+    weekPlan: function() {
+      var plan = this.$store.state.weeklyPlan;
+      if (!plan) return [];
+      var checkIns = this.$store.state.checkIns;
+      var that = this;
+      var days = [];
+      for (var d=1; d<=7; d++) {
+        var items = plan.items.filter(function(i) { return i.day === d; });
+        var dateStr = addDays(plan.weekStart, d-1);
+        var total = 0, done = 0;
+        var ci = checkIns[dateStr] || {};
+        items.forEach(function(item) {
+          var sd = ci[item.subject] || [];
+          item.questions.forEach(function(q) { total++; if(sd.indexOf(q.id)>=0) done++; });
+        });
+        days.push({day:d, date:dateStr, items:items, total:total, done:done, percent: total>0 ? Math.round(done/total*100) : 0});
+      }
+      return days;
+    },
+    todayDay: function() { return new Date().getDay() || 7; },
+    dailyTasks: function() {
+      var plan = this.$store.state.weeklyPlan;
+      if (!plan) return [];
+      return plan.items.filter(function(i) { return i.day === this.currentDayNum; }.bind(this));
+    },
+    currentDayDate: function() {
+      var plan = this.$store.state.weeklyPlan;
+      if (!plan) return '';
+      return addDays(plan.weekStart, this.currentDayNum-1);
+    },
+    dailyProgress: function() {
+      var checkIns = this.$store.state.checkIns;
+      var date = this.currentDayDate;
+      var ci = checkIns[date] || {};
+      var total = 0, done = 0;
+      this.dailyTasks.forEach(function(item) {
+        var sd = ci[item.subject] || [];
+        item.questions.forEach(function(q) { total++; if(sd.indexOf(q.id)>=0) done++; });
+      });
+      return { total:total, done:done, percent: total>0 ? Math.round(done/total*100) : 0 };
+    }
+  },
+  methods: {
+    // Navigation
+    goSubject: function() { this.currentPage = 'subject'; },
+    goAbilities: function() { this.currentPage = 'abilities'; },
+    goPlan: function() { this.currentPage = 'plan'; if (this.currentPage==='home' && this.$store.state.weeklyPlan) this.$store.dispatch('generatePlan'); },
+    goHome: function() { this.currentPage = 'home'; },
+    goToday: function() {
+      this.currentDayNum = new Date().getDay() || 7;
+      this.currentPage = 'daily';
+      var _s=this; 
+    },
+    goDaily: function(day) {
+      this.currentDayNum = day;
+      this.currentPage = 'daily';
+      var _s=this; 
+    },
+    toggleSubject: function(id) {
+      var cur = this.$store.state.subjects.slice();
+      var idx = cur.indexOf(id);
+      if (idx>=0) cur.splice(idx,1); else cur.push(id);
+      this.$store.commit('SET_SUBJECTS', cur);
+    },
+    isAbilityChecked: function(subject, abId) {
+      var ab = this.$store.state.abilities[subject];
+      return ab && ab[abId];
+    },
+    isAllAbilitiesSelected: function(subject) {
+      var currentGrade = this.$store.state.grade || '1-2';
+      var defs = ABILITY_DEFS[subject] || [];
+      // 只统计该年级适用的能力
+      var gradeDefs = defs.filter(function(a) { return a.grades && a.grades.indexOf(currentGrade) >= 0; });
+      var ab = this.$store.state.abilities[subject] || {};
+      return gradeDefs.length > 0 && gradeDefs.every(function(a) { return ab[a.id]; });
+    },
+    toggleAllAbilities: function(subject) {
+      var currentGrade = this.$store.state.grade || '1-2';
+      var defs = ABILITY_DEFS[subject] || [];
+      // 只操作该年级适用的能力
+      var gradeDefs = defs.filter(function(a) { return a.grades && a.grades.indexOf(currentGrade) >= 0; });
+      var all = this.isAllAbilitiesSelected(subject);
+      var map = {};
+      defs.forEach(function(a) { map[a.id] = false; }); // 先把所有的关掉
+      gradeDefs.forEach(function(a) { map[a.id] = !all; }); // 再只开关年级适用的
+      this.$store.commit('SET_ABILITIES', {subject:subject, abilities:map});
+    },
+    toggleAbility: function(subject, abId) {
+      var cur = Object.assign({}, this.$store.state.abilities[subject] || {});
+      cur[abId] = !cur[abId];
+      this.$store.commit('SET_ABILITIES', {subject:subject, abilities:cur});
+    },
+    quickStart: function() {
+      var all = ['chinese','math','english'];
+      this.$store.commit('SET_SUBJECTS', all);
+      var that = this;
+      var currentGrade = this.$store.state.grade || '1-2';
+      all.forEach(function(s) {
+        var map = {};
+        (ABILITY_DEFS[s]||[]).forEach(function(a) {
+          // 只启用该年级适合的能力项
+          if (a.grades && a.grades.indexOf(currentGrade) >= 0) {
+            map[a.id] = true;
+          }
+        });
+        that.$store.commit('SET_ABILITIES', {subject:s, abilities:map});
+      });
+      this.$store.dispatch('generatePlan');
+      this.currentPage = 'plan';
+    },
+    generateAndGo: function() {
+      this.$store.dispatch('generatePlan');
+      this.currentPage = 'plan';
+    },
+    regeneratePlan: function() {
+      // 检查是否有未完成的题目
+      var plan = this.$store.state.weeklyPlan;
+      var checkIns = this.$store.state.checkIns;
+      var hasUncompleted = false;
+      var allDone = true;
+      
+      if (plan && plan.items) {
+        for (var i=0; i<plan.items.length; i++) {
+          var day = plan.items[i];
+          if (!day.questions || day.questions.length === 0) continue;
+          var dayDate = formatDate(addDays(new Date(plan.weekStart), day.day-1));
+          var doneToday = checkIns[dayDate] || {};
+          for (var j=0; j<day.questions.length; j++) {
+            var q = day.questions[j];
+            var doneForSubject = doneToday[q.subject] || [];
+            if (doneForSubject.indexOf(q.id) < 0) {
+              hasUncompleted = true;
+              allDone = false;
+            }
+          }
+        }
+      }
+      
+      if (hasUncompleted) {
+        alert('当前有计划未完成，建议先完成现有练习再换新题。\n\n如需强制换题，请点击右上角「重置」重新开始。');
+        return;
+      }
+      
+      // 检查题库是否还有新题可用
+      var usedSet = {};
+      var dates = Object.keys(checkIns).sort();
+      dates.forEach(function(d) {
+        var subs = checkIns[d] || {};
+        Object.keys(subs).forEach(function(s) {
+          (subs[s]||[]).forEach(function(qId) { usedSet[qId] = true; });
+        });
+      });
+      
+      // 统计每种能力项的剩余题目
+      var exhaustedMessages = [];
+      var st = this.$store.state;
+      var enabled = st.abilities || {};
+      var subjects = st.subjects || [];
+      
+      subjects.forEach(function(sub) {
+        var bank = QUESTION_BANK[sub] || {};
+        var enabledAbilities = enabled[sub] || {};
+        Object.keys(enabledAbilities).forEach(function(abId) {
+          if (!enabledAbilities[abId]) return;
+          var questions = bank[abId] || [];
+          var remaining = questions.filter(function(q) { return !usedSet[q.id]; });
+          if (remaining.length === 0) {
+            exhaustedMessages.push(sub + '/' + abId);
+          }
+        });
+      });
+      
+      if (exhaustedMessages.length > 0) {
+        var msg = '以下能力项的题目已全部做完：\n\n' + exhaustedMessages.join('\n') + '\n\n请移除这些能力项或清除缓存后再换题。';
+        alert(msg);
+        return;
+      }
+      
+      // 可以换题
+      this.$store.dispatch('generatePlan');
+      this.currentPage = 'plan';
+      this.$forceUpdate();
+    },
+    goBack: function() {
+      var map = {
+        subject: 'home',
+        abilities: 'subject',
+        plan: 'home',
+        daily: 'plan',
+        report: 'plan'
+      };
+      this.currentPage = map[this.currentPage] || 'home';
+    },
+    // Daily functions
+    isDone: function(qId) {
+      var ci = this.$store.state.checkIns[this.currentDayDate] || {};
+      for (var k in ci) if (ci[k].indexOf(qId)>=0) return true;
+      return false;
+    },
+    toggleAnswer: function(qId) {
+      this.showAnswer[qId] = !this.showAnswer[qId];
+    },
+    toggleHint: function(qId) {
+      this.showHint[qId] = !this.showHint[qId];
+      // 如果打开了提示，自动关闭答案
+      if (this.showHint[qId]) this.showAnswer[qId] = false;
+    },
+    doCheckIn: function(q) {
+      if (this.isDone(q.id)) return;
+      var that = this;
+      var subject = '';
+      this.dailyTasks.some(function(item) {
+        if (item.questions.some(function(gq) { return gq.id === q.id; })) { subject = item.subject; return true; }
+        return false;
+      });
+      if (!subject) return;
+      this.$store.commit('CHECK_IN', { date: this.currentDayDate, subject: subject, qId: q.id });
+      this.$store.commit('ADD_USED_QUESTION', { date: this.currentDayDate, subject: subject, qId: q.id });
+      this.$store.commit('UPDATE_STATS');
+    },
+    getAnswer: function(q) {
+      if (q.answer) return q.answer;
+      if (q.example) return q.example;
+      if (q.character) return q.character+' ('+q.pinyin+')';
+      return '\u8bf7\u53c2\u8003\u9898\u76ee\u81ea\u884c\u5b8c\u6210';
+    },
+    getHint: function(q) {
+      var subject = this.getQuestionSubject(q);
+      var qText = q.question || q.instruction || q.prompt || '';
+      var answer = q.answer || q.example || '';
+
+      // ===== 数学提示 =====
+      if (subject === 'math') {
+        // 加减法
+        if (qText.indexOf('+') >= 0) {
+          var parts = qText.match(/(\d+)\s*\+\s*(\d+)/);
+          if (parts) return '把 ' + parts[1] + ' 和 ' + parts[2] + ' 合在一起数一数。可以从 ' + parts[1] + ' 开始，往后数 ' + parts[2] + ' 个数。';
+        }
+        if (qText.indexOf('-') >= 0) {
+          var parts = qText.match(/(\d+)\s*-\s*(\d+)/);
+          if (parts) return '从 ' + parts[1] + ' 里面去掉 ' + parts[2] + ' 个，看看还剩几个？可以倒着数。';
+        }
+        if (qText.indexOf('\u00d7') >= 0 || qText.indexOf('*') >= 0 || qText.indexOf('\u4e58\u6cd5') >= 0) {
+          var parts = qText.match(/(\d+)\s*[\u00d7*]\s*(\d+)/);
+          if (parts) return '想一想乘法口诀：' + parts[1] + '\u00d7' + parts[2] + ' 等于多少？' + parts[1] + '个' + parts[2] + '相加。';
+        }
+        if (qText.indexOf('\u00f7') >= 0 || qText.indexOf('\u9664\u6cd5') >= 0) {
+          var parts = qText.match(/(\d+)\s*[\u00f7\/]\s*(\d+)/);
+          if (parts) return '把 ' + parts[1] + ' 平均分成 ' + parts[2] + ' 份，每份是多少？用乘法口诀反过来想。';
+        }
+        // 比大小
+        if (qText.indexOf('\u25cb') >= 0 || qText.indexOf('\u6bd4') >= 0) {
+          if (qText.indexOf('>') >= 0 || qText.indexOf('<') >= 0) {
+            return '先算出两边各是多少，再比较大小。数大的那边开口朝它。';
+          }
+          return '想一想哪个数更大？哪个更小？先比较十位，十位相同再比较个位。';
+        }
+        // 应用题
+        if (qText.indexOf('\u5e94\u7528\u9898') >= 0 || qText.indexOf('\u6728') >= 0 || qText.indexOf('\u82b9\u679c') >= 0 || qText.indexOf('\u94b1') >= 0) {
+          if (qText.indexOf('\u52a0') >= 0 || qText.indexOf('\u4e00\u5171') >= 0 || qText.indexOf('\u53c8') >= 0) {
+            return '关键词是\u201c一共\u201d或\u201c又\u201d，说明要把数量合起来，用加法计算。';
+          }
+          if (qText.indexOf('\u5269') >= 0 || qText.indexOf('\u98de\u8d70') >= 0 || qText.indexOf('\u5403\u4e86') >= 0) {
+            return '关键词是\u201c还剩\u201d或\u201c飞走\u201d，说明要去掉一部分，用减法计算。';
+          }
+          if (qText.indexOf('\u00d7') >= 0 || qText.indexOf('\u4e58') >= 0 || qText.indexOf('\u6bcf') >= 0) {
+            return '关键词是\u201c每\u201d或\u201c一包\u201d，说明是相同数量重复出现，用乘法计算。';
+          }
+          if (qText.indexOf('\u00f7') >= 0 || qText.indexOf('\u9664') >= 0 || qText.indexOf('\u5e73\u5747\u5206') >= 0) {
+            return '关键词是\u201c平均分\u201d，说明要把总数分成相等的几份，用除法计算。';
+          }
+          return '仔细读题，找出题目中的数字和关键词，想想用加法还是减法。';
+        }
+        // 图形/时间/货币
+        if (qText.indexOf('\u51e0\u70b9') >= 0 || qText.indexOf('\u65f6\u95f4') >= 0 || qText.indexOf('\u5206\u9488') >= 0) {
+          return '看钟表：短针是时针，表示几点；长针是分针，表示几分。';
+        }
+        if (qText.indexOf('\u5143') >= 0 || qText.indexOf('\u89d2') >= 0 || qText.indexOf('\u4eba\u6c11\u5e01') >= 0) {
+          return '元角分换算：1元=10角，1角=10分。先把相同单位相加，再换算。';
+        }
+        if (qText.indexOf('\u6b63\u65b9\u5f62') >= 0 || qText.indexOf('\u4e09\u89d2\u5f62') >= 0 || qText.indexOf('\u957f\u65b9\u4f53') >= 0) {
+          return '回想一下各种图形的特征：边有几条？角有几个？面是平的还是曲的？';
+        }
+        // 通用数学提示
+        return '试试把题目再读一遍，圈出关键数字，想想要用什么方法计算。';
+      }
+
+      // ===== 语文提示 =====
+      if (subject === 'chinese') {
+        if (q.character) {
+          return '注意这个字的笔画顺序，先写上面再写下面，先写左边再写右边。可以多写几遍记住它。';
+        }
+        if (q.type === '\u8d44\u8bcd' || q.type === '\u9020\u53e5') {
+          return '先理解这个词的意思，然后想一想在生活中什么情况下会用到它。';
+        }
+        if (q.type === '\u6269\u53e5') {
+          return '在原来的句子上加形容词（什么样的）、地点（在哪里）、时间（什么时候），让句子更生动。';
+        }
+        if (q.type === '\u628a\u5b57\u53e5' || q.type === '\u88ab\u5b57\u53e5') {
+          return '\u201c把\u201d字句：谁把什么怎么样了。\u201c被\u201d字句：什么被谁怎么样了。两句话意思一样，说法不同。';
+        }
+        if (q.type === '\u770b\u56fe\u5199\u8bdd') {
+          return '先看图上画了谁、在什么地方、在做什么、心情怎么样。用几句通顺的话写下来。';
+        }
+        if (q.passage) {
+          return '先快速读一遍短文，再仔细看问题，带着问题回到文中找答案。答案往往在原文中可以找到。';
+        }
+        if (q.type === '\u62fc\u97f3') {
+          return '声母和韵母拼在一起就是读音。注意声调：一声平、二声扬、三声拐弯、四声降。';
+        }
+        return '慢慢读题，理解题目的要求，想清楚再动笔。';
+      }
+
+      // ===== 英语提示 =====
+      if (subject === 'english') {
+        if (q.word) {
+          return '先看单词的字母组成，试着按自然拼读法发音，然后结合例句记忆。多读几遍。';
+        }
+        if (q.instruction && (q.instruction.indexOf('\u8bd1') >= 0 || q.instruction.indexOf('\u7ffb\u8bd1') >= 0)) {
+          return '逐词理解意思，然后调整语序让它符合中文/英文的表达习惯。';
+        }
+        if (q.instruction && q.instruction.indexOf('\u586b\u7a7a') >= 0) {
+          return '先看空的前后是什么词，判断缺少的是什么成分（名词、动词还是其他）。';
+        }
+        if (q.instruction && q.instruction.indexOf('\u6392\u5e8f') >= 0) {
+          return '英语句子的一般顺序是：谁 + 做什么 + 什么/哪里。先找到主语开头。';
+        }
+        if (q.type === '\u5bf9\u8bdd') {
+          return '想想在生活中遇到这种情况应该怎么用英语回答。注意礼貌用语。';
+        }
+        if (q.type === '\u5c0f\u4f5c\u6587' || q.type === '\u5199\u4f5c') {
+          return '先用几个关键词列出想写的内容，然后用简单的句子把它们串起来。';
+        }
+        if (q.type === '\u81ea\u7136\u62fc\u8bfb') {
+          return '每个字母有自己的发音，把它们连起来读。辅音+元音+辅音的单词最容易拼读。';
+        }
+        return '仔细看题，回忆一下学过的相关内容。';
+      }
+
+      return '仔细想一想这道题考的是什么知识点，回忆一下学过的内容。';
+    },
+    getQuestionSubject: function(q) {
+      // 通过题目 ID 判断科目：c=chinese, m=math, e=english
+      var id = q.id || '';
+      if (id.indexOf('c') === 0) return 'chinese';
+      if (id.indexOf('m') === 0) return 'math';
+      if (id.indexOf('e') === 0) return 'english';
+      return '';
+    },
+    getTypeLabel: function(q) {
+      if (q.type) return q.type;
+      if (q.character) return '\u751f\u5b57';
+      if (q.passage) return '\u9605\u8bfb';
+      return '\u9898\u76ee';
+    },
+    getDayName: function(d) { return ['','\u5468\u4e00','\u5468\u4e8c','\u5468\u4e09','\u5468\u56db','\u5468\u4e94','\u5468\u516d','\u5468\u65e5'][d]||''; },
+    getSubjectName: function(id) { return {chinese:'\u8bed\u6587',math:'\u6570\u5b66',english:'\u82f1\u8bed'}[id]||id; },
+    getSubjectColor: function(id) { return {chinese:'#FF6B6B',math:'#4ECDC4',english:'#45B7D1'}[id]||'#999'; },
+    getSubjectEmoji: function(id) { return {chinese:'\ud83d\udcd6',math:'\ud83d\udd22',english:'\ud83c\uddec\ud83c\udde7'}[id]||''; },
+    getGeometrySvg: function(q) {
+      var qText = (q.question || '') + (q.answer || '');
+      if (qText.indexOf('正方体') >= 0) return 'geometry/square.svg';
+      if (qText.indexOf('正方形') >= 0) return 'geometry/square.svg';
+      if (qText.indexOf('长方体') >= 0) return 'geometry/cuboid.svg';
+      if (qText.indexOf('长方形') >= 0) return 'geometry/cuboid.svg';
+      if (qText.indexOf('三角形') >= 0) return 'geometry/triangle.svg';
+      if (qText.indexOf('梯形') >= 0 || qText.indexOf('平行四边形') >= 0) return 'geometry/square.svg';
+      if (qText.indexOf('圆柱') >= 0 || qText.indexOf('圆锥') >= 0) return 'geometry/circle.svg';
+      if (qText.indexOf('圆形') >= 0) return 'geometry/circle.svg';
+      return 'geometry/square.svg';
+    },
+    isGeometryQ: function(q) {
+      var t = (q.question || '') + (q.answer || '') + (q.type || '');
+      // 只在问题明确涉及几何图形时配图，避免误匹配
+      return t.indexOf('正方形') >= 0 || t.indexOf('正方体') >= 0 ||
+             t.indexOf('长方形') >= 0 || t.indexOf('长方体') >= 0 ||
+             t.indexOf('三角形') >= 0 || t.indexOf('梯形') >= 0 ||
+             t.indexOf('平行四边形') >= 0 ||
+             t.indexOf('圆形') >= 0 || t.indexOf('圆柱') >= 0 || t.indexOf('圆锥') >= 0 ||
+             t.indexOf('周长') >= 0 || t.indexOf('面积') >= 0 ||
+             t.indexOf('对称轴') >= 0 || t.indexOf('轴对称') >= 0;
+    },
+    isClockQ: function(q) {
+      var t = (q.question || '') + (q.answer || '') + (q.type || '');
+      return t.indexOf('钟表') >= 0 || t.indexOf('时针') >= 0 || t.indexOf('分针') >= 0 ||
+             t.indexOf('几时') >= 0 || t.indexOf('几点') >= 0 || t.indexOf('半点') >= 0 ||
+             t.indexOf('时=') >= 0 || t.indexOf('分=') >= 0 || t.indexOf('秒=') >= 0;
+    },
+    isCompareQ: function(q) {
+      var t = (q.question || '') + (q.type || '');
+      // 只在明确是比大小类题目时配图，不匹配含"圆/边"等词的应用题
+      return (t.indexOf('比大小') >= 0 || t.indexOf('比多少') >= 0 || t.indexOf('比轻重') >= 0 || t.indexOf('比长短') >= 0);
+    },
+    isMoneyQ: function(q) {
+      var t = (q.question || '') + (q.answer || '');
+      // 只匹配明确涉及人民币的题目
+      return t.indexOf('元') >= 0 && (t.indexOf('角') >= 0 || t.indexOf('分') >= 0) || t.indexOf('人民币') >= 0;
+    },
+    onImageError: function(q) {
+      q.image = ''; // 图片加载失败时清空，降级显示文字
+    },
+    speak: function(text) {
+      try {
+      if (!text || text === '?' || text.length > 200) return;
+      if (!window.speechSynthesis) { alert('\u60a8\u7684\u6d4f\u89c8\u5668\u4e0d\u652f\u6301\u8bed\u97f3\u529f\u80fd'); return; }
+      window.speechSynthesis.cancel();
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = 'en-US'; u.rate = 0.85; u.pitch = 1.0; u.volume = 1.0;
+      window.speechSynthesis.speak(u);
+      } catch(e) { console.warn("Speech not supported"); }
+    },
+    resetData: function() {
+      this.$store.state.grade = '';
+      this.$store.state.subjects = [];
+      this.$store.state.abilities = {};
+      this.$store.state.weeklyPlan = null;
+      this.$store.state.checkIns = {};
+      this.$store.state.stats = { totalDays:0, totalQuestions:0, streakDays:0 };
+      this.currentPage = 'home';
+    },
+    clearAllData: function() {
+      var ok = confirm('⚠️ 确认清除全部缓存？\n\n此操作将清空：\n- 所有学习记录\n- 打卡数据\n- 学习进度\n- 成就统计\n\n此操作不可恢复！');
+      if (ok) {
+        this.$store.state.grade = '';
+        this.$store.state.subjects = [];
+        this.$store.state.abilities = {};
+        this.$store.state.weeklyPlan = null;
+        this.$store.state.checkIns = {};
+        this.$store.state.usedQuestions = {};
+        this.$store.state.stats = { totalDays:0, totalQuestions:0, streakDays:0 };
+        localStorage.removeItem('study_app_data');
+        this.currentPage = 'home';
+        alert('✅ 缓存已清除');
+      } else {
+        // 取消，什么都不做
+      }
+    },
+    // ===== 交互答题方法 =====
+    getChoices: function(q) {
+      var qText = q.question || q.instruction || '';
+      var choices = [];
+      // 匹配 A. xxx  B. xxx  C. xxx  D. xxx 模式
+      var match = qText.match(/[A-D]\s*[.、）)]/g);
+      if (match && match.length >= 2) {
+        // 按A/B/C/D分割
+        var parts = qText.split(/\b([A-D])\s*[.、）)]\s*/);
+        // parts format: ["before", "A", "textA", "B", "textB", ...]
+        for (var i=1; i<parts.length; i+=2) {
+          var label = parts[i];
+          var text = (parts[i+1]||'').trim();
+          // 截断到下个选项或结尾
+          var nextIdx = text.search(/\b[B-Z]\s*[.、）)]/);
+          if (nextIdx > 0) text = text.substring(0, nextIdx).trim();
+          choices.push(label + '. ' + text);
+        }
+      }
+      return choices;
+    },
+    isMathCalc: function(q) {
+      var t = q.question || '';
+      // 包含 = ? 或 数字运算特征
+      return t.indexOf('?') >= 0 && (t.indexOf('+') >= 0 || t.indexOf('-') >= 0 || t.indexOf('\u00d7') >= 0 || t.indexOf('\u00f7') >= 0 || t.indexOf('=') >= 0);
+    },
+    isWritingTask: function(q) {
+      // 小作文、看图写话、自我介绍等需要写段落的
+      return q.type === '小作文' || q.type === '看图写话' || q.instruction === '自我介绍' || q.type === '描述' || q.type === '写短文';
+    },
+    getInputPlaceholder: function(q) {
+      if (q.character) return '写下这个字...';
+      if (q.question && q.question.indexOf('?') >= 0) return '输入答案...';
+      if (q.scene) return '写下你的回答...';
+      if (q.english) return '输入中文翻译...';
+      if (q.chinese && !q.english) return '输入英文翻译...';
+      return '输入你的答案...';
+    },
+    checkAnswer: function(q) {
+      var answer = (q.answer || q.example || q.character || '').toString().trim();
+      var userAns = this.userAnswers[q.id];
+      if (userAns === undefined || userAns === '') {
+        // 手写题：用户可能在画布上练习，显示参考答案
+        if (q.character) {
+          this.answerChecked[q.id] = true;
+          this.answerCorrect[q.id] = false; // 标记为未正确（对照参考）
+          return;
+        }
+        return;
+      }
+
+      userAns = userAns.toString().trim();
+      var isCorrect = false;
+
+      if (!answer) {
+        // 无预设答案，直接标记为"已作答"
+        this.answerChecked[q.id] = true;
+        this.answerCorrect[q.id] = null; // 无正确答案，无法判断
+        return;
+      }
+
+      // 多选题匹配
+      if (this.getChoices(q).length > 0) {
+        // 比较选项字母
+        var userLetter = userAns.replace(/^([A-D])\..*$/, '$1').trim();
+        var ansLetter = answer.replace(/^([A-D])\..*$/, '$1').trim();
+        isCorrect = userLetter === ansLetter || userAns.indexOf(answer) >= 0 || answer.indexOf(userAns) >= 0;
+      }
+      // 数学数字比较
+      else if (this.isMathCalc(q)) {
+        var numAns = parseFloat(answer.replace(/[^\d.-]/g, ''));
+        var numUser = parseFloat(userAns.replace(/[^\d.-]/g, ''));
+        isCorrect = !isNaN(numAns) && !isNaN(numUser) && numAns === numUser;
+      }
+      // 通用字符串匹配
+      else {
+        var ansNorm = answer.replace(/[（(].*?[）)]/g, '').replace(/[\/／]/g, '').trim().toLowerCase();
+        var userNorm = userAns.toLowerCase().trim();
+        isCorrect = userNorm === ansNorm || ansNorm.indexOf(userNorm) >= 0 || userNorm.indexOf(ansNorm) >= 0;
+      }
+
+      this.answerChecked[q.id] = true;
+      this.answerCorrect[q.id] = isCorrect;
+    }
+  }
+});
+
+app.use(store);
+app.mount('#app');
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180">
+  <!-- Rectangle body -->
+  <rect x="30" y="40" width="180" height="100" fill="#4ECDC4" stroke="#2C3E50" stroke-width="2.5" rx="3"/>
+  <!-- Top face -->
+  <polygon points="30,40 80,10 230,10 180,40" fill="#7EDDD6" stroke="#2C3E50" stroke-width="2"/>
+  <!-- Right face -->
+  <polygon points="180,40 230,10 230,110 180,140" fill="#3BA99E" stroke="#2C3E50" stroke-width="2"/>
+  <text x="120" y="165" text-anchor="middle" font-size="15" fill="#2C3E50" font-weight="bold">长方体</text>
+</svg>

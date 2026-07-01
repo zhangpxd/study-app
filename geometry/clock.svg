@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- 钟面 -->
+  <circle cx="100" cy="100" r="85" fill="#FFF9E6" stroke="#2C3E50" stroke-width="3"/>
+  <!-- 刻度 -->
+  <g stroke="#2C3E50" stroke-width="2">
+    <line x1="100" y1="20" x2="100" y2="30"/><line x1="100" y1="170" x2="100" y2="180"/>
+    <line x1="20" y1="100" x2="30" y2="100"/><line x1="170" y1="100" x2="180" y2="100"/>
+  </g>
+  <!-- 数字 -->
+  <g text-anchor="middle" font-size="16" fill="#2C3E50" font-weight="bold">
+    <text x="100" y="40">12</text><text x="160" y="105">3</text>
+    <text x="100" y="175">6</text><text x="40" y="105">9</text>
+  </g>
+  <!-- 时针（指向3点） -->
+  <line x1="100" y1="100" x2="145" y2="100" stroke="#2C3E50" stroke-width="4" stroke-linecap="round"/>
+  <!-- 分针 -->
+  <line x1="100" y1="100" x2="100" y2="45" stroke="#2C3E50" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- 中心点 -->
+  <circle cx="100" cy="100" r="4" fill="#E74C3C"/>
+</svg>
