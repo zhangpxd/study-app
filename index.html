@@ -731,7 +731,7 @@
       </div>
 
       <!-- 章节列表 -->
-      <div v-if="kbFilteredChapters.length > 0" style="border:1px solid #EEE;border-radius:10px;overflow:hidden;">
+      <div v-if="kbFilteredChapters && kbFilteredChapters.length > 0" style="border:1px solid #EEE;border-radius:10px;overflow:hidden;">
         <div v-for="(ch, idx) in kbFilteredChapters" :key="idx" style="padding:12px 14px;border-bottom:1px solid #F0F0F0;display:flex;align-items:center;gap:10px;cursor:pointer;transition:background .15s;"
           :style="{ background: idx % 2 === 0 ? '#fff' : '#FAFBFC', borderBottom: idx === kbFilteredChapters.length - 1 ? 'none' : '' }"
           @click="window.open(kbCurrentBook.link, '_blank')">
@@ -2036,12 +2036,14 @@ var app = Vue.createApp({
       return null;
     },
     kbFilteredChapters: function() {
-      var book = this.kbCurrentBook;
-      if (!book) return [];
-      var chs = book.chapters || [];
-      if (!this.kbSearch.trim()) return chs;
-      var q = this.kbSearch.trim().toLowerCase();
-      return chs.filter(function(c) { return c.toLowerCase().indexOf(q) >= 0; });
+      try {
+        var book = this.kbCurrentBook;
+        if (!book) return [];
+        var chs = book.chapters || [];
+        if (!this.kbSearch || !this.kbSearch.trim()) return chs;
+        var q = this.kbSearch.trim().toLowerCase();
+        return chs.filter(function(c) { return c.toLowerCase().indexOf(q) >= 0; });
+      } catch(e) { return []; }
     },
     getSubjectName: function(id) { return {chinese:'\u8bed\u6587',math:'\u6570\u5b66',english:'\u82f1\u8bed'}[id]||id; },
     getSubjectColor: function(id) { return {chinese:'#FF6B6B',math:'#4ECDC4',english:'#45B7D1'}[id]||'#999'; },
