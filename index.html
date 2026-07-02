@@ -124,6 +124,8 @@
     .tab-item .tab-label { font-size: 11px; margin-top: 2px; display: block; }
     /* 内容区底部留出 tab bar 高度 */
     .page-content { padding-bottom: 60px; }
+    .kb-subject-tab { flex:1; text-align:center; padding:10px 0; border-radius:10px; border:2px solid #EEE; cursor:pointer; transition:all .15s; display:flex; flex-direction:column; align-items:center; gap:4px; }
+    .kb-subject-tab:active { transform:scale(0.97); }
     /* app容器底部留白 */
     #app { padding-bottom: 50px; }
       display: flex;
@@ -140,6 +142,8 @@
     .tab-item .tab-label { font-size: 11px; margin-top: 2px; display: block; }
 
     .page-content { padding-bottom: 60px; }
+    .kb-subject-tab { flex:1; text-align:center; padding:10px 0; border-radius:10px; border:2px solid #EEE; cursor:pointer; transition:all .15s; display:flex; flex-direction:column; align-items:center; gap:4px; }
+    .kb-subject-tab:active { transform:scale(0.97); }
 
     /* Styled elements */
     .subject-card { display: flex; align-items: center; }
@@ -676,6 +680,73 @@
     </div>
   </div>
 
+<!-- === 知识库 === -->
+    <div v-if="currentPage === 'knowledge'" class="page">
+      <div style="padding:10px 0 15px">
+        <span style="font-size:20px;font-weight:bold;color:#2C3E50">📚 知识库</span>
+        <span style="display:block;font-size:13px;color:#95A5A6;margin-top:4px;">人教版 1-6年级 课本知识</span>
+      </div>
+
+      <!-- 科目切换 -->
+      <div style="display:flex;gap:6px;margin-bottom:12px;">
+        <div v-for="sub in kbSubjects" :key="sub.id" class="kb-subject-tab"
+          :style="{ background: kbSubject === sub.id ? sub.color : '#F5F5F5', color: kbSubject === sub.id ? '#fff' : '#666', borderColor: sub.color }"
+          @click="kbSubject = sub.id; kbGrade = (sub.id==='english'?3:1); kbSemester = '上'; kbSearch = ''">
+          <span style="font-size:18px;">{{ sub.icon }}</span>
+          <span style="font-size:13px;font-weight:500;">{{ sub.name }}</span>
+        </div>
+      </div>
+
+      <!-- 年级选择 -->
+      <div style="display:flex;gap:4px;margin-bottom:10px;flex-wrap:wrap;">
+        <span v-for="g in kbAvailableGrades" :key="g" class="tag" style="padding:6px 14px;font-size:13px;cursor:pointer;border-radius:16px;"
+          :style="{ background: kbGrade === g ? '#4A90D9' : '#F0F0F0', color: kbGrade === g ? '#fff' : '#555' }"
+          @click="kbGrade = g">{{ g }}年级</span>
+      </div>
+
+      <!-- 上下册切换 -->
+      <div style="display:flex;margin-bottom:10px;background:#F5F5F5;border-radius:8px;overflow:hidden;width:fit-content;">
+        <div style="padding:6px 20px;font-size:13px;cursor:pointer;" :style="{ background: kbSemester === '上' ? '#4A90D9' : 'transparent', color: kbSemester === '上' ? '#fff' : '#555' }"
+          @click="kbSemester = '上'">上册</div>
+        <div style="padding:6px 20px;font-size:13px;cursor:pointer;" :style="{ background: kbSemester === '下' ? '#4A90D9' : 'transparent', color: kbSemester === '下' ? '#fff' : '#555' }"
+          @click="kbSemester = '下'">下册</div>
+      </div>
+
+      <!-- 搜索框 -->
+      <div style="margin-bottom:12px;position:relative;">
+        <input v-model="kbSearch" placeholder="搜索章节（如：四则运算、分数、三角形...）"
+          style="width:100%;padding:10px 14px;border:1px solid #DDD;border-radius:8px;font-size:13px;box-sizing:border-box;outline:none;"
+          @focus="event.target.style.borderColor='#4A90D9'"
+          @blur="event.target.style.borderColor='#DDD'">
+        <span style="position:absolute;right:12px;top:10px;font-size:13px;color:#999;">🔍</span>
+      </div>
+
+      <!-- 当前课本标题和链接 -->
+      <div v-if="kbCurrentBook" style="background:linear-gradient(135deg,#F8F9FA,#F0F3F8);border-radius:10px;padding:12px 14px;margin-bottom:10px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-weight:bold;font-size:15px;color:#2C3E50;">{{ kbCurrentBook.title }}</span>
+          <a :href="kbCurrentBook.link" target="_blank" style="font-size:12px;color:#4A90D9;text-decoration:none;border:1px solid #4A90D9;border-radius:6px;padding:4px 10px;">📖 查看课本</a>
+        </div>
+        <span style="font-size:12px;color:#7F8C8D;">{{ kbSubjectName }} · {{ kbCurrentBook.chapters.length }}个章节</span>
+      </div>
+
+      <!-- 章节列表 -->
+      <div v-if="kbFilteredChapters.length > 0" style="border:1px solid #EEE;border-radius:10px;overflow:hidden;">
+        <div v-for="(ch, idx) in kbFilteredChapters" :key="idx" style="padding:12px 14px;border-bottom:1px solid #F0F0F0;display:flex;align-items:center;gap:10px;cursor:pointer;transition:background .15s;"
+          :style="{ background: idx % 2 === 0 ? '#fff' : '#FAFBFC', borderBottom: idx === kbFilteredChapters.length - 1 ? 'none' : '' }"
+          @click="window.open(kbCurrentBook.link, '_blank')">
+          <span style="font-size:12px;color:#4A90D9;background:rgba(74,144,217,0.1);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">{{ idx + 1 }}</span>
+          <span style="flex:1;font-size:13px;color:#2C3E50;">{{ ch }}</span>
+          <span style="font-size:11px;color:#BDC3C7;">→</span>
+        </div>
+      </div>
+      <div v-else style="text-align:center;padding:30px;color:#BDC3C7;">
+        <span style="font-size:14px;">未找到匹配的章节</span>
+        <br><span style="font-size:12px;">试试搜索其他关键词</span>
+      </div>
+    </div>
+
+
   <!-- Tab Bar -->
   <div class="tab-bar" v-if="showTabBar">
     <div class="tab-item" :class="{ active: currentPage === 'home' }" @click="goHome">
@@ -693,6 +764,10 @@
     <div class="tab-item" :class="{ active: currentPage === 'report' }" @click="currentPage = 'report'">
       <span class="tab-icon">📊</span>
       <span class="tab-label">报告</span>
+    </div>
+    <div class="tab-item" :class="{ active: currentPage === 'knowledge' }" @click="currentPage = 'knowledge'">
+      <span class="tab-icon">📚</span>
+      <span class="tab-label">知识库</span>
     </div>
   </div>
 </div>
@@ -726,6 +801,48 @@ function _checkBanksLoaded() {
 
 
 // ====================== Vuex Store ======================
+const TEXTBOOK_DATA = {
+  math: [
+    {"g":1,"s":"上","code":"1s","title":"一年级上册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs1s_2024/","chapters":["数学游戏","一、5以内数的认识和加、减法","二、6~10的认识和加、减法","三、认识立体图形","四、11~20的认识","五、20以内的进位加法","六、复习与关联"]},
+    {"g":1,"s":"下","code":"1x","title":"一年级下册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs1x/","chapters":["一、认识平面图形","二、20以内的退位减法","三、100以内数的认识","四、100以内的加法和减法(一)","五、认识人民币","六、100以内的加法和减法(二)","七、找规律","八、总复习"]},
+    {"g":2,"s":"上","code":"2s","title":"二年级上册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs2s/","chapters":["一、长度单位","二、100以内的加法和减法(二)","三、角的初步认识","四、表内乘法(一)","五、观察物体(一)","六、表内乘法(二)","七、认识时间","八、数学广角——搭配(一)","九、总复习"]},
+    {"g":2,"s":"下","code":"2x","title":"二年级下册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs2x/","chapters":["一、数据收集整理","二、表内除法(一)","三、图形的运动(一)","四、表内除法(二)","五、混合运算","六、有余数的除法","七、万以内数的认识","八、克和千克","九、数学广角——推理","十、总复习"]},
+    {"g":3,"s":"上","code":"3s","title":"三年级上册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs3s/","chapters":["一、时、分、秒","二、万以内的加法和减法(一)","三、测量","四、万以内的加法和减法(二)","五、倍的认识","六、多位数乘一位数","七、长方形和正方形","八、分数的初步认识","九、数学广角——集合","十、总复习"]},
+    {"g":3,"s":"下","code":"3x","title":"三年级下册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs3x/","chapters":["一、位置与方向(一)","二、除数是一位数的除法","三、复式统计表","四、两位数乘两位数","五、面积","六、年、月、日","七、小数的初步认识","八、数学广角——搭配(二)","九、总复习"]},
+    {"g":4,"s":"上","code":"4s","title":"四年级上册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs4s/","chapters":["一、大数的认识","二、公顷和平方千米","三、角的度量","四、三位数乘两位数","五、平行四边形和梯形","六、除数是两位数的除法","七、条形统计图","八、数学广角——优化","九、总复习"]},
+    {"g":4,"s":"下","code":"4x","title":"四年级下册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs4x/","chapters":["一、四则运算","二、观察物体(二)","三、运算定律","四、小数的意义和性质","五、三角形","六、小数的加法和减法","七、图形的运动(二)","八、平均数与条形统计图","九、数学广角——鸡兔同笼","十、总复习"]},
+    {"g":5,"s":"上","code":"5s","title":"五年级上册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs5s/","chapters":["一、小数乘法","二、位置","三、小数除法","四、可能性","五、简易方程","六、多边形的面积","七、数学广角——植树问题","八、总复习"]},
+    {"g":5,"s":"下","code":"5x","title":"五年级下册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs5x/","chapters":["一、观察物体(三)","二、因数与倍数","三、长方体和正方体","四、分数的意义和性质","五、图形的运动(三)","六、分数的加法和减法","七、折线统计图","八、数学广角——找次品","九、总复习"]},
+    {"g":6,"s":"上","code":"6s","title":"六年级上册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs6s/","chapters":["一、分数乘法","二、位置与方向(二)","三、分数除法","四、比","五、圆","六、百分数(一)","七、扇形统计图","八、数学广角——数与形","九、总复习"]},
+    {"g":6,"s":"下","code":"6x","title":"六年级下册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs6x/","chapters":["一、负数","二、百分数(二)","三、圆柱与圆锥","四、比例","五、数学广角——鸽巢问题","六、整理和复习"]}
+  ],
+  chinese: [
+    {"g":1,"s":"上","code":"1s","title":"一年级上册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs1s_2024/","chapters":["我上学了","第一单元 识字","第二单元 汉语拼音(一)","第三单元 汉语拼音(二)","第四单元 汉语拼音(三)","第五单元 识字","第六单元 课文","第七单元 课文","第八单元 课文"]},
+    {"g":1,"s":"下","code":"1x","title":"一年级下册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs1x_2025/","chapters":["第一单元 识字","第二单元 课文","第三单元 课文","第四单元 课文","第五单元 识字","第六单元 课文","第七单元 课文","第八单元 课文"]},
+    {"g":2,"s":"上","code":"2s","title":"二年级上册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs2s_2025/","chapters":["第一单元 课文","第二单元 识字","第三单元 课文","第四单元 课文","第五单元 课文","第六单元 课文","第七单元 课文","第八单元 课文"]},
+    {"g":2,"s":"下","code":"2x","title":"二年级下册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs2x/","chapters":["第一单元 课文","第二单元 课文","第三单元 识字","第四单元 课文","第五单元 课文","第六单元 课文","第七单元 课文","第八单元 课文"]},
+    {"g":3,"s":"上","code":"3s","title":"三年级上册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs3s/","chapters":["第一单元","第二单元","第三单元","第四单元","第五单元 习作单元","第六单元","第七单元","第八单元"]},
+    {"g":3,"s":"下","code":"3x","title":"三年级下册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs3x/","chapters":["第一单元","第二单元","第三单元","第四单元","第五单元 习作单元","第六单元","第七单元","第八单元"]},
+    {"g":4,"s":"上","code":"4s","title":"四年级上册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs4s/","chapters":["第一单元","第二单元","第三单元","第四单元","第五单元 习作单元","第六单元","第七单元","第八单元"]},
+    {"g":4,"s":"下","code":"4x","title":"四年级下册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs4x/","chapters":["第一单元","第二单元","第三单元","第四单元","第五单元 习作单元","第六单元","第七单元","第八单元"]},
+    {"g":5,"s":"上","code":"5s","title":"五年级上册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs5s/","chapters":["第一单元","第二单元","第三单元","第四单元","第五单元 习作单元","第六单元","第七单元","第八单元"]},
+    {"g":5,"s":"下","code":"5x","title":"五年级下册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs5x/","chapters":["第一单元","第二单元","第三单元","第四单元","第五单元 习作单元","第六单元","第七单元","第八单元"]},
+    {"g":6,"s":"上","code":"6s","title":"六年级上册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs6s/","chapters":["第一单元","第二单元","第三单元","第四单元","第五单元 习作单元","第六单元","第七单元","第八单元"]},
+    {"g":6,"s":"下","code":"6x","title":"六年级下册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs6x/","chapters":["第一单元","第二单元","第三单元","第四单元","第五单元","第六单元 综合性学习"]}
+  ],
+  english: [
+    {"g":3,"s":"上","code":"3s","title":"三年级上册","link":"https://www.dzkbw.com/books/rjb/yingyu/xs3s/","chapters":["Unit 1 Hello!","Unit 2 Colours","Unit 3 Look at me!","Unit 4 We love animals","Unit 5 Let's eat!","Unit 6 Happy birthday!","Recycle 1","Recycle 2"]},
+    {"g":3,"s":"下","code":"3x","title":"三年级下册","link":"https://www.dzkbw.com/books/rjb/yingyu/xs3x/","chapters":["Unit 1 Welcome back to school!","Unit 2 My family","Unit 3 At the zoo","Unit 4 Where is my car?","Unit 5 Do you like pears?","Unit 6 How many?","Recycle 1","Recycle 2"]},
+    {"g":4,"s":"上","code":"4s","title":"四年级上册","link":"https://www.dzkbw.com/books/rjb/yingyu/xs4s/","chapters":["Unit 1 My classroom","Unit 2 My schoolbag","Unit 3 My friends","Unit 4 My home","Unit 5 Dinner's ready","Unit 6 Meet my family!","Recycle 1","Recycle 2"]},
+    {"g":4,"s":"下","code":"4x","title":"四年级下册","link":"https://www.dzkbw.com/books/rjb/yingyu/xs4x/","chapters":["Unit 1 My school","Unit 2 What time is it?","Unit 3 Weather","Unit 4 At the farm","Unit 5 My clothes","Unit 6 Shopping","Recycle 1","Recycle 2"]},
+    {"g":5,"s":"上","code":"5s","title":"五年级上册","link":"https://www.dzkbw.com/books/rjb/yingyu/xs5s/","chapters":["Unit 1 What's he like?","Unit 2 My week","Unit 3 What would you like?","Unit 4 What can you do?","Unit 5 There is a big bed","Unit 6 In a nature park","Recycle 1","Recycle 2"]},
+    {"g":5,"s":"下","code":"5x","title":"五年级下册","link":"https://www.dzkbw.com/books/rjb/yingyu/xs5x/","chapters":["Unit 1 My day","Unit 2 My favourite season","Unit 3 My school calendar","Unit 4 When is the art show?","Unit 5 Whose dog is it?","Unit 6 Work quietly!","Recycle 1","Recycle 2"]},
+    {"g":6,"s":"上","code":"6s","title":"六年级上册","link":"https://www.dzkbw.com/books/rjb/yingyu/xs6s/","chapters":["Unit 1 How can I get there?","Unit 2 Ways to go to school","Unit 3 My weekend plan","Unit 4 I have a pen pal","Unit 5 What does he do?","Unit 6 How do you feel?","Recycle 1","Recycle 2"]},
+    {"g":6,"s":"下","code":"6x","title":"六年级下册","link":"https://www.dzkbw.com/books/rjb/yingyu/xs6x/","chapters":["Unit 1 How tall are you?","Unit 2 Last weekend","Unit 3 Where did you go?","Unit 4 Then and now","Recycle Mike's happy days"]}
+  ]
+};
+
+
 const ABILITY_DEFS = {
   "chinese": [
     {
@@ -1470,6 +1587,10 @@ var app = Vue.createApp({
       currentPage: 'home',
       showAnswer: {},
       showHint: {},
+      kbSubject: 'math',
+      kbGrade: 1,
+      kbSemester: '上',
+      kbSearch: '',
       userAnswers: {},
       answerChecked: {},
       answerCorrect: {},
@@ -1892,6 +2013,36 @@ var app = Vue.createApp({
       return '\u9898\u76ee';
     },
     getDayName: function(d) { return ['','\u5468\u4e00','\u5468\u4e8c','\u5468\u4e09','\u5468\u56db','\u5468\u4e94','\u5468\u516d','\u5468\u65e5'][d]||''; },
+        kbSubjectName: function() {
+      var map = {math:'数学',chinese:'语文',english:'英语'};
+      return map[this.kbSubject]||'';
+    },
+    kbSubjects: function() {
+      return [
+        {id:'math',name:'数学',icon:'🧮',color:'#4ECDC4'},
+        {id:'chinese',name:'语文',icon:'📖',color:'#FF6B6B'},
+        {id:'english',name:'英语',icon:'🇬🇧',color:'#45B7D1'}
+      ];
+    },
+    kbAvailableGrades: function() {
+      if (this.kbSubject === 'english') return [3,4,5,6];
+      return [1,2,3,4,5,6];
+    },
+    kbCurrentBook: function() {
+      var list = TEXTBOOK_DATA[this.kbSubject] || [];
+      for (var i=0; i<list.length; i++) {
+        if (list[i].g === this.kbGrade && list[i].s === this.kbSemester) return list[i];
+      }
+      return null;
+    },
+    kbFilteredChapters: function() {
+      var book = this.kbCurrentBook;
+      if (!book) return [];
+      var chs = book.chapters || [];
+      if (!this.kbSearch.trim()) return chs;
+      var q = this.kbSearch.trim().toLowerCase();
+      return chs.filter(function(c) { return c.toLowerCase().indexOf(q) >= 0; });
+    },
     getSubjectName: function(id) { return {chinese:'\u8bed\u6587',math:'\u6570\u5b66',english:'\u82f1\u8bed'}[id]||id; },
     getSubjectColor: function(id) { return {chinese:'#FF6B6B',math:'#4ECDC4',english:'#45B7D1'}[id]||'#999'; },
     getSubjectEmoji: function(id) { return {chinese:'\ud83d\udcd6',math:'\ud83d\udd22',english:'\ud83c\uddec\ud83c\udde7'}[id]||''; },
