@@ -1,0 +1,68 @@
+    <!-- === 看视频 === -->
+    <div v-if="currentPage === 'video'" class="page">
+      <div style="padding:10px 0 15px">
+        <span style="font-size:20px;font-weight:bold;color:#2C3E50">📺 看视频</span>
+        <span style="display:block;font-size:13px;color:#95A5A6;margin-top:4px;">国家中小学智慧教育平台 课程教学视频</span>
+      </div>
+
+      <!-- 科目切换 -->
+      <div style="display:flex;gap:6px;margin-bottom:12px;">
+        <div v-for="sub in vdSubjects" :key="sub.id" class="kb-subject-tab"
+          :style="{ background: vdSubject === sub.id ? sub.color : '#F5F5F5', color: vdSubject === sub.id ? '#fff' : '#666', borderColor: sub.color }"
+          @click="vdSubject = sub.id; vdGrade = (sub.id==='english'?3:1); vdSemester = '上'; vdSearch = ''">
+          <span style="font-size:18px;">{{ sub.icon }}</span>
+          <span style="font-size:13px;font-weight:500;">{{ sub.name }}</span>
+        </div>
+      </div>
+
+      <!-- 年级选择 -->
+      <div style="display:flex;gap:4px;margin-bottom:10px;flex-wrap:wrap;">
+        <span v-for="g in vdAvailableGrades" :key="g" class="tag" style="padding:6px 14px;font-size:13px;cursor:pointer;border-radius:16px;"
+          :style="{ background: vdGrade === g ? '#4A90D9' : '#F0F0F0', color: vdGrade === g ? '#fff' : '#555' }"
+          @click="vdGrade = g">{{ g }}年级</span>
+      </div>
+
+      <!-- 上下册切换 -->
+      <div style="display:flex;margin-bottom:10px;background:#F5F5F5;border-radius:8px;overflow:hidden;width:fit-content;">
+        <div style="padding:6px 20px;font-size:13px;cursor:pointer;" :style="{ background: vdSemester === '上' ? '#4A90D9' : 'transparent', color: vdSemester === '上' ? '#fff' : '#555' }"
+          @click="vdSemester = '上'">上册</div>
+        <div style="padding:6px 20px;font-size:13px;cursor:pointer;" :style="{ background: vdSemester === '下' ? '#4A90D9' : 'transparent', color: vdSemester === '下' ? '#fff' : '#555' }"
+          @click="vdSemester = '下'">下册</div>
+      </div>
+
+      <!-- 搜索框 -->
+      <div style="margin-bottom:12px;position:relative;">
+        <input v-model="vdSearch" placeholder="搜索章节（如：四则运算、分数、三角形...）"
+          style="width:100%;padding:10px 14px;border:1px solid #DDD;border-radius:8px;font-size:13px;box-sizing:border-box;outline:none;"
+          @focus="event.target.style.borderColor='#4A90D9'"
+          @blur="event.target.style.borderColor='#DDD'">
+        <span style="position:absolute;right:12px;top:10px;font-size:13px;color:#999;">🔍</span>
+      </div>
+
+      <!-- 当前课本标题和链接 -->
+      <div v-if="vdCurrentBook" style="background:linear-gradient(135deg,#F8F9FA,#F0F3F8);border-radius:10px;padding:12px 14px;margin-bottom:10px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-weight:bold;font-size:15px;color:#2C3E50;">{{ vdCurrentBook.title }}</span>
+          <a :href="vdCurrentBook.link" style="font-size:12px;color:#4A90D9;text-decoration:none;border:1px solid #4A90D9;border-radius:6px;padding:4px 10px;">▶ 查看视频</a>
+        </div>
+        <span style="font-size:12px;color:#7F8C8D;">{{ vdSubjectName }} · {{ (vdCurrentBook && vdCurrentBook.chapters || []).length }}个章节</span>
+      </div>
+
+      <!-- 章节列表 -->
+      <div v-if="vdFilteredChapters && vdFilteredChapters.length > 0" style="border:1px solid #EEE;border-radius:10px;overflow:hidden;">
+        <div v-for="(ch, idx) in vdFilteredChapters" :key="idx" style="padding:12px 14px;border-bottom:1px solid #F0F0F0;display:flex;align-items:center;gap:10px;cursor:pointer;transition:background .15s;"
+          :style="{ background: idx % 2 === 0 ? '#fff' : '#FAFBFC', borderBottom: idx === vdFilteredChapters.length - 1 ? 'none' : '' }"
+          @click="goToBook(vdCurrentBook.link + '?grade=' + vdGrade + '&subject=' + vdSubject + '&semester=' + (vdSemester==='上'?'up':'down'))">
+          <span style="font-size:12px;color:#4A90D9;background:rgba(74,144,217,0.1);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">{{ idx + 1 }}</span>
+          <span style="flex:1;font-size:13px;color:#2C3E50;">{{ ch }}</span>
+          <span style="font-size:11px;color:#BDC3C7;">→</span>
+        </div>
+      </div>
+      <div v-else style="text-align:center;padding:30px;color:#BDC3C7;">
+        <span style="font-size:14px;">未找到匹配的章节</span>
+        <br><span style="font-size:12px;">试试搜索其他关键词</span>
+      </div>
+    </div>
+  </div>
+
+

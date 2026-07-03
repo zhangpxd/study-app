@@ -341,11 +341,11 @@
             <span class="badge green" v-if="day.percent >= 100 && day.total > 0">✓</span>
           </div>
         </div>
-        <div class="task-row" v-if="day.items.length > 0">
+        <div class="task-row" v-if="day.items && day.items.length > 0">
           <span class="task-tag" v-for="t in day.items" :key="t.abilityId">
             <span class="task-dot" :style="{ background: getSubjectColor(t.subject) }"></span>
             {{ t.abilityName }}
-            <span style="color:#95A5A6;font-size:11px">{{ t.questions.length }}题</span>
+            <span style="color:#95A5A6;font-size:11px">{{ (t.questions || []).length }}题</span>
           </span>
         </div>
         <div v-else style="font-size:12px;color:#BDC3C7;padding:4px 0">休息日</div>
@@ -596,7 +596,7 @@
           </div>
         </div>
 
-        <div class="empty" v-if="dailyTasks.length === 0">
+        <div class="empty" v-if="!dailyTasks || dailyTasks.length === 0">
           <div class="empty-icon">🎉</div>
           <div class="empty-text">今天没有学习任务，休息一天吧！</div>
         </div>
@@ -678,9 +678,8 @@
         <div style="font-size:11px;color:#95A5A6;margin-top:6px;">清除后将清空所有学习记录和数据</div>
       </div>
     </div>
-  </div>
 
-<!-- === 知识库 === -->
+    <!-- === 知识库 === -->
     <div v-if="currentPage === 'knowledge'" class="page">
       <div style="padding:10px 0 15px">
         <span style="font-size:20px;font-weight:bold;color:#2C3E50">📚 知识库</span>
@@ -727,16 +726,16 @@
           <span style="font-weight:bold;font-size:15px;color:#2C3E50;">{{ kbCurrentBook.title }}</span>
           <a :href="kbCurrentBook.link" target="_blank" style="font-size:12px;color:#4A90D9;text-decoration:none;border:1px solid #4A90D9;border-radius:6px;padding:4px 10px;">📖 查看课本</a>
         </div>
-        <span style="font-size:12px;color:#7F8C8D;">{{ kbSubjectName }} · {{ kbCurrentBook.chapters.length }}个章节</span>
+        <span style="font-size:12px;color:#7F8C8D;">{{ kbSubjectName }} · {{ (kbCurrentBook && kbCurrentBook.chapters || []).length }}个章节</span>
       </div>
 
       <!-- 章节列表 -->
       <div v-if="kbFilteredChapters && kbFilteredChapters.length > 0" style="border:1px solid #EEE;border-radius:10px;overflow:hidden;">
         <div v-for="(ch, idx) in kbFilteredChapters" :key="idx" style="padding:12px 14px;border-bottom:1px solid #F0F0F0;display:flex;align-items:center;gap:10px;cursor:pointer;transition:background .15s;"
           :style="{ background: idx % 2 === 0 ? '#fff' : '#FAFBFC', borderBottom: idx === kbFilteredChapters.length - 1 ? 'none' : '' }"
-          @click="window.open(kbCurrentBook.link, '_blank')">
+          @click="goToBook(getChapterLink(kbCurrentBook.link, ch))">
           <span style="font-size:12px;color:#4A90D9;background:rgba(74,144,217,0.1);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">{{ idx + 1 }}</span>
-          <span style="flex:1;font-size:13px;color:#2C3E50;">{{ ch }}</span>
+          <span style="flex:1;font-size:13px;color:#2C3E50;">{{ ch.includes('|') ? ch.split('|')[0] : ch }}</span>
           <span style="font-size:11px;color:#BDC3C7;">→</span>
         </div>
       </div>
@@ -745,6 +744,73 @@
         <br><span style="font-size:12px;">试试搜索其他关键词</span>
       </div>
     </div>
+
+    <!-- === 看视频 === -->
+    <div v-if="currentPage === 'video'" class="page">
+      <div style="padding:10px 0 15px">
+        <span style="font-size:20px;font-weight:bold;color:#2C3E50">📺 看视频</span>
+        <span style="display:block;font-size:13px;color:#95A5A6;margin-top:4px;">B站免费教学视频 · 无需登录</span>
+      </div>
+
+      <!-- 科目切换 -->
+      <div style="display:flex;gap:6px;margin-bottom:12px;">
+        <div v-for="sub in vdSubjects" :key="sub.id" class="kb-subject-tab"
+          :style="{ background: vdSubject === sub.id ? sub.color : '#F5F5F5', color: vdSubject === sub.id ? '#fff' : '#666', borderColor: sub.color }"
+          @click="vdSubject = sub.id; vdGrade = (sub.id==='english'?3:1); vdSemester = '上'; vdSearch = ''">
+          <span style="font-size:18px;">{{ sub.icon }}</span>
+          <span style="font-size:13px;font-weight:500;">{{ sub.name }}</span>
+        </div>
+      </div>
+
+      <!-- 年级选择 -->
+      <div style="display:flex;gap:4px;margin-bottom:10px;flex-wrap:wrap;">
+        <span v-for="g in vdAvailableGrades" :key="g" class="tag" style="padding:6px 14px;font-size:13px;cursor:pointer;border-radius:16px;"
+          :style="{ background: vdGrade === g ? '#4A90D9' : '#F0F0F0', color: vdGrade === g ? '#fff' : '#555' }"
+          @click="vdGrade = g">{{ g }}年级</span>
+      </div>
+
+      <!-- 上下册切换 -->
+      <div style="display:flex;margin-bottom:10px;background:#F5F5F5;border-radius:8px;overflow:hidden;width:fit-content;">
+        <div style="padding:6px 20px;font-size:13px;cursor:pointer;" :style="{ background: vdSemester === '上' ? '#4A90D9' : 'transparent', color: vdSemester === '上' ? '#fff' : '#555' }"
+          @click="vdSemester = '上'">上册</div>
+        <div style="padding:6px 20px;font-size:13px;cursor:pointer;" :style="{ background: vdSemester === '下' ? '#4A90D9' : 'transparent', color: vdSemester === '下' ? '#fff' : '#555' }"
+          @click="vdSemester = '下'">下册</div>
+      </div>
+
+      <!-- 搜索框 -->
+      <div style="margin-bottom:12px;position:relative;">
+        <input v-model="vdSearch" placeholder="搜索章节（如：四则运算、分数、三角形...）"
+          style="width:100%;padding:10px 14px;border:1px solid #DDD;border-radius:8px;font-size:13px;box-sizing:border-box;outline:none;"
+          @focus="event.target.style.borderColor='#4A90D9'"
+          @blur="event.target.style.borderColor='#DDD'">
+        <span style="position:absolute;right:12px;top:10px;font-size:13px;color:#999;">🔍</span>
+      </div>
+
+      <!-- 当前课本标题和链接 -->
+      <div v-if="vdCurrentBook" style="background:linear-gradient(135deg,#F8F9FA,#F0F3F8);border-radius:10px;padding:12px 14px;margin-bottom:10px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-weight:bold;font-size:15px;color:#2C3E50;">{{ vdCurrentBook.title }}</span>
+          <a :href="vdVideoLink" style="font-size:12px;color:#4A90D9;text-decoration:none;border:1px solid #4A90D9;border-radius:6px;padding:4px 10px;">▶ 查看视频</a>
+        </div>
+        <span style="font-size:12px;color:#7F8C8D;">{{ vdSubjectName }} · {{ (vdCurrentBook && vdCurrentBook.chapters || []).length }}个章节</span>
+      </div>
+
+      <!-- 章节列表 -->
+      <div v-if="vdFilteredChapters && vdFilteredChapters.length > 0" style="border:1px solid #EEE;border-radius:10px;overflow:hidden;">
+        <div v-for="(ch, idx) in vdFilteredChapters" :key="idx" style="padding:12px 14px;border-bottom:1px solid #F0F0F0;display:flex;align-items:center;gap:10px;cursor:pointer;transition:background .15s;"
+          :style="{ background: idx % 2 === 0 ? '#fff' : '#FAFBFC', borderBottom: idx === vdFilteredChapters.length - 1 ? 'none' : '' }"
+          @click="searchVideo(ch.includes('|') ? ch.split('|')[0] : ch)">
+          <span style="font-size:12px;color:#4A90D9;background:rgba(74,144,217,0.1);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">{{ idx + 1 }}</span>
+          <span style="flex:1;font-size:13px;color:#2C3E50;">{{ ch.includes('|') ? ch.split('|')[0] : ch }}</span>
+          <span style="font-size:11px;color:#BDC3C7;">→</span>
+        </div>
+      </div>
+      <div v-else style="text-align:center;padding:30px;color:#BDC3C7;">
+        <span style="font-size:14px;">未找到匹配的章节</span>
+        <br><span style="font-size:12px;">试试搜索其他关键词</span>
+      </div>
+    </div>
+  </div>
 
 
   <!-- Tab Bar -->
@@ -768,6 +834,10 @@
     <div class="tab-item" :class="{ active: currentPage === 'knowledge' }" @click="currentPage = 'knowledge'">
       <span class="tab-icon">📚</span>
       <span class="tab-label">知识库</span>
+    </div>
+    <div class="tab-item" :class="{ active: currentPage === 'video' }" @click="currentPage = 'video'">
+      <span class="tab-icon">📺</span>
+      <span class="tab-label">看视频</span>
     </div>
   </div>
 </div>
@@ -803,42 +873,42 @@ function _checkBanksLoaded() {
 // ====================== Vuex Store ======================
 const TEXTBOOK_DATA = {
   math: [
-    {"g":1,"s":"上","code":"1s","title":"一年级上册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs1s_2024/","chapters":["数学游戏","一、5以内数的认识和加、减法","二、6~10的认识和加、减法","三、认识立体图形","四、11~20的认识","五、20以内的进位加法","六、复习与关联"]},
-    {"g":1,"s":"下","code":"1x","title":"一年级下册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs1x/","chapters":["一、认识平面图形","二、20以内的退位减法","三、100以内数的认识","四、100以内的加法和减法(一)","五、认识人民币","六、100以内的加法和减法(二)","七、找规律","八、总复习"]},
-    {"g":2,"s":"上","code":"2s","title":"二年级上册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs2s/","chapters":["一、长度单位","二、100以内的加法和减法(二)","三、角的初步认识","四、表内乘法(一)","五、观察物体(一)","六、表内乘法(二)","七、认识时间","八、数学广角——搭配(一)","九、总复习"]},
-    {"g":2,"s":"下","code":"2x","title":"二年级下册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs2x/","chapters":["一、数据收集整理","二、表内除法(一)","三、图形的运动(一)","四、表内除法(二)","五、混合运算","六、有余数的除法","七、万以内数的认识","八、克和千克","九、数学广角——推理","十、总复习"]},
-    {"g":3,"s":"上","code":"3s","title":"三年级上册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs3s/","chapters":["一、时、分、秒","二、万以内的加法和减法(一)","三、测量","四、万以内的加法和减法(二)","五、倍的认识","六、多位数乘一位数","七、长方形和正方形","八、分数的初步认识","九、数学广角——集合","十、总复习"]},
-    {"g":3,"s":"下","code":"3x","title":"三年级下册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs3x/","chapters":["一、位置与方向(一)","二、除数是一位数的除法","三、复式统计表","四、两位数乘两位数","五、面积","六、年、月、日","七、小数的初步认识","八、数学广角——搭配(二)","九、总复习"]},
-    {"g":4,"s":"上","code":"4s","title":"四年级上册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs4s/","chapters":["一、大数的认识","二、公顷和平方千米","三、角的度量","四、三位数乘两位数","五、平行四边形和梯形","六、除数是两位数的除法","七、条形统计图","八、数学广角——优化","九、总复习"]},
-    {"g":4,"s":"下","code":"4x","title":"四年级下册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs4x/","chapters":["一、四则运算","二、观察物体(二)","三、运算定律","四、小数的意义和性质","五、三角形","六、小数的加法和减法","七、图形的运动(二)","八、平均数与条形统计图","九、数学广角——鸡兔同笼","十、总复习"]},
-    {"g":5,"s":"上","code":"5s","title":"五年级上册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs5s/","chapters":["一、小数乘法","二、位置","三、小数除法","四、可能性","五、简易方程","六、多边形的面积","七、数学广角——植树问题","八、总复习"]},
-    {"g":5,"s":"下","code":"5x","title":"五年级下册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs5x/","chapters":["一、观察物体(三)","二、因数与倍数","三、长方体和正方体","四、分数的意义和性质","五、图形的运动(三)","六、分数的加法和减法","七、折线统计图","八、数学广角——找次品","九、总复习"]},
-    {"g":6,"s":"上","code":"6s","title":"六年级上册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs6s/","chapters":["一、分数乘法","二、位置与方向(二)","三、分数除法","四、比","五、圆","六、百分数(一)","七、扇形统计图","八、数学广角——数与形","九、总复习"]},
-    {"g":6,"s":"下","code":"6x","title":"六年级下册","link":"https://www.dzkbw.com/books/rjb/shuxue/xs6x/","chapters":["一、负数","二、百分数(二)","三、圆柱与圆锥","四、比例","五、数学广角——鸽巢问题","六、整理和复习"]}
+    {"g":1,"s":"上","code":"1s","title":"一年级上册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/math/sx1s.shtml","chapters":["1 准备课|1","2 位置|8","3 5以内数的认识和加减法|13","4 认识图形(一)|33","5 6~10的认识和加减法|38","6 11~20各数的认识|72","* 数字乐园|81","7 认识钟表|83","8 20以内的进位加法|87","9 总复习|103"]},
+    {"g":1,"s":"下","code":"1x","title":"一年级下册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/math/sx1x.shtml","chapters":["1 认识图形(二)|1","2 20以内的退位减法|7","3 分类与整理|26","4 100以内数的认识|31","* 摆一摆想一想|50","5 认识人民币|51","6 100以内的加法和减法(一)|60","7 找规律|83","8 总复习|90"]},
+    {"g":2,"s":"上","code":"2s","title":"二年级上册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/math/sx2s.shtml","chapters":["1 长度单位|1","2 100以内的加法和减法(二)|10","3 角的初步认识|37","4 表内乘法(一)|45","5 观察物体(一)|67","6 表内乘法(二)|71","7 认识时间|89","8 数学广角——搭配(一)|96","9 总复习|99"]},
+    {"g":2,"s":"下","code":"2x","title":"二年级下册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/math/sx2x.shtml","chapters":["1 数据收集整理|1","2 表内除法(一)|6","3 图形的运动(一)|27","4 表内除法(二)|36","5 混合运算|45","6 有余数的除法|57","7 万以内数的认识|72","8 克和千克|97","9 数学广角——推理|106","10 总复习|111"]},
+    {"g":3,"s":"上","code":"3s","title":"三年级上册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/math/sx3s.shtml","chapters":["1 时、分、秒|1","2 万以内的加法和减法(一)|8","3 测量|20","4 万以内的加法和减法(二)|35","5 倍的认识|49","6 多位数乘一位数|55","* 数字编码|76","7 长方形和正方形|78","8 分数的初步认识|88","9 数学广角|103","10 总复习|107"]},
+    {"g":3,"s":"下","code":"3x","title":"三年级下册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/math/sx3x.shtml","chapters":["1 位置与方向(一)|1","2 除数是一位数的除法|9","3 复式统计表|33","4 两位数乘两位数|39","5 面积|55","6 年、月、日|71","7 小数的初步认识|85","8 数学广角——搭配(二)|97","9 总复习|105"]},
+    {"g":4,"s":"上","code":"4s","title":"四年级上册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/math/sx4s.shtml","chapters":["1 大数的认识|1","* 1亿有多大|31","2 公顷和平方千米|33","3 角的度量|37","4 三位数乘两位数|45","5 平行四边形和梯形|54","6 除数是两位数的除法|67","7 条形统计图|90","8 数学广角——优化|101","9 总复习|105"]},
+    {"g":4,"s":"下","code":"4x","title":"四年级下册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/math/sx4x.shtml","chapters":["1 四则运算|1","2 观察物体(二)|10","3 运算定律|14","4 小数的意义和性质|27","5 三角形|53","6 小数的加法和减法|65","7 图形的运动(二)|74","8 平均数与条形统计图|83","* 营养午餐|95","9 数学广角——鸡兔同笼|98","10 总复习|101"]},
+    {"g":5,"s":"上","code":"5s","title":"五年级上册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/math/sx5s.shtml","chapters":["1 小数乘法|1","2 位置|16","3 小数除法|21","4 可能性|41","* 掷一掷|46","5 简易方程|48","6 多边形的面积|82","7 数学广角——植树问题|101","8 总复习|107"]},
+    {"g":5,"s":"下","code":"5x","title":"五年级下册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/math/sx5x.shtml","chapters":["1 观察物体(三)|1","2 因数与倍数|3","3 长方体和正方体|15","* 探索图形|34","4 分数的意义和性质|39","5 图形的运动(三)|76","6 分数的加法和减法|83","* 打电话|94","7 折线统计图|96","8 数学广角——找次品|103","9 总复习|107"]},
+    {"g":6,"s":"上","code":"6s","title":"六年级上册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/math/sx6s.shtml","chapters":["1 分数乘法|1","2 位置与方向(二)|17","3 分数除法|25","4 比|43","5 圆|51","* 确定起跑线|68","6 百分数(一)|71","7 扇形统计图|89","* 节约用水|95","8 数学广角——数与形|97","9 总复习|103"]},
+    {"g":6,"s":"下","code":"6x","title":"六年级下册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/math/sx6x.shtml","chapters":["1 负数|1","2 百分数(二)|7","* 生活与百分数|13","3 圆柱与圆锥|15","4 比例|33","* 自行车里的数学|57","5 数学广角——鸽巢问题|61","6 整理和复习|65"]}
   ],
   chinese: [
-    {"g":1,"s":"上","code":"1s","title":"一年级上册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs1s_2024/","chapters":["我上学了","第一单元 识字","第二单元 汉语拼音(一)","第三单元 汉语拼音(二)","第四单元 汉语拼音(三)","第五单元 识字","第六单元 课文","第七单元 课文","第八单元 课文"]},
-    {"g":1,"s":"下","code":"1x","title":"一年级下册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs1x_2025/","chapters":["第一单元 识字","第二单元 课文","第三单元 课文","第四单元 课文","第五单元 识字","第六单元 课文","第七单元 课文","第八单元 课文"]},
-    {"g":2,"s":"上","code":"2s","title":"二年级上册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs2s_2025/","chapters":["第一单元 课文","第二单元 识字","第三单元 课文","第四单元 课文","第五单元 课文","第六单元 课文","第七单元 课文","第八单元 课文"]},
-    {"g":2,"s":"下","code":"2x","title":"二年级下册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs2x/","chapters":["第一单元 课文","第二单元 课文","第三单元 识字","第四单元 课文","第五单元 课文","第六单元 课文","第七单元 课文","第八单元 课文"]},
-    {"g":3,"s":"上","code":"3s","title":"三年级上册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs3s/","chapters":["第一单元","第二单元","第三单元","第四单元","第五单元 习作单元","第六单元","第七单元","第八单元"]},
-    {"g":3,"s":"下","code":"3x","title":"三年级下册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs3x/","chapters":["第一单元","第二单元","第三单元","第四单元","第五单元 习作单元","第六单元","第七单元","第八单元"]},
-    {"g":4,"s":"上","code":"4s","title":"四年级上册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs4s/","chapters":["第一单元","第二单元","第三单元","第四单元","第五单元 习作单元","第六单元","第七单元","第八单元"]},
-    {"g":4,"s":"下","code":"4x","title":"四年级下册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs4x/","chapters":["第一单元","第二单元","第三单元","第四单元","第五单元 习作单元","第六单元","第七单元","第八单元"]},
-    {"g":5,"s":"上","code":"5s","title":"五年级上册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs5s/","chapters":["第一单元","第二单元","第三单元","第四单元","第五单元 习作单元","第六单元","第七单元","第八单元"]},
-    {"g":5,"s":"下","code":"5x","title":"五年级下册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs5x/","chapters":["第一单元","第二单元","第三单元","第四单元","第五单元 习作单元","第六单元","第七单元","第八单元"]},
-    {"g":6,"s":"上","code":"6s","title":"六年级上册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs6s/","chapters":["第一单元","第二单元","第三单元","第四单元","第五单元 习作单元","第六单元","第七单元","第八单元"]},
-    {"g":6,"s":"下","code":"6x","title":"六年级下册","link":"https://www.dzkbw.com/books/rjb/yuwen/xs6x/","chapters":["第一单元","第二单元","第三单元","第四单元","第五单元","第六单元 综合性学习"]}
+    {"g":1,"s":"上","code":"1s","title":"一年级上册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/yuwen/yinianji_2016s.shtml","chapters":["我上学了|5","识字(一)|9","汉语拼音|23","课文1：秋天等|57","识字(二)|70","课文5：影子等|83","课文9：明天要远足等|96","课文12：雪地里的小画家等|107"]},
+    {"g":1,"s":"下","code":"1x","title":"一年级下册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/yuwen/2016_1x.shtml","chapters":["识字(一)|4","课文1：吃水不忘挖井人等|32","课文5：小公鸡和小鸭子等|48","课文9：夜色等|62","识字(二)|73","课文13：古诗二首等|86","课文18：小猴子下山等|99","课文21：咕咚等|112"]},
+    {"g":2,"s":"上","code":"2s","title":"二年级上册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/yuwen/2016_2s.shtml","chapters":["课文1：小蝌蚪找妈妈等|4","识字|25","课文5：曹冲称象等|43","课文9：古诗二首等|62","课文13：坐井观天等|81","课文17：古诗二首等|98","课文20：雾在哪里等|108","课文23：纸船和风筝等|117"]},
+    {"g":2,"s":"下","code":"2x","title":"二年级下册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/yuwen/2018_2x.shtml","chapters":["课文1：古诗二首等|4","课文5：雷锋叔叔等|22","识字|37","课文9：枫树上的喜鹊等|55","课文13：画杨桃等|71","课文17：古诗二首等|87","课文21：大象的耳朵等|100","课文25：羿射九日等|115"]},
+    {"g":3,"s":"上","code":"3s","title":"三年级上册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/yuwen/2018_3s.shtml","chapters":["第一单元|4","第二单元|16","第三单元|30","第四单元|44","第五单元 习作|64","第六单元|74","第七单元|88","第八单元|102"]},
+    {"g":3,"s":"下","code":"3x","title":"三年级下册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/yuwen/3x.shtml","chapters":["第一单元|4","第二单元|18","第三单元|36","第四单元|50","第五单元 习作|62","第六单元|74","第七单元|88","第八单元|100"]},
+    {"g":4,"s":"上","code":"4s","title":"四年级上册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/chinese/xc4s.shtml","chapters":["第一单元|4","第二单元|16","第三单元|30","第四单元|46","第五单元 习作|60","第六单元|76","第七单元|90","第八单元|102"]},
+    {"g":4,"s":"下","code":"4x","title":"四年级下册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/chinese/xc4x.shtml","chapters":["第一单元|4","第二单元|18","第三单元|36","第四单元|48","第五单元 习作|62","第六单元|76","第七单元|90","第八单元|102"]},
+    {"g":5,"s":"上","code":"5s","title":"五年级上册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/chinese/xc5s.shtml","chapters":["第一单元|4","第二单元|16","第三单元|30","第四单元|44","第五单元 习作|64","第六单元|80","第七单元|94","第八单元|106"]},
+    {"g":5,"s":"下","code":"5x","title":"五年级下册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/chinese/xc5x.shtml","chapters":["第一单元|4","第二单元|18","第三单元|34","第四单元|50","第五单元 习作|66","第六单元|82","第七单元|98","第八单元|112"]},
+    {"g":6,"s":"上","code":"6s","title":"六年级上册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/chinese/xc6s.shtml","chapters":["第一单元|4","第二单元|16","第三单元|30","第四单元|44","第五单元 习作|62","第六单元|78","第七单元|94","第八单元|108"]},
+    {"g":6,"s":"下","code":"6x","title":"六年级下册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/book/rjb/chinese/xc6x.shtml","chapters":["第一单元|4","第二单元|18","第三单元|30","第四单元|44","第五单元|58","第六单元 综合性学习|72"]}
   ],
   english: [
-    {"g":3,"s":"上","code":"3s","title":"三年级上册","link":"https://www.dzkbw.com/books/rjb/yingyu/xs3s/","chapters":["Unit 1 Hello!","Unit 2 Colours","Unit 3 Look at me!","Unit 4 We love animals","Unit 5 Let's eat!","Unit 6 Happy birthday!","Recycle 1","Recycle 2"]},
-    {"g":3,"s":"下","code":"3x","title":"三年级下册","link":"https://www.dzkbw.com/books/rjb/yingyu/xs3x/","chapters":["Unit 1 Welcome back to school!","Unit 2 My family","Unit 3 At the zoo","Unit 4 Where is my car?","Unit 5 Do you like pears?","Unit 6 How many?","Recycle 1","Recycle 2"]},
-    {"g":4,"s":"上","code":"4s","title":"四年级上册","link":"https://www.dzkbw.com/books/rjb/yingyu/xs4s/","chapters":["Unit 1 My classroom","Unit 2 My schoolbag","Unit 3 My friends","Unit 4 My home","Unit 5 Dinner's ready","Unit 6 Meet my family!","Recycle 1","Recycle 2"]},
-    {"g":4,"s":"下","code":"4x","title":"四年级下册","link":"https://www.dzkbw.com/books/rjb/yingyu/xs4x/","chapters":["Unit 1 My school","Unit 2 What time is it?","Unit 3 Weather","Unit 4 At the farm","Unit 5 My clothes","Unit 6 Shopping","Recycle 1","Recycle 2"]},
-    {"g":5,"s":"上","code":"5s","title":"五年级上册","link":"https://www.dzkbw.com/books/rjb/yingyu/xs5s/","chapters":["Unit 1 What's he like?","Unit 2 My week","Unit 3 What would you like?","Unit 4 What can you do?","Unit 5 There is a big bed","Unit 6 In a nature park","Recycle 1","Recycle 2"]},
-    {"g":5,"s":"下","code":"5x","title":"五年级下册","link":"https://www.dzkbw.com/books/rjb/yingyu/xs5x/","chapters":["Unit 1 My day","Unit 2 My favourite season","Unit 3 My school calendar","Unit 4 When is the art show?","Unit 5 Whose dog is it?","Unit 6 Work quietly!","Recycle 1","Recycle 2"]},
-    {"g":6,"s":"上","code":"6s","title":"六年级上册","link":"https://www.dzkbw.com/books/rjb/yingyu/xs6s/","chapters":["Unit 1 How can I get there?","Unit 2 Ways to go to school","Unit 3 My weekend plan","Unit 4 I have a pen pal","Unit 5 What does he do?","Unit 6 How do you feel?","Recycle 1","Recycle 2"]},
-    {"g":6,"s":"下","code":"6x","title":"六年级下册","link":"https://www.dzkbw.com/books/rjb/yingyu/xs6x/","chapters":["Unit 1 How tall are you?","Unit 2 Last weekend","Unit 3 Where did you go?","Unit 4 Then and now","Recycle Mike's happy days"]}
+    {"g":3,"s":"上","code":"3s","title":"三年级上册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/fanyi/rjb/pep_3s/","chapters":["Unit 1 Hello!|4","Unit 2 Colours|14","Unit 3 Look at me!|24","Recycle 1|32","Unit 4 We love animals|38","Unit 5 Let's eat!|48","Unit 6 Happy birthday!|58","Recycle 2|66"]},
+    {"g":3,"s":"下","code":"3x","title":"三年级下册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/fanyi/rjb/pep_3x/","chapters":["Unit 1 Welcome back!|4","Unit 2 My family|14","Unit 3 At the zoo|24","Recycle 1|32","Unit 4 Where is my car?|38","Unit 5 Do you like pears?|48","Unit 6 How many?|58","Recycle 2|66"]},
+    {"g":4,"s":"上","code":"4s","title":"四年级上册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/fanyi/rjb/pep_4s/","chapters":["Unit 1 My classroom|4","Unit 2 My schoolbag|14","Unit 3 My friends|24","Recycle 1|32","Unit 4 My home|38","Unit 5 Dinner's ready|48","Unit 6 Meet my family!|58","Recycle 2|66"]},
+    {"g":4,"s":"下","code":"4x","title":"四年级下册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/fanyi/rjb/pep_4x/","chapters":["Unit 1 My school|4","Unit 2 What time is it?|12","Unit 3 Weather|24","Recycle 1|32","Unit 4 At the farm|36","Unit 5 My clothes|48","Unit 6 Shopping|58","Recycle 2|66"]},
+    {"g":5,"s":"上","code":"5s","title":"五年级上册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/fanyi/rjb/pep_5s/","chapters":["Unit 1 What's he like?|4","Unit 2 My week|12","Unit 3 What would you like?|22","Recycle 1|32","Unit 4 What can you do?|38","Unit 5 There is a big bed|46","Unit 6 In a nature park|56","Recycle 2|66"]},
+    {"g":5,"s":"下","code":"5x","title":"五年级下册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/fanyi/rjb/pep_5x/","chapters":["Unit 1 My day|4","Unit 2 My favourite season|12","Unit 3 My school calendar|22","Recycle 1|32","Unit 4 When is Easter?|38","Unit 5 Whose dog is it?|46","Unit 6 Work quietly!|56","Recycle 2|66"]},
+    {"g":6,"s":"上","code":"6s","title":"六年级上册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/fanyi/rjb/pep_6s/","chapters":["Unit 1 How can I get there?|4","Unit 2 Ways to go to school|12","Unit 3 My weekend plan|22","Recycle 1|30","Unit 4 I have a pen pal|36","Unit 5 What does he do?|46","Unit 6 How do you feel?|56","Recycle 2|64"]},
+    {"g":6,"s":"下","code":"6x","title":"六年级下册","video":"https://basic.smartedu.cn/syncClassroom/auto","link":"https://www.haoduoyun.cc/fanyi/rjb/pep_6x/","chapters":["Unit 1 How tall are you?|4","Unit 2 Last weekend|14","Unit 3 Where did you go?|24","Unit 4 Then and now|34","Recycle Mike's happy days|44"]}
   ]
 };
 
@@ -1304,6 +1374,36 @@ const ABILITY_DEFS = {
       "grades": [
         "5-6"
       ]
+    },
+    {
+      "id": "m37",
+      "name": "排队问题",
+      "desc": "位置与顺序、排队计数",
+      "icon": "🧍",
+      "grades": [
+        "1-2",
+        "2-3"
+      ]
+    },
+    {
+      "id": "m38",
+      "name": "找规律",
+      "desc": "图形周期、数字等差、双重规律",
+      "icon": "🔍",
+      "grades": [
+        "1-2",
+        "2-3"
+      ]
+    },
+    {
+      "id": "m39",
+      "name": "拨珠子",
+      "desc": "计数器个十百位拨数",
+      "icon": "🧮",
+      "grades": [
+        "1-2",
+        "2-3"
+      ]
     }
   ],
   "english": [
@@ -1503,7 +1603,7 @@ const store = new Vuex.Store({
                 m13: 3, m14: 2, m15: 3, m16: 2, m17: 2, m18: 1,
                 m19: 2, m20: 3, m21: 2, m22: 2, m23: 2, m24: 1,
                 m25: 3, m26: 2, m27: 2, m28: 2, m29: 2, m30: 1,
-                m31: 3, m32: 2, m33: 2, m34: 2, m35: 2, m36: 1 },
+                m31: 3, m32: 2, m33: 2, m34: 2, m35: 2, m36: 1, m37: 3, m38: 3, m39: 2 },
         english: { e1: 4, e2: 3, e3: 2, e4: 2, e5: 1, e6: 2, e7: 2, e8: 2, e9: 2, e10: 2 }
       };
       var exhaustedAbilities = {}; // 记录哪些能力题库已用完
@@ -1591,6 +1691,10 @@ var app = Vue.createApp({
       kbGrade: 1,
       kbSemester: '上',
       kbSearch: '',
+      vdSubject: 'math',
+      vdGrade: 1,
+      vdSemester: '上',
+      vdSearch: '',
       userAnswers: {},
       answerChecked: {},
       answerCorrect: {},
@@ -1697,6 +1801,76 @@ var app = Vue.createApp({
         item.questions.forEach(function(q) { total++; if(sd.indexOf(q.id)>=0) done++; });
       });
       return { total:total, done:done, percent: total>0 ? Math.round(done/total*100) : 0 };
+    },
+    kbSubjectName: function() {
+      var map = {math:'数学',chinese:'语文',english:'英语'};
+      return map[this.kbSubject]||'';
+    },
+    kbSubjects: function() {
+      return [
+        {id:'math',name:'数学',icon:'🧮',color:'#4ECDC4'},
+        {id:'chinese',name:'语文',icon:'📖',color:'#FF6B6B'},
+        {id:'english',name:'英语',icon:'🇬🇧',color:'#45B7D1'}
+      ];
+    },
+    kbAvailableGrades: function() {
+      if (this.kbSubject === 'english') return [3,4,5,6];
+      return [1,2,3,4,5,6];
+    },
+    kbCurrentBook: function() {
+      var list = TEXTBOOK_DATA[this.kbSubject] || [];
+      for (var i=0; i<list.length; i++) {
+        if (list[i].g === this.kbGrade && list[i].s === this.kbSemester) return list[i];
+      }
+      return null;
+    },
+    kbFilteredChapters: function() {
+      try {
+        var book = this.kbCurrentBook;
+        if (!book) return [];
+        var chs = book.chapters || [];
+        if (!this.kbSearch || !this.kbSearch.trim()) return chs;
+        var q = this.kbSearch.trim().toLowerCase();
+        return chs.filter(function(c) { return c.toLowerCase().indexOf(q) >= 0; });
+      } catch(e) { return []; }
+    },
+    vdSubjectName: function() {
+      var map = {math:'数学',chinese:'语文',english:'英语'};
+      return map[this.vdSubject]||'';
+    },
+    vdSubjects: function() {
+      return [{id:'math',name:'数学',icon:'🧮',color:'#4ECDC4'},{id:'chinese',name:'语文',icon:'📖',color:'#FF6B6B'},{id:'english',name:'英语',icon:'🇬🇧',color:'#45B7D1'}];
+    },
+    vdAvailableGrades: function() {
+      if (this.vdSubject === 'english') return [3,4,5,6];
+      return [1,2,3,4,5,6];
+    },
+    vdCurrentBook: function() {
+      var list = TEXTBOOK_DATA[this.vdSubject] || [];
+      for (var i=0; i<list.length; i++) {
+        if (list[i].g === this.vdGrade && list[i].s === this.vdSemester) return list[i];
+      }
+      return null;
+    },
+    vdVideoLink: function() {
+      var book = this.vdCurrentBook;
+      if (!book) return '';
+      var subMap = {math:'数学',chinese:'语文',english:'英语'};
+      var subCN = subMap[this.vdSubject] || '';
+      var englishExtra = this.vdSubject === 'english' ? ' PEP' : '';
+      var gradeText = this.vdGrade + '年级' + this.vdSemester + '册';
+      var keyword = '人教版 ' + gradeText + subCN + englishExtra + ' 教学视频';
+      return 'https://search.bilibili.com/all?keyword=' + encodeURIComponent(keyword);
+    },
+    vdFilteredChapters: function() {
+      try {
+        var book = this.vdCurrentBook;
+        if (!book) return [];
+        var chs = book.chapters || [];
+        if (!this.vdSearch || !this.vdSearch.trim()) return chs;
+        var q = this.vdSearch.trim().toLowerCase();
+        return chs.filter(function(c) { return c.toLowerCase().indexOf(q) >= 0; });
+      } catch(e) { return []; }
     }
   },
   methods: {
@@ -1705,6 +1879,22 @@ var app = Vue.createApp({
     goAbilities: function() { this.currentPage = 'abilities'; },
     goPlan: function() { this.currentPage = 'plan'; if (this.currentPage==='home' && this.$store.state.weeklyPlan) this.$store.dispatch('generatePlan'); },
     goHome: function() { this.currentPage = 'home'; },
+    getChapterLink: function(baseLink, chapterStr) {
+      if (chapterStr && chapterStr.includes('|')) {
+        var parts = chapterStr.split('|');
+        var page = parts[1];
+        return baseLink.replace('.shtml', '/' + page + '.shtml');
+      }
+      return baseLink;
+    },
+    searchVideo: function(chapterName) {
+      var subMap = {math:'数学',chinese:'语文',english:'英语'};
+      var subCN = subMap[this.vdSubject] || '';
+      var gradeText = this.vdGrade + '年级' + this.vdSemester + '册';
+      var kw = '人教版 ' + gradeText + subCN + ' ' + chapterName;
+      window.location.href = 'https://search.bilibili.com/all?keyword=' + encodeURIComponent(kw);
+    },
+    goToBook: function(link) { window.location.href = link; },
     goToday: function() {
       this.currentDayNum = new Date().getDay() || 7;
       this.currentPage = 'daily';
@@ -2013,38 +2203,6 @@ var app = Vue.createApp({
       return '\u9898\u76ee';
     },
     getDayName: function(d) { return ['','\u5468\u4e00','\u5468\u4e8c','\u5468\u4e09','\u5468\u56db','\u5468\u4e94','\u5468\u516d','\u5468\u65e5'][d]||''; },
-        kbSubjectName: function() {
-      var map = {math:'数学',chinese:'语文',english:'英语'};
-      return map[this.kbSubject]||'';
-    },
-    kbSubjects: function() {
-      return [
-        {id:'math',name:'数学',icon:'🧮',color:'#4ECDC4'},
-        {id:'chinese',name:'语文',icon:'📖',color:'#FF6B6B'},
-        {id:'english',name:'英语',icon:'🇬🇧',color:'#45B7D1'}
-      ];
-    },
-    kbAvailableGrades: function() {
-      if (this.kbSubject === 'english') return [3,4,5,6];
-      return [1,2,3,4,5,6];
-    },
-    kbCurrentBook: function() {
-      var list = TEXTBOOK_DATA[this.kbSubject] || [];
-      for (var i=0; i<list.length; i++) {
-        if (list[i].g === this.kbGrade && list[i].s === this.kbSemester) return list[i];
-      }
-      return null;
-    },
-    kbFilteredChapters: function() {
-      try {
-        var book = this.kbCurrentBook;
-        if (!book) return [];
-        var chs = book.chapters || [];
-        if (!this.kbSearch || !this.kbSearch.trim()) return chs;
-        var q = this.kbSearch.trim().toLowerCase();
-        return chs.filter(function(c) { return c.toLowerCase().indexOf(q) >= 0; });
-      } catch(e) { return []; }
-    },
     getSubjectName: function(id) { return {chinese:'\u8bed\u6587',math:'\u6570\u5b66',english:'\u82f1\u8bed'}[id]||id; },
     getSubjectColor: function(id) { return {chinese:'#FF6B6B',math:'#4ECDC4',english:'#45B7D1'}[id]||'#999'; },
     getSubjectEmoji: function(id) { return {chinese:'\ud83d\udcd6',math:'\ud83d\udd22',english:'\ud83c\uddec\ud83c\udde7'}[id]||''; },
@@ -2164,8 +2322,21 @@ var app = Vue.createApp({
       if (q.chinese && !q.english) return '输入英文翻译...';
       return '输入你的答案...';
     },
+    normalizeAns: function(str) {
+      if (!str && str !== 0) return '';
+      str = String(str);
+      str = str.replace(/[\uff10-\uff19]/g, function(c) { return String.fromCharCode(c.charCodeAt(0) - 0xFEE0); });
+      str = str.replace(/[\uff21-\uff3a]/g, function(c) { return String.fromCharCode(c.charCodeAt(0) - 0xFEE0); });
+      str = str.replace(/[\uff41-\uff5a]/g, function(c) { return String.fromCharCode(c.charCodeAt(0) - 0xFEE0); });
+      var map = {'\uff0b': '+', '\uff0d': '-', '\uff1d': '=', '\uff08': '(', '\uff09': ')',
+        '\uff0c': ',', '\u3001': ',', '\uff0e': '.', '\uff1a': ':',
+        '\u3000': ' ', '\u00d7': '*', '\u00f7': '/', '\u00a0': ' '};
+      for (var k in map) { str = str.split(k).join(map[k]); }
+      str = str.replace(/\s+/g, '');
+      return str;
+    },
     checkAnswer: function(q) {
-      var answer = (q.answer || q.example || q.character || '').toString().trim();
+      var answer = this.normalizeAns(q.answer || q.example || q.character || '');
       var userAns = this.userAnswers[q.id];
       if (userAns === undefined || userAns === '') {
         // 手写题：用户可能在画布上练习，显示参考答案
@@ -2177,7 +2348,7 @@ var app = Vue.createApp({
         return;
       }
 
-      userAns = userAns.toString().trim();
+      userAns = this.normalizeAns(userAns);
       var isCorrect = false;
 
       if (!answer) {
