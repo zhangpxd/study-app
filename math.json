@@ -14329,6 +14329,181 @@
       "type": "应用题",
       "question": "商店有39个书包，上午卖了15个，下午卖了19个。还剩多少个？",
       "answer": "39-15-19=5（个）"
+    },
+    {
+      "id": "m5_501",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "小明买了3支铅笔，每支2元，付了10元，应找回多少元？",
+      "answer": "4"
+    },
+    {
+      "id": "m5_502",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "一班有28人，二班比一班多5人，两个班一共有多少人？",
+      "answer": "61"
+    },
+    {
+      "id": "m5_503",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "妈妈买了5个苹果，每个3元，又买了2个梨，每个4元，一共花了多少元？",
+      "answer": "23"
+    },
+    {
+      "id": "m5_504",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "图书馆有45本书，借走18本，又还回7本，现在有多少本？",
+      "answer": "34"
+    },
+    {
+      "id": "m5_505",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "小红有24张邮票，小明比小红多8张，两人一共有多少张？",
+      "answer": "56"
+    },
+    {
+      "id": "m5_506",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "一盒巧克力有6块，妈妈买了3盒，吃了5块，还剩几块？",
+      "answer": "13"
+    },
+    {
+      "id": "m5_507",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "小明每分钟写8个字，写了5分钟，还要写12个字，一共要写多少个字？",
+      "answer": "52"
+    },
+    {
+      "id": "m5_508",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "商店有50个气球，上午卖了15个，下午卖了18个，还剩几个？",
+      "answer": "17"
+    },
+    {
+      "id": "m5_509",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "小明身高1米35厘米，爸爸比他高40厘米，爸爸身高多少厘米？",
+      "answer": "175"
+    },
+    {
+      "id": "m5_510",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "一根绳子长80米，第一次剪掉15米，第二次比第一次多剪8米，还剩多少米？",
+      "answer": "42"
+    },
+    {
+      "id": "m5_511",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "一本故事书56页，第一天看18页，第二天看22页，还剩多少页？",
+      "answer": "16"
+    },
+    {
+      "id": "m5_512",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "水果店有苹果36个，橘子比苹果少12个，一共有多少个水果？",
+      "answer": "60"
+    },
+    {
+      "id": "m5_513",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "小明有5元和2元的人民币各3张，一共有多少元？",
+      "answer": "21"
+    },
+    {
+      "id": "m5_514",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "一条路100米，工人每天修25米，修了3天，还剩多少米？",
+      "answer": "25"
+    },
+    {
+      "id": "m5_515",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "学校买6盒粉笔，每盒8支，用去20支，还剩多少支？",
+      "answer": "28"
+    },
+    {
+      "id": "m5_516",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "同学们排队，每行8人排4行，女生15人，男生几人？",
+      "answer": "17"
+    },
+    {
+      "id": "m5_517",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "公交车上原有32人，下9人上13人，现在车上有多少人？",
+      "answer": "36"
+    },
+    {
+      "id": "m5_518",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "爸爸今年35岁，小明今年7岁，20年后爸爸比小明大几岁？",
+      "answer": "28"
+    },
+    {
+      "id": "m5_519",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "一袋大米25千克，买4袋，吃了60千克，还剩多少？",
+      "answer": "40"
+    },
+    {
+      "id": "m5_520",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "钢笔8元一支，小明有50元，买5支够吗？不够的话差多少？",
+      "answer": "不够，差10元"
+    },
+    {
+      "id": "m5_521",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "教室有6排桌子，每排8张，搬走15张，还剩几张？",
+      "answer": "33"
+    },
+    {
+      "id": "m5_522",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "三年级栽45棵树，四年级栽的是三年级的2倍，共栽多少棵？",
+      "answer": "135"
+    },
+    {
+      "id": "m5_523",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "小红每分钟算9道口算题，算了4分钟，还有15道没算，一共多少道？",
+      "answer": "51"
+    },
+    {
+      "id": "m5_524",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "商店可乐35瓶，雪碧比可乐少8瓶，果汁和可乐一样多，三种共多少？",
+      "answer": "97"
+    },
+    {
+      "id": "m5_525",
+      "difficulty": 2,
+      "type": "应用题",
+      "question": "一根彩带90厘米，剪3段，第一段20厘米，第二段25厘米，第三段多少？",
+      "answer": "45"
     }
   ],
   "m6": [
@@ -16431,6 +16606,181 @@
       "type": "比大小",
       "question": "在○里填上 >、< 或 =：14 ○ 28",
       "answer": "<"
+    },
+    {
+      "id": "m6_301",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "比直角小的角叫什么角？",
+      "answer": "锐角"
+    },
+    {
+      "id": "m6_302",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "比直角大的角叫什么角？",
+      "answer": "钝角"
+    },
+    {
+      "id": "m6_303",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "黑板上的四个角都是什么角？",
+      "answer": "直角"
+    },
+    {
+      "id": "m6_304",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "一个角有()个顶点和()条边",
+      "answer": "1个顶点，2条边"
+    },
+    {
+      "id": "m6_305",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "角的两条边越长，角就越大。对吗？",
+      "answer": "不对，角大小和边长短无关"
+    },
+    {
+      "id": "m6_306",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "用放大镜看一个直角，这个角会变大吗？",
+      "answer": "不会"
+    },
+    {
+      "id": "m6_307",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "圆桌上有角吗？",
+      "answer": "没有"
+    },
+    {
+      "id": "m6_308",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "三角板上有几个锐角？",
+      "answer": "2个"
+    },
+    {
+      "id": "m6_309",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "线段有几个端点？",
+      "answer": "2个"
+    },
+    {
+      "id": "m6_310",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "下面哪个不是角：A.直角 B.锐角 C.直线",
+      "answer": "C.直线"
+    },
+    {
+      "id": "m6_311",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "请画出长5厘米的线段",
+      "answer": "用直尺从刻度0画到5"
+    },
+    {
+      "id": "m6_312",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "1米等于多少厘米？",
+      "answer": "100厘米"
+    },
+    {
+      "id": "m6_313",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "36厘米加64厘米等于多少米？",
+      "answer": "1米"
+    },
+    {
+      "id": "m6_314",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "画一条比8厘米短3厘米的线段，是几厘米？",
+      "answer": "5厘米"
+    },
+    {
+      "id": "m6_315",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "线段是直的，有两个端点。对吗？",
+      "answer": "对"
+    },
+    {
+      "id": "m6_316",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "角的大小和边的长短有关吗？",
+      "answer": "没有关系"
+    },
+    {
+      "id": "m6_317",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "三角板上最大的角是什么角？",
+      "answer": "直角"
+    },
+    {
+      "id": "m6_318",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "连接两点可以画几条线段？",
+      "answer": "1条"
+    },
+    {
+      "id": "m6_319",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "三角板上有钝角吗？",
+      "answer": "没有"
+    },
+    {
+      "id": "m6_320",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "所有的直角都一样大。对吗？",
+      "answer": "对"
+    },
+    {
+      "id": "m6_321",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "正方形的四个角都是什么角？",
+      "answer": "直角"
+    },
+    {
+      "id": "m6_322",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "长方形的四个角都是什么角？",
+      "answer": "直角"
+    },
+    {
+      "id": "m6_323",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "直角用符号怎么表示？",
+      "answer": "用直角符号\"┐\"表示"
+    },
+    {
+      "id": "m6_324",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "画一个直角",
+      "answer": "先画一条边，用三角板直角对齐画另一边"
+    },
+    {
+      "id": "m6_325",
+      "difficulty": 1,
+      "type": "图形与时间",
+      "question": "用直尺画一条比10厘米短4厘米的线段",
+      "answer": "6厘米"
     }
   ],
   "m7": [
@@ -16783,6 +17133,356 @@
       "type": "分数",
       "question": "1 - 5/6 = ?",
       "answer": "1/6"
+    },
+    {
+      "difficulty": 1,
+      "type": "分数",
+      "question": "1/2 + 1/2 = ?",
+      "answer": "1",
+      "id": "m7_051"
+    },
+    {
+      "difficulty": 2,
+      "type": "分数",
+      "question": "5/6 + 1/6 = ?",
+      "answer": "1",
+      "id": "m7_052"
+    },
+    {
+      "difficulty": 3,
+      "type": "分数",
+      "question": "4/6 - 1/6 = ?",
+      "answer": "1/2",
+      "id": "m7_053"
+    },
+    {
+      "difficulty": 1,
+      "type": "分数",
+      "question": "2/10 + 2/10 = ?",
+      "answer": "2/5",
+      "id": "m7_054"
+    },
+    {
+      "difficulty": 2,
+      "type": "分数",
+      "question": "2/3 + 2/3 = ?",
+      "answer": "4/3",
+      "id": "m7_055"
+    },
+    {
+      "difficulty": 3,
+      "type": "分数",
+      "question": "5/8 - 3/8 = ?",
+      "answer": "1/4",
+      "id": "m7_056"
+    },
+    {
+      "difficulty": 1,
+      "type": "分数",
+      "question": "5/6 - 4/6 = ?",
+      "answer": "1/6",
+      "id": "m7_057"
+    },
+    {
+      "difficulty": 2,
+      "type": "分数",
+      "question": "6/8 - 2/8 = ?",
+      "answer": "1/2",
+      "id": "m7_058"
+    },
+    {
+      "difficulty": 3,
+      "type": "分数",
+      "question": "3/8 - 2/8 = ?",
+      "answer": "1/8",
+      "id": "m7_059"
+    },
+    {
+      "difficulty": 1,
+      "type": "分数",
+      "question": "5/6 - 1/6 = ?",
+      "answer": "2/3",
+      "id": "m7_060"
+    },
+    {
+      "difficulty": 2,
+      "type": "分数",
+      "question": "8/10 + 5/10 = ?",
+      "answer": "13/10",
+      "id": "m7_061"
+    },
+    {
+      "difficulty": 3,
+      "type": "分数",
+      "question": "4/6 + 1/6 = ?",
+      "answer": "5/6",
+      "id": "m7_062"
+    },
+    {
+      "difficulty": 1,
+      "type": "分数",
+      "question": "3/10 + 6/10 = ?",
+      "answer": "9/10",
+      "id": "m7_063"
+    },
+    {
+      "difficulty": 2,
+      "type": "分数",
+      "question": "4/8 - 1/8 = ?",
+      "answer": "3/8",
+      "id": "m7_064"
+    },
+    {
+      "difficulty": 3,
+      "type": "分数",
+      "question": "2/5 + 1/5 = ?",
+      "answer": "3/5",
+      "id": "m7_065"
+    },
+    {
+      "difficulty": 1,
+      "type": "分数",
+      "question": "4/5 + 1/5 = ?",
+      "answer": "1",
+      "id": "m7_066"
+    },
+    {
+      "difficulty": 2,
+      "type": "分数",
+      "question": "3/8 + 5/8 = ?",
+      "answer": "1",
+      "id": "m7_067"
+    },
+    {
+      "difficulty": 3,
+      "type": "分数",
+      "question": "7/10 + 3/10 = ?",
+      "answer": "1",
+      "id": "m7_068"
+    },
+    {
+      "difficulty": 1,
+      "type": "分数",
+      "question": "1/2 + 1/2 = ?",
+      "answer": "1",
+      "id": "m7_069"
+    },
+    {
+      "difficulty": 2,
+      "type": "分数",
+      "question": "3/5 + 2/5 = ?",
+      "answer": "1",
+      "id": "m7_070"
+    },
+    {
+      "difficulty": 3,
+      "type": "分数",
+      "question": "4/5 + 1/5 = ?",
+      "answer": "1",
+      "id": "m7_071"
+    },
+    {
+      "difficulty": 1,
+      "type": "分数",
+      "question": "2/4 - 1/4 = ?",
+      "answer": "1/4",
+      "id": "m7_072"
+    },
+    {
+      "difficulty": 2,
+      "type": "分数",
+      "question": "7/8 - 1/8 = ?",
+      "answer": "3/4",
+      "id": "m7_073"
+    },
+    {
+      "difficulty": 3,
+      "type": "分数",
+      "question": "2/3 + 1/3 = ?",
+      "answer": "1",
+      "id": "m7_074"
+    },
+    {
+      "difficulty": 1,
+      "type": "分数",
+      "question": "3/8 - 3/8 = ?",
+      "answer": "0",
+      "id": "m7_075"
+    },
+    {
+      "difficulty": 2,
+      "type": "分数",
+      "question": "7/8 + 4/8 = ?",
+      "answer": "11/8",
+      "id": "m7_076"
+    },
+    {
+      "difficulty": 3,
+      "type": "分数",
+      "question": "1/2 + 1/2 = ?",
+      "answer": "1",
+      "id": "m7_077"
+    },
+    {
+      "difficulty": 1,
+      "type": "分数",
+      "question": "1/3 + 1/3 = ?",
+      "answer": "2/3",
+      "id": "m7_078"
+    },
+    {
+      "difficulty": 2,
+      "type": "分数",
+      "question": "3/4 - 1/4 = ?",
+      "answer": "1/2",
+      "id": "m7_079"
+    },
+    {
+      "difficulty": 3,
+      "type": "分数",
+      "question": "3/4 + 1/4 = ?",
+      "answer": "1",
+      "id": "m7_080"
+    },
+    {
+      "difficulty": 1,
+      "type": "分数",
+      "question": "1/3 + 1/3 = ?",
+      "answer": "2/3",
+      "id": "m7_081"
+    },
+    {
+      "difficulty": 2,
+      "type": "分数",
+      "question": "5/8 + 4/8 = ?",
+      "answer": "9/8",
+      "id": "m7_082"
+    },
+    {
+      "difficulty": 3,
+      "type": "分数",
+      "question": "2/3 + 1/3 = ?",
+      "answer": "1",
+      "id": "m7_083"
+    },
+    {
+      "difficulty": 1,
+      "type": "分数",
+      "question": "2/6 - 1/6 = ?",
+      "answer": "1/6",
+      "id": "m7_084"
+    },
+    {
+      "difficulty": 2,
+      "type": "分数",
+      "question": "1/2 + 1/2 = ?",
+      "answer": "1",
+      "id": "m7_085"
+    },
+    {
+      "difficulty": 3,
+      "type": "分数",
+      "question": "1/2 + 1/2 = ?",
+      "answer": "1",
+      "id": "m7_086"
+    },
+    {
+      "difficulty": 1,
+      "type": "分数",
+      "question": "3/5 + 2/5 = ?",
+      "answer": "1",
+      "id": "m7_087"
+    },
+    {
+      "difficulty": 2,
+      "type": "分数",
+      "question": "5/6 + 1/6 = ?",
+      "answer": "1",
+      "id": "m7_088"
+    },
+    {
+      "difficulty": 3,
+      "type": "分数",
+      "question": "2/3 + 1/3 = ?",
+      "answer": "1",
+      "id": "m7_089"
+    },
+    {
+      "difficulty": 1,
+      "type": "分数",
+      "question": "6/8 - 4/8 = ?",
+      "answer": "1/4",
+      "id": "m7_090"
+    },
+    {
+      "difficulty": 2,
+      "type": "分数",
+      "question": "2/8 - 1/8 = ?",
+      "answer": "1/8",
+      "id": "m7_091"
+    },
+    {
+      "difficulty": 3,
+      "type": "分数",
+      "question": "4/10 - 1/10 = ?",
+      "answer": "3/10",
+      "id": "m7_092"
+    },
+    {
+      "difficulty": 1,
+      "type": "分数",
+      "question": "2/6 - 2/6 = ?",
+      "answer": "0",
+      "id": "m7_093"
+    },
+    {
+      "difficulty": 2,
+      "type": "分数",
+      "question": "3/10 + 2/10 = ?",
+      "answer": "1/2",
+      "id": "m7_094"
+    },
+    {
+      "difficulty": 3,
+      "type": "分数",
+      "question": "2/10 - 1/10 = ?",
+      "answer": "1/10",
+      "id": "m7_095"
+    },
+    {
+      "difficulty": 1,
+      "type": "分数",
+      "question": "2/4 - 2/4 = ?",
+      "answer": "0",
+      "id": "m7_096"
+    },
+    {
+      "difficulty": 2,
+      "type": "分数",
+      "question": "2/3 - 1/3 = ?",
+      "answer": "1/3",
+      "id": "m7_097"
+    },
+    {
+      "difficulty": 3,
+      "type": "分数",
+      "question": "9/10 + 1/10 = ?",
+      "answer": "1",
+      "id": "m7_098"
+    },
+    {
+      "difficulty": 1,
+      "type": "分数",
+      "question": "1/3 + 2/3 = ?",
+      "answer": "1",
+      "id": "m7_099"
+    },
+    {
+      "difficulty": 2,
+      "type": "分数",
+      "question": "2/5 + 2/5 = ?",
+      "answer": "4/5",
+      "id": "m7_100"
     }
   ],
   "m8": [
@@ -17065,6 +17765,426 @@
       "type": "小数",
       "question": "6元5角 = ? 元（用小数表示）",
       "answer": "6.5元"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "3.5 + 6.8 = ?",
+      "answer": "10.3",
+      "id": "m8_041"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "6.2 - 4.7 = ?",
+      "answer": "1.5",
+      "id": "m8_042"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "5.7 + 7.3 = ?",
+      "answer": "13.0",
+      "id": "m8_043"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "1.4 + 6.7 = ?",
+      "answer": "8.1",
+      "id": "m8_044"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "4.4 - 0.4 = ?",
+      "answer": "4.0",
+      "id": "m8_045"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "3.6 + 8.0 = ?",
+      "answer": "11.6",
+      "id": "m8_046"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "1.1 + 3.2 = ?",
+      "answer": "4.3",
+      "id": "m8_047"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "9.2 - 2.4 = ?",
+      "answer": "6.8",
+      "id": "m8_048"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "0.2 + 8.6 = ?",
+      "answer": "8.8",
+      "id": "m8_049"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "9.6 - 2.3 = ?",
+      "answer": "7.3",
+      "id": "m8_050"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "1.0 + 3.1 = ?",
+      "answer": "4.1",
+      "id": "m8_051"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "9.8 - 4.5 = ?",
+      "answer": "5.3",
+      "id": "m8_052"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "7.1 - 2.9 = ?",
+      "answer": "4.2",
+      "id": "m8_053"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "6.1 - 4.2 = ?",
+      "answer": "1.9",
+      "id": "m8_054"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "1.3 + 3.8 = ?",
+      "answer": "5.1",
+      "id": "m8_055"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "9.6 - 7.9 = ?",
+      "answer": "1.7",
+      "id": "m8_056"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "0.7 + 7.1 = ?",
+      "answer": "7.8",
+      "id": "m8_057"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "2.9 + 3.3 = ?",
+      "answer": "6.2",
+      "id": "m8_058"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "9.1 - 3.8 = ?",
+      "answer": "5.3",
+      "id": "m8_059"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "0.3 + 5.8 = ?",
+      "answer": "6.1",
+      "id": "m8_060"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "0.7 + 2.0 = ?",
+      "answer": "2.7",
+      "id": "m8_061"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "1.7 - 0.9 = ?",
+      "answer": "0.8",
+      "id": "m8_062"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "9.6 - 4.1 = ?",
+      "answer": "5.5",
+      "id": "m8_063"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "4.2 - 3.3 = ?",
+      "answer": "0.9",
+      "id": "m8_064"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "7.7 - 0.3 = ?",
+      "answer": "7.4",
+      "id": "m8_065"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "5.4 + 7.1 = ?",
+      "answer": "12.5",
+      "id": "m8_066"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "8.8 - 0.2 = ?",
+      "answer": "8.6",
+      "id": "m8_067"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "4.2 + 5.4 = ?",
+      "answer": "9.6",
+      "id": "m8_068"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "6.2 - 1.2 = ?",
+      "answer": "5.0",
+      "id": "m8_069"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "0.5 + 8.6 = ?",
+      "answer": "9.1",
+      "id": "m8_070"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "3.4 + 8.1 = ?",
+      "answer": "11.5",
+      "id": "m8_071"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "0.7 + 7.4 = ?",
+      "answer": "8.1",
+      "id": "m8_072"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "6.3 - 1.5 = ?",
+      "answer": "4.8",
+      "id": "m8_073"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "1.6 + 5.1 = ?",
+      "answer": "6.7",
+      "id": "m8_074"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "8.6 - 6.8 = ?",
+      "answer": "1.8",
+      "id": "m8_075"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "2.8 + 5.6 = ?",
+      "answer": "8.4",
+      "id": "m8_076"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "4.6 - 3.8 = ?",
+      "answer": "0.8",
+      "id": "m8_077"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "8.9 - 1.5 = ?",
+      "answer": "7.4",
+      "id": "m8_078"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "4.9 - 1.8 = ?",
+      "answer": "3.1",
+      "id": "m8_079"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "9.5 - 0.5 = ?",
+      "answer": "9.0",
+      "id": "m8_080"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "1.8 + 3.0 = ?",
+      "answer": "4.8",
+      "id": "m8_081"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "7.1 - 6.4 = ?",
+      "answer": "0.7",
+      "id": "m8_082"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "5.3 + 8.4 = ?",
+      "answer": "13.7",
+      "id": "m8_083"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "3.1 - 1.7 = ?",
+      "answer": "1.4",
+      "id": "m8_084"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "8.1 + 9.6 = ?",
+      "answer": "17.7",
+      "id": "m8_085"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "9.6 - 3.8 = ?",
+      "answer": "5.8",
+      "id": "m8_086"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "3.1 + 5.5 = ?",
+      "answer": "8.6",
+      "id": "m8_087"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "2.0 + 6.6 = ?",
+      "answer": "8.6",
+      "id": "m8_088"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "3.0 - 1.2 = ?",
+      "answer": "1.8",
+      "id": "m8_089"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "6.3 + 9.7 = ?",
+      "answer": "16.0",
+      "id": "m8_090"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "9.3 - 7.2 = ?",
+      "answer": "2.1",
+      "id": "m8_091"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "7.7 + 8.7 = ?",
+      "answer": "16.4",
+      "id": "m8_092"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "7.2 - 1.1 = ?",
+      "answer": "6.1",
+      "id": "m8_093"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "0.4 + 1.2 = ?",
+      "answer": "1.6",
+      "id": "m8_094"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "7.0 + 7.6 = ?",
+      "answer": "14.6",
+      "id": "m8_095"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "0.7 + 3.1 = ?",
+      "answer": "3.8",
+      "id": "m8_096"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "6.0 - 2.0 = ?",
+      "answer": "4.0",
+      "id": "m8_097"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "8.3 - 2.3 = ?",
+      "answer": "6.0",
+      "id": "m8_098"
+    },
+    {
+      "difficulty": 1,
+      "type": "小数",
+      "question": "3.1 - 1.6 = ?",
+      "answer": "1.5",
+      "id": "m8_099"
+    },
+    {
+      "difficulty": 2,
+      "type": "小数",
+      "question": "5.5 - 4.5 = ?",
+      "answer": "1.0",
+      "id": "m8_100"
     }
   ],
   "m9": [
@@ -17417,6 +18537,356 @@
       "type": "混合运算",
       "question": "42 ÷ 6 + 2 × 4 = ?",
       "answer": "15"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "20 + 7 × 4 = ?",
+      "answer": "48",
+      "id": "m9_051"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "17 × 6 - 7 = ?",
+      "answer": "95",
+      "id": "m9_052"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "12 ÷ 6 + 48 = ?",
+      "answer": "50",
+      "id": "m9_053"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "17 × 8 - 8 = ?",
+      "answer": "128",
+      "id": "m9_054"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "16 ÷ 6 + 30 = ?",
+      "answer": "32",
+      "id": "m9_055"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "(15 + 8) × 6 = ?",
+      "answer": "138",
+      "id": "m9_056"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "20 ÷ 5 + 20 = ?",
+      "answer": "24",
+      "id": "m9_057"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "5 ÷ 8 + 56 = ?",
+      "answer": "56",
+      "id": "m9_058"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "6 × 6 - 6 = ?",
+      "answer": "30",
+      "id": "m9_059"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "19 × 3 + 7 × 5 = ?",
+      "answer": "92",
+      "id": "m9_060"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "16 × 8 + 9 × 1 = ?",
+      "answer": "137",
+      "id": "m9_061"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "(12 + 8) × 8 = ?",
+      "answer": "160",
+      "id": "m9_062"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "19 ÷ 6 + 30 = ?",
+      "answer": "33",
+      "id": "m9_063"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "3 + 8 × 14 = ?",
+      "answer": "115",
+      "id": "m9_064"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "10 × 6 + 5 × 6 = ?",
+      "answer": "90",
+      "id": "m9_065"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "15 + 9 × 10 = ?",
+      "answer": "105",
+      "id": "m9_066"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "3 ÷ 2 + 10 = ?",
+      "answer": "11",
+      "id": "m9_067"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "(12 + 2) × 15 = ?",
+      "answer": "210",
+      "id": "m9_068"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "18 + 6 × 12 = ?",
+      "answer": "90",
+      "id": "m9_069"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "19 + 5 × 11 = ?",
+      "answer": "74",
+      "id": "m9_070"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "6 × 7 - 6 = ?",
+      "answer": "36",
+      "id": "m9_071"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "7 × 6 + 4 × 7 = ?",
+      "answer": "70",
+      "id": "m9_072"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "20 ÷ 1 + 4 = ?",
+      "answer": "24",
+      "id": "m9_073"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "(15 + 2) × 5 = ?",
+      "answer": "85",
+      "id": "m9_074"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "12 × 7 + 8 × 6 = ?",
+      "answer": "132",
+      "id": "m9_075"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "17 ÷ 6 + 36 = ?",
+      "answer": "38",
+      "id": "m9_076"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "(3 + 9) × 5 = ?",
+      "answer": "60",
+      "id": "m9_077"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "13 × 6 - 15 = ?",
+      "answer": "63",
+      "id": "m9_078"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "13 ÷ 7 + 42 = ?",
+      "answer": "43",
+      "id": "m9_079"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "8 × 2 + 9 × 2 = ?",
+      "answer": "34",
+      "id": "m9_080"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "19 × 6 + 10 × 2 = ?",
+      "answer": "134",
+      "id": "m9_081"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "18 ÷ 6 + 42 = ?",
+      "answer": "45",
+      "id": "m9_082"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "13 ÷ 3 + 12 = ?",
+      "answer": "16",
+      "id": "m9_083"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "18 × 8 + 13 × 2 = ?",
+      "answer": "170",
+      "id": "m9_084"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "8 × 2 - 10 = ?",
+      "answer": "6",
+      "id": "m9_085"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "15 ÷ 4 + 16 = ?",
+      "answer": "19",
+      "id": "m9_086"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "17 ÷ 6 + 24 = ?",
+      "answer": "26",
+      "id": "m9_087"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "14 × 5 - 5 = ?",
+      "answer": "65",
+      "id": "m9_088"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "6 ÷ 1 + 2 = ?",
+      "answer": "8",
+      "id": "m9_089"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "11 × 4 + 5 × 5 = ?",
+      "answer": "69",
+      "id": "m9_090"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "13 × 4 - 10 = ?",
+      "answer": "42",
+      "id": "m9_091"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "(3 + 4) × 13 = ?",
+      "answer": "91",
+      "id": "m9_092"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "17 × 2 + 7 × 4 = ?",
+      "answer": "62",
+      "id": "m9_093"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "13 × 3 - 10 = ?",
+      "answer": "29",
+      "id": "m9_094"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "(12 + 4) × 14 = ?",
+      "answer": "224",
+      "id": "m9_095"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "2 × 2 + 4 × 6 = ?",
+      "answer": "28",
+      "id": "m9_096"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "10 × 7 - 15 = ?",
+      "answer": "55",
+      "id": "m9_097"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "(18 + 5) × 4 = ?",
+      "answer": "92",
+      "id": "m9_098"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "(8 + 4) × 6 = ?",
+      "answer": "72",
+      "id": "m9_099"
+    },
+    {
+      "difficulty": 2,
+      "type": "混合运算",
+      "question": "(8 + 7) × 5 = ?",
+      "answer": "75",
+      "id": "m9_100"
     }
   ],
   "m10": [
@@ -17524,150 +18994,601 @@
       "type": "单位换算",
       "question": "1年零3个月 = ? 个月",
       "answer": "15个月"
-    }
-  ],
-  "m11": [
+    },
     {
-      "id": "m11_01",
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "7米 = ?厘米",
+      "answer": "700",
+      "id": "m10_016"
+    },
+    {
       "difficulty": 2,
-      "type": "周长与面积",
-      "question": "长方形长5厘米，宽3厘米，周长是多少厘米？",
-      "answer": "(5+3)×2=16厘米"
+      "type": "单位换算",
+      "question": "8米 = ?分米",
+      "answer": "80",
+      "id": "m10_017"
     },
     {
-      "id": "m11_02",
+      "difficulty": 3,
+      "type": "单位换算",
+      "question": "70厘米 = ?分米",
+      "answer": "7",
+      "id": "m10_018"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "2千克 = ?克",
+      "answer": "2000",
+      "id": "m10_019"
+    },
+    {
       "difficulty": 2,
-      "type": "周长与面积",
-      "question": "正方形边长4厘米，周长是多少厘米？",
-      "answer": "4×4=16厘米"
+      "type": "单位换算",
+      "question": "5000克 = ?千克",
+      "answer": "5",
+      "id": "m10_020"
     },
     {
-      "id": "m11_03",
+      "difficulty": 3,
+      "type": "单位换算",
+      "question": "1吨 = ?千克",
+      "answer": "1000",
+      "id": "m10_021"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "3元8角 = ?角",
+      "answer": "38",
+      "id": "m10_022"
+    },
+    {
       "difficulty": 2,
-      "type": "周长与面积",
-      "question": "长方形长6米，宽4米，面积是多少平方米？",
-      "answer": "6×4=24平方米"
+      "type": "单位换算",
+      "question": "52角 = ?元?角",
+      "answer": "5元2角",
+      "id": "m10_023"
     },
     {
-      "id": "m11_04",
+      "difficulty": 3,
+      "type": "单位换算",
+      "question": "9元 = ?角",
+      "answer": "90",
+      "id": "m10_024"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "20分 = ?角",
+      "answer": "2",
+      "id": "m10_025"
+    },
+    {
       "difficulty": 2,
-      "type": "周长与面积",
-      "question": "正方形边长5厘米，面积是多少平方厘米？",
-      "answer": "5×5=25平方厘米"
+      "type": "单位换算",
+      "question": "200厘米 = ?米",
+      "answer": "2米",
+      "id": "m10_026"
     },
     {
-      "id": "m11_05",
       "difficulty": 3,
-      "type": "周长与面积",
-      "question": "一个长方形的长是8分米，宽是5分米，周长是多少？",
-      "answer": "(8+5)×2=26分米"
+      "type": "单位换算",
+      "question": "3时 = ?分",
+      "answer": "180",
+      "id": "m10_027"
     },
     {
-      "id": "m11_06",
-      "difficulty": 3,
-      "type": "周长与面积",
-      "question": "正方形周长是20厘米，边长是多少？",
-      "answer": "20÷4=5厘米"
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "120分 = ?时",
+      "answer": "2",
+      "id": "m10_028"
     },
     {
-      "id": "m11_07",
-      "difficulty": 3,
-      "type": "周长与面积",
-      "question": "长方形面积是24平方米，长是6米，宽是多少米？",
-      "answer": "24÷6=4米"
-    },
-    {
-      "id": "m11_08",
-      "difficulty": 3,
-      "type": "周长与面积",
-      "question": "边长6米的正方形花坛，面积是多少平方米？",
-      "answer": "6×6=36平方米"
-    },
-    {
-      "id": "m11_09",
       "difficulty": 2,
-      "type": "周长与面积",
-      "question": "1平方米 = ? 平方分米",
-      "answer": "100平方分米"
+      "type": "单位换算",
+      "question": "4千米 = ?米",
+      "answer": "4000",
+      "id": "m10_029"
     },
     {
-      "id": "m11_10",
       "difficulty": 3,
-      "type": "周长与面积",
-      "question": "一张长方形纸长10厘米宽6厘米，剪一个最大的正方形，正方形的周长是多少？",
-      "answer": "6×4=24厘米"
-    }
-  ],
-  "m12": [
-    {
-      "id": "m12_01",
-      "difficulty": 3,
-      "type": "百分数",
-      "question": "50% 用分数表示是多少？",
-      "answer": "1/2"
+      "type": "单位换算",
+      "question": "2分 = ?秒",
+      "answer": "120",
+      "id": "m10_030"
     },
     {
-      "id": "m12_02",
-      "difficulty": 3,
-      "type": "百分数",
-      "question": "25% 用小数表示是多少？",
-      "answer": "0.25"
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "30角 = ?元",
+      "answer": "3元",
+      "id": "m10_031"
     },
     {
-      "id": "m12_03",
-      "difficulty": 3,
-      "type": "百分数",
-      "question": "0.3 化成百分数是多少？",
-      "answer": "30%"
+      "difficulty": 2,
+      "type": "单位换算",
+      "question": "9米 = ?厘米",
+      "answer": "900",
+      "id": "m10_032"
     },
     {
-      "id": "m12_04",
       "difficulty": 3,
-      "type": "百分数",
-      "question": "3/4 化成百分数是多少？",
-      "answer": "75%"
+      "type": "单位换算",
+      "question": "2米 = ?分米",
+      "answer": "20",
+      "id": "m10_033"
     },
     {
-      "id": "m12_05",
-      "difficulty": 3,
-      "type": "百分数",
-      "question": "100% 表示什么？",
-      "answer": "全部或整体"
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "50厘米 = ?分米",
+      "answer": "5",
+      "id": "m10_034"
     },
     {
-      "id": "m12_06",
-      "difficulty": 3,
-      "type": "百分数",
-      "question": "20是100的百分之几？",
-      "answer": "20%"
+      "difficulty": 2,
+      "type": "单位换算",
+      "question": "8千克 = ?克",
+      "answer": "8000",
+      "id": "m10_035"
     },
     {
-      "id": "m12_07",
       "difficulty": 3,
-      "type": "比例",
-      "question": "比的前项是6，后项是3，比值是多少？",
-      "answer": "2"
+      "type": "单位换算",
+      "question": "5000克 = ?千克",
+      "answer": "5",
+      "id": "m10_036"
     },
     {
-      "id": "m12_08",
-      "difficulty": 3,
-      "type": "比例",
-      "question": "12:4 的比值是多少？",
-      "answer": "3"
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "1吨 = ?千克",
+      "answer": "1000",
+      "id": "m10_037"
     },
     {
-      "id": "m12_09",
-      "difficulty": 3,
-      "type": "比例",
-      "question": "3:6 = ? : 2, 填空",
-      "answer": "1"
+      "difficulty": 2,
+      "type": "单位换算",
+      "question": "3元8角 = ?角",
+      "answer": "38",
+      "id": "m10_038"
     },
     {
-      "id": "m12_10",
       "difficulty": 3,
-      "type": "比例",
-      "question": "比例尺1:100是什么意思？",
-      "answer": "图上1厘米代表实际100厘米"
+      "type": "单位换算",
+      "question": "48角 = ?元?角",
+      "answer": "4元8角",
+      "id": "m10_039"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "5元 = ?角",
+      "answer": "50",
+      "id": "m10_040"
+    },
+    {
+      "difficulty": 2,
+      "type": "单位换算",
+      "question": "20分 = ?角",
+      "answer": "2",
+      "id": "m10_041"
+    },
+    {
+      "difficulty": 3,
+      "type": "单位换算",
+      "question": "100厘米 = ?米",
+      "answer": "1米",
+      "id": "m10_042"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "1时 = ?分",
+      "answer": "60",
+      "id": "m10_043"
+    },
+    {
+      "difficulty": 2,
+      "type": "单位换算",
+      "question": "120分 = ?时",
+      "answer": "2",
+      "id": "m10_044"
+    },
+    {
+      "difficulty": 3,
+      "type": "单位换算",
+      "question": "3千米 = ?米",
+      "answer": "3000",
+      "id": "m10_045"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "2分 = ?秒",
+      "answer": "120",
+      "id": "m10_046"
+    },
+    {
+      "difficulty": 2,
+      "type": "单位换算",
+      "question": "30角 = ?元",
+      "answer": "3元",
+      "id": "m10_047"
+    },
+    {
+      "difficulty": 3,
+      "type": "单位换算",
+      "question": "2米 = ?厘米",
+      "answer": "200",
+      "id": "m10_048"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "8米 = ?分米",
+      "answer": "80",
+      "id": "m10_049"
+    },
+    {
+      "difficulty": 2,
+      "type": "单位换算",
+      "question": "100厘米 = ?分米",
+      "answer": "10",
+      "id": "m10_050"
+    },
+    {
+      "difficulty": 3,
+      "type": "单位换算",
+      "question": "8千克 = ?克",
+      "answer": "8000",
+      "id": "m10_051"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "2000克 = ?千克",
+      "answer": "2",
+      "id": "m10_052"
+    },
+    {
+      "difficulty": 2,
+      "type": "单位换算",
+      "question": "2吨 = ?千克",
+      "answer": "2000",
+      "id": "m10_053"
+    },
+    {
+      "difficulty": 3,
+      "type": "单位换算",
+      "question": "1元8角 = ?角",
+      "answer": "18",
+      "id": "m10_054"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "52角 = ?元?角",
+      "answer": "5元2角",
+      "id": "m10_055"
+    },
+    {
+      "difficulty": 2,
+      "type": "单位换算",
+      "question": "8元 = ?角",
+      "answer": "80",
+      "id": "m10_056"
+    },
+    {
+      "difficulty": 3,
+      "type": "单位换算",
+      "question": "100分 = ?角",
+      "answer": "10",
+      "id": "m10_057"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "100厘米 = ?米",
+      "answer": "1米",
+      "id": "m10_058"
+    },
+    {
+      "difficulty": 2,
+      "type": "单位换算",
+      "question": "1时 = ?分",
+      "answer": "60",
+      "id": "m10_059"
+    },
+    {
+      "difficulty": 3,
+      "type": "单位换算",
+      "question": "120分 = ?时",
+      "answer": "2",
+      "id": "m10_060"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "3千米 = ?米",
+      "answer": "3000",
+      "id": "m10_061"
+    },
+    {
+      "difficulty": 2,
+      "type": "单位换算",
+      "question": "1分 = ?秒",
+      "answer": "60",
+      "id": "m10_062"
+    },
+    {
+      "difficulty": 3,
+      "type": "单位换算",
+      "question": "20角 = ?元",
+      "answer": "2元",
+      "id": "m10_063"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "2米 = ?厘米",
+      "answer": "200",
+      "id": "m10_064"
+    },
+    {
+      "difficulty": 2,
+      "type": "单位换算",
+      "question": "1米 = ?分米",
+      "answer": "10",
+      "id": "m10_065"
+    },
+    {
+      "difficulty": 3,
+      "type": "单位换算",
+      "question": "50厘米 = ?分米",
+      "answer": "5",
+      "id": "m10_066"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "7千克 = ?克",
+      "answer": "7000",
+      "id": "m10_067"
+    },
+    {
+      "difficulty": 2,
+      "type": "单位换算",
+      "question": "1000克 = ?千克",
+      "answer": "1",
+      "id": "m10_068"
+    },
+    {
+      "difficulty": 3,
+      "type": "单位换算",
+      "question": "2吨 = ?千克",
+      "answer": "2000",
+      "id": "m10_069"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "3元1角 = ?角",
+      "answer": "31",
+      "id": "m10_070"
+    },
+    {
+      "difficulty": 2,
+      "type": "单位换算",
+      "question": "67角 = ?元?角",
+      "answer": "6元7角",
+      "id": "m10_071"
+    },
+    {
+      "difficulty": 3,
+      "type": "单位换算",
+      "question": "4元 = ?角",
+      "answer": "40",
+      "id": "m10_072"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "100分 = ?角",
+      "answer": "10",
+      "id": "m10_073"
+    },
+    {
+      "difficulty": 2,
+      "type": "单位换算",
+      "question": "200厘米 = ?米",
+      "answer": "2米",
+      "id": "m10_074"
+    },
+    {
+      "difficulty": 3,
+      "type": "单位换算",
+      "question": "3时 = ?分",
+      "answer": "180",
+      "id": "m10_075"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "180分 = ?时",
+      "answer": "3",
+      "id": "m10_076"
+    },
+    {
+      "difficulty": 2,
+      "type": "单位换算",
+      "question": "4千米 = ?米",
+      "answer": "4000",
+      "id": "m10_077"
+    },
+    {
+      "difficulty": 3,
+      "type": "单位换算",
+      "question": "2分 = ?秒",
+      "answer": "120",
+      "id": "m10_078"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "10角 = ?元",
+      "answer": "1元",
+      "id": "m10_079"
+    },
+    {
+      "difficulty": 2,
+      "type": "单位换算",
+      "question": "2米 = ?厘米",
+      "answer": "200",
+      "id": "m10_080"
+    },
+    {
+      "difficulty": 3,
+      "type": "单位换算",
+      "question": "8米 = ?分米",
+      "answer": "80",
+      "id": "m10_081"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "70厘米 = ?分米",
+      "answer": "7",
+      "id": "m10_082"
+    },
+    {
+      "difficulty": 2,
+      "type": "单位换算",
+      "question": "2千克 = ?克",
+      "answer": "2000",
+      "id": "m10_083"
+    },
+    {
+      "difficulty": 3,
+      "type": "单位换算",
+      "question": "3000克 = ?千克",
+      "answer": "3",
+      "id": "m10_084"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "1吨 = ?千克",
+      "answer": "1000",
+      "id": "m10_085"
+    },
+    {
+      "difficulty": 2,
+      "type": "单位换算",
+      "question": "7元8角 = ?角",
+      "answer": "78",
+      "id": "m10_086"
+    },
+    {
+      "difficulty": 3,
+      "type": "单位换算",
+      "question": "67角 = ?元?角",
+      "answer": "6元7角",
+      "id": "m10_087"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "5元 = ?角",
+      "answer": "50",
+      "id": "m10_088"
+    },
+    {
+      "difficulty": 2,
+      "type": "单位换算",
+      "question": "20分 = ?角",
+      "answer": "2",
+      "id": "m10_089"
+    },
+    {
+      "difficulty": 3,
+      "type": "单位换算",
+      "question": "100厘米 = ?米",
+      "answer": "1米",
+      "id": "m10_090"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "2时 = ?分",
+      "answer": "120",
+      "id": "m10_091"
+    },
+    {
+      "difficulty": 2,
+      "type": "单位换算",
+      "question": "120分 = ?时",
+      "answer": "2",
+      "id": "m10_092"
+    },
+    {
+      "difficulty": 3,
+      "type": "单位换算",
+      "question": "5千米 = ?米",
+      "answer": "5000",
+      "id": "m10_093"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "1分 = ?秒",
+      "answer": "60",
+      "id": "m10_094"
+    },
+    {
+      "difficulty": 2,
+      "type": "单位换算",
+      "question": "10角 = ?元",
+      "answer": "1元",
+      "id": "m10_095"
+    },
+    {
+      "difficulty": 3,
+      "type": "单位换算",
+      "question": "5米 = ?厘米",
+      "answer": "500",
+      "id": "m10_096"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "5米 = ?分米",
+      "answer": "50",
+      "id": "m10_097"
+    },
+    {
+      "difficulty": 2,
+      "type": "单位换算",
+      "question": "10厘米 = ?分米",
+      "answer": "1",
+      "id": "m10_098"
+    },
+    {
+      "difficulty": 3,
+      "type": "单位换算",
+      "question": "6千克 = ?克",
+      "answer": "6000",
+      "id": "m10_099"
+    },
+    {
+      "difficulty": 1,
+      "type": "单位换算",
+      "question": "3000克 = ?千克",
+      "answer": "3",
+      "id": "m10_100"
     }
   ],
   "m13": [
@@ -23346,6 +25267,286 @@
       "type": "m16",
       "question": "12时53分 = ？分",
       "answer": "773分"
+    },
+    {
+      "difficulty": 1,
+      "type": "时间与测量",
+      "question": "1时05分 = ?分",
+      "answer": "65",
+      "id": "m16_061"
+    },
+    {
+      "difficulty": 2,
+      "type": "时间与测量",
+      "question": "130分 = ?时?分",
+      "answer": "2时10分",
+      "id": "m16_062"
+    },
+    {
+      "difficulty": 3,
+      "type": "时间与测量",
+      "question": "从2:30到4:50，经过了多少分钟？",
+      "answer": "140",
+      "id": "m16_063"
+    },
+    {
+      "difficulty": 1,
+      "type": "时间与测量",
+      "question": "9厘米 = ?毫米",
+      "answer": "90",
+      "id": "m16_064"
+    },
+    {
+      "difficulty": 2,
+      "type": "时间与测量",
+      "question": "20毫米 = ?厘米",
+      "answer": "2",
+      "id": "m16_065"
+    },
+    {
+      "difficulty": 3,
+      "type": "时间与测量",
+      "question": "3分米 = ?厘米",
+      "answer": "30",
+      "id": "m16_066"
+    },
+    {
+      "difficulty": 1,
+      "type": "时间与测量",
+      "question": "3时39分 = ?分",
+      "answer": "219",
+      "id": "m16_067"
+    },
+    {
+      "difficulty": 2,
+      "type": "时间与测量",
+      "question": "75分 = ?时?分",
+      "answer": "1时15分",
+      "id": "m16_068"
+    },
+    {
+      "difficulty": 3,
+      "type": "时间与测量",
+      "question": "从2:35到2:46，经过了多少分钟？",
+      "answer": "11",
+      "id": "m16_069"
+    },
+    {
+      "difficulty": 1,
+      "type": "时间与测量",
+      "question": "6厘米 = ?毫米",
+      "answer": "60",
+      "id": "m16_070"
+    },
+    {
+      "difficulty": 2,
+      "type": "时间与测量",
+      "question": "20毫米 = ?厘米",
+      "answer": "2",
+      "id": "m16_071"
+    },
+    {
+      "difficulty": 3,
+      "type": "时间与测量",
+      "question": "5分米 = ?厘米",
+      "answer": "50",
+      "id": "m16_072"
+    },
+    {
+      "difficulty": 1,
+      "type": "时间与测量",
+      "question": "2时22分 = ?分",
+      "answer": "142",
+      "id": "m16_073"
+    },
+    {
+      "difficulty": 2,
+      "type": "时间与测量",
+      "question": "150分 = ?时?分",
+      "answer": "2时30分",
+      "id": "m16_074"
+    },
+    {
+      "difficulty": 3,
+      "type": "时间与测量",
+      "question": "从3:32到3:52，经过了多少分钟？",
+      "answer": "20",
+      "id": "m16_075"
+    },
+    {
+      "difficulty": 1,
+      "type": "时间与测量",
+      "question": "6厘米 = ?毫米",
+      "answer": "60",
+      "id": "m16_076"
+    },
+    {
+      "difficulty": 2,
+      "type": "时间与测量",
+      "question": "10毫米 = ?厘米",
+      "answer": "1",
+      "id": "m16_077"
+    },
+    {
+      "difficulty": 3,
+      "type": "时间与测量",
+      "question": "5分米 = ?厘米",
+      "answer": "50",
+      "id": "m16_078"
+    },
+    {
+      "difficulty": 1,
+      "type": "时间与测量",
+      "question": "1时03分 = ?分",
+      "answer": "63",
+      "id": "m16_079"
+    },
+    {
+      "difficulty": 2,
+      "type": "时间与测量",
+      "question": "75分 = ?时?分",
+      "answer": "1时15分",
+      "id": "m16_080"
+    },
+    {
+      "difficulty": 3,
+      "type": "时间与测量",
+      "question": "从1:33到1:52，经过了多少分钟？",
+      "answer": "19",
+      "id": "m16_081"
+    },
+    {
+      "difficulty": 1,
+      "type": "时间与测量",
+      "question": "7厘米 = ?毫米",
+      "answer": "70",
+      "id": "m16_082"
+    },
+    {
+      "difficulty": 2,
+      "type": "时间与测量",
+      "question": "30毫米 = ?厘米",
+      "answer": "3",
+      "id": "m16_083"
+    },
+    {
+      "difficulty": 3,
+      "type": "时间与测量",
+      "question": "3分米 = ?厘米",
+      "answer": "30",
+      "id": "m16_084"
+    },
+    {
+      "difficulty": 1,
+      "type": "时间与测量",
+      "question": "2时28分 = ?分",
+      "answer": "148",
+      "id": "m16_085"
+    },
+    {
+      "difficulty": 2,
+      "type": "时间与测量",
+      "question": "90分 = ?时?分",
+      "answer": "1时30分",
+      "id": "m16_086"
+    },
+    {
+      "difficulty": 3,
+      "type": "时间与测量",
+      "question": "从2:18到3:44，经过了多少分钟？",
+      "answer": "86",
+      "id": "m16_087"
+    },
+    {
+      "difficulty": 1,
+      "type": "时间与测量",
+      "question": "9厘米 = ?毫米",
+      "answer": "90",
+      "id": "m16_088"
+    },
+    {
+      "difficulty": 2,
+      "type": "时间与测量",
+      "question": "80毫米 = ?厘米",
+      "answer": "8",
+      "id": "m16_089"
+    },
+    {
+      "difficulty": 3,
+      "type": "时间与测量",
+      "question": "2分米 = ?厘米",
+      "answer": "20",
+      "id": "m16_090"
+    },
+    {
+      "difficulty": 1,
+      "type": "时间与测量",
+      "question": "1时59分 = ?分",
+      "answer": "119",
+      "id": "m16_091"
+    },
+    {
+      "difficulty": 2,
+      "type": "时间与测量",
+      "question": "90分 = ?时?分",
+      "answer": "1时30分",
+      "id": "m16_092"
+    },
+    {
+      "difficulty": 3,
+      "type": "时间与测量",
+      "question": "从2:30到4:50，经过了多少分钟？",
+      "answer": "140",
+      "id": "m16_093"
+    },
+    {
+      "difficulty": 1,
+      "type": "时间与测量",
+      "question": "5厘米 = ?毫米",
+      "answer": "50",
+      "id": "m16_094"
+    },
+    {
+      "difficulty": 2,
+      "type": "时间与测量",
+      "question": "80毫米 = ?厘米",
+      "answer": "8",
+      "id": "m16_095"
+    },
+    {
+      "difficulty": 3,
+      "type": "时间与测量",
+      "question": "1分米 = ?厘米",
+      "answer": "10",
+      "id": "m16_096"
+    },
+    {
+      "difficulty": 1,
+      "type": "时间与测量",
+      "question": "3时37分 = ?分",
+      "answer": "217",
+      "id": "m16_097"
+    },
+    {
+      "difficulty": 2,
+      "type": "时间与测量",
+      "question": "150分 = ?时?分",
+      "answer": "2时30分",
+      "id": "m16_098"
+    },
+    {
+      "difficulty": 3,
+      "type": "时间与测量",
+      "question": "从2:19到2:45，经过了多少分钟？",
+      "answer": "26",
+      "id": "m16_099"
+    },
+    {
+      "difficulty": 1,
+      "type": "时间与测量",
+      "question": "5厘米 = ?毫米",
+      "answer": "50",
+      "id": "m16_100"
     }
   ],
   "m17": [
@@ -23698,6 +25899,426 @@
       "type": "m17",
       "question": "长方形长9宽4，周长多少？",
       "answer": "(9+4)×2=26"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "长方形长5厘米，宽1厘米，周长是多少厘米？",
+      "answer": "12",
+      "id": "m17_051"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "长方形长8厘米，宽3厘米，面积是多少平方厘米？",
+      "answer": "24",
+      "id": "m17_052"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "正方形边长8厘米，周长是多少厘米？",
+      "answer": "32",
+      "id": "m17_053"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "正方形边长6厘米，面积是多少平方厘米？",
+      "answer": "36",
+      "id": "m17_054"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "长方形长2厘米，宽7厘米，周长是多少厘米？",
+      "answer": "18",
+      "id": "m17_055"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "长方形长2厘米，宽5厘米，面积是多少平方厘米？",
+      "answer": "10",
+      "id": "m17_056"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "正方形边长3厘米，周长是多少厘米？",
+      "answer": "12",
+      "id": "m17_057"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "正方形边长3厘米，面积是多少平方厘米？",
+      "answer": "9",
+      "id": "m17_058"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "长方形长9厘米，宽6厘米，周长是多少厘米？",
+      "answer": "30",
+      "id": "m17_059"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "长方形长4厘米，宽2厘米，面积是多少平方厘米？",
+      "answer": "8",
+      "id": "m17_060"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "正方形边长8厘米，周长是多少厘米？",
+      "answer": "32",
+      "id": "m17_061"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "正方形边长4厘米，面积是多少平方厘米？",
+      "answer": "16",
+      "id": "m17_062"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "长方形长6厘米，宽4厘米，周长是多少厘米？",
+      "answer": "20",
+      "id": "m17_063"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "长方形长8厘米，宽3厘米，面积是多少平方厘米？",
+      "answer": "24",
+      "id": "m17_064"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "正方形边长4厘米，周长是多少厘米？",
+      "answer": "16",
+      "id": "m17_065"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "正方形边长5厘米，面积是多少平方厘米？",
+      "answer": "25",
+      "id": "m17_066"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "长方形长6厘米，宽5厘米，周长是多少厘米？",
+      "answer": "22",
+      "id": "m17_067"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "长方形长7厘米，宽3厘米，面积是多少平方厘米？",
+      "answer": "21",
+      "id": "m17_068"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "正方形边长2厘米，周长是多少厘米？",
+      "answer": "8",
+      "id": "m17_069"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "正方形边长6厘米，面积是多少平方厘米？",
+      "answer": "36",
+      "id": "m17_070"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "长方形长7厘米，宽6厘米，周长是多少厘米？",
+      "answer": "26",
+      "id": "m17_071"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "长方形长6厘米，宽6厘米，面积是多少平方厘米？",
+      "answer": "36",
+      "id": "m17_072"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "正方形边长3厘米，周长是多少厘米？",
+      "answer": "12",
+      "id": "m17_073"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "正方形边长6厘米，面积是多少平方厘米？",
+      "answer": "36",
+      "id": "m17_074"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "长方形长4厘米，宽2厘米，周长是多少厘米？",
+      "answer": "12",
+      "id": "m17_075"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "长方形长5厘米，宽1厘米，面积是多少平方厘米？",
+      "answer": "5",
+      "id": "m17_076"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "正方形边长8厘米，周长是多少厘米？",
+      "answer": "32",
+      "id": "m17_077"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "正方形边长3厘米，面积是多少平方厘米？",
+      "answer": "9",
+      "id": "m17_078"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "长方形长8厘米，宽2厘米，周长是多少厘米？",
+      "answer": "20",
+      "id": "m17_079"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "长方形长7厘米，宽2厘米，面积是多少平方厘米？",
+      "answer": "14",
+      "id": "m17_080"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "正方形边长7厘米，周长是多少厘米？",
+      "answer": "28",
+      "id": "m17_081"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "正方形边长6厘米，面积是多少平方厘米？",
+      "answer": "36",
+      "id": "m17_082"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "长方形长9厘米，宽4厘米，周长是多少厘米？",
+      "answer": "26",
+      "id": "m17_083"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "长方形长2厘米，宽6厘米，面积是多少平方厘米？",
+      "answer": "12",
+      "id": "m17_084"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "正方形边长3厘米，周长是多少厘米？",
+      "answer": "12",
+      "id": "m17_085"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "正方形边长5厘米，面积是多少平方厘米？",
+      "answer": "25",
+      "id": "m17_086"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "长方形长7厘米，宽3厘米，周长是多少厘米？",
+      "answer": "20",
+      "id": "m17_087"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "长方形长8厘米，宽4厘米，面积是多少平方厘米？",
+      "answer": "32",
+      "id": "m17_088"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "正方形边长6厘米，周长是多少厘米？",
+      "answer": "24",
+      "id": "m17_089"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "正方形边长2厘米，面积是多少平方厘米？",
+      "answer": "4",
+      "id": "m17_090"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "长方形长7厘米，宽8厘米，周长是多少厘米？",
+      "answer": "30",
+      "id": "m17_091"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "长方形长6厘米，宽4厘米，面积是多少平方厘米？",
+      "answer": "24",
+      "id": "m17_092"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "正方形边长2厘米，周长是多少厘米？",
+      "answer": "8",
+      "id": "m17_093"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "正方形边长4厘米，面积是多少平方厘米？",
+      "answer": "16",
+      "id": "m17_094"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "长方形长3厘米，宽4厘米，周长是多少厘米？",
+      "answer": "14",
+      "id": "m17_095"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "长方形长8厘米，宽6厘米，面积是多少平方厘米？",
+      "answer": "48",
+      "id": "m17_096"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "正方形边长8厘米，周长是多少厘米？",
+      "answer": "32",
+      "id": "m17_097"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "正方形边长5厘米，面积是多少平方厘米？",
+      "answer": "25",
+      "id": "m17_098"
+    },
+    {
+      "difficulty": 1,
+      "type": "周长面积",
+      "question": "长方形长8厘米，宽2厘米，周长是多少厘米？",
+      "answer": "20",
+      "id": "m17_099"
+    },
+    {
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "长方形长3厘米，宽3厘米，面积是多少平方厘米？",
+      "answer": "9",
+      "id": "m17_100"
+    },
+    {
+      "id": "m17_101",
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "长方形长5厘米，宽3厘米，周长是多少厘米？",
+      "answer": "(5+3)×2=16厘米"
+    },
+    {
+      "id": "m17_102",
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "正方形边长4厘米，周长是多少厘米？",
+      "answer": "4×4=16厘米"
+    },
+    {
+      "id": "m17_103",
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "长方形长6米，宽4米，面积是多少平方米？",
+      "answer": "6×4=24平方米"
+    },
+    {
+      "id": "m17_104",
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "正方形边长5厘米，面积是多少平方厘米？",
+      "answer": "5×5=25平方厘米"
+    },
+    {
+      "id": "m17_105",
+      "difficulty": 3,
+      "type": "周长面积",
+      "question": "一个长方形的长是8分米，宽是5分米，周长是多少？",
+      "answer": "(8+5)×2=26分米"
+    },
+    {
+      "id": "m17_106",
+      "difficulty": 3,
+      "type": "周长面积",
+      "question": "正方形周长是20厘米，边长是多少？",
+      "answer": "20÷4=5厘米"
+    },
+    {
+      "id": "m17_107",
+      "difficulty": 3,
+      "type": "周长面积",
+      "question": "长方形面积是24平方米，长是6米，宽是多少米？",
+      "answer": "24÷6=4米"
+    },
+    {
+      "id": "m17_108",
+      "difficulty": 3,
+      "type": "周长面积",
+      "question": "边长6米的正方形花坛，面积是多少平方米？",
+      "answer": "6×6=36平方米"
+    },
+    {
+      "id": "m17_109",
+      "difficulty": 2,
+      "type": "周长面积",
+      "question": "1平方米 = ? 平方分米",
+      "answer": "100平方分米"
+    },
+    {
+      "id": "m17_110",
+      "difficulty": 3,
+      "type": "周长面积",
+      "question": "一张长方形纸长10厘米宽6厘米，剪一个最大的正方形，正方形的周长是多少？",
+      "answer": "6×4=24厘米"
     }
   ],
   "m18": [
@@ -23910,6 +26531,496 @@
       "type": "位置与方向",
       "question": "学校在公园的西北面，公园在学校的什么方向？",
       "answer": "东南面"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "小明调查了班级同学喜欢的颜色：红色12人、蓝色10人、绿色15人、黄色20人。一共调查了多少人？",
+      "answer": "57",
+      "id": "m18_031"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "统计表：苹果8个、香蕉14个、橘子6个、葡萄10个。哪种水果最多？",
+      "answer": "香蕉",
+      "id": "m18_032"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "小组跳绳比赛：小明10下、小红6下、小刚3下、小丽3下。第一名是谁？",
+      "answer": "小明",
+      "id": "m18_033"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "5个同学排队，小丽排在第5个，他前面有几人？后面有几人？",
+      "answer": "前面4人，后面0人",
+      "id": "m18_034"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "水果店有苹果2个、梨6个、香蕉2个、橘子6个。一共有多少个水果？",
+      "answer": "16",
+      "id": "m18_035"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "小明调查了班级同学喜欢的颜色：红色17人、蓝色10人、绿色19人、黄色19人。一共调查了多少人？",
+      "answer": "65",
+      "id": "m18_036"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "统计表：苹果6个、香蕉5个、橘子9个、葡萄7个。哪种水果最多？",
+      "answer": "橘子",
+      "id": "m18_037"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "小组跳绳比赛：小明10下、小红8下、小刚7下、小丽5下。第一名是谁？",
+      "answer": "小明",
+      "id": "m18_038"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "5个同学排队，小刚排在第3个，他前面有几人？后面有几人？",
+      "answer": "前面2人，后面2人",
+      "id": "m18_039"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "水果店有苹果3个、梨5个、香蕉7个、橘子6个。一共有多少个水果？",
+      "answer": "21",
+      "id": "m18_040"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "小明调查了班级同学喜欢的颜色：红色5人、蓝色13人、绿色11人、黄色8人。一共调查了多少人？",
+      "answer": "37",
+      "id": "m18_041"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "统计表：苹果3个、香蕉7个、橘子14个、葡萄14个。哪种水果最多？",
+      "answer": "橘子",
+      "id": "m18_042"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "小组跳绳比赛：小明10下、小红9下、小刚5下、小丽4下。第一名是谁？",
+      "answer": "小明",
+      "id": "m18_043"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "5个同学排队，小明排在第1个，他前面有几人？后面有几人？",
+      "answer": "前面0人，后面4人",
+      "id": "m18_044"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "水果店有苹果4个、梨7个、香蕉7个、橘子3个。一共有多少个水果？",
+      "answer": "21",
+      "id": "m18_045"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "小明调查了班级同学喜欢的颜色：红色10人、蓝色15人、绿色8人、黄色15人。一共调查了多少人？",
+      "answer": "48",
+      "id": "m18_046"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "统计表：苹果5个、香蕉4个、橘子9个、葡萄13个。哪种水果最多？",
+      "answer": "葡萄",
+      "id": "m18_047"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "小组跳绳比赛：小明10下、小红10下、小刚9下、小丽8下。第一名是谁？",
+      "answer": "小明",
+      "id": "m18_048"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "5个同学排队，小刚排在第3个，他前面有几人？后面有几人？",
+      "answer": "前面2人，后面2人",
+      "id": "m18_049"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "水果店有苹果7个、梨8个、香蕉3个、橘子5个。一共有多少个水果？",
+      "answer": "23",
+      "id": "m18_050"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "小明调查了班级同学喜欢的颜色：红色5人、蓝色16人、绿色7人、黄色16人。一共调查了多少人？",
+      "answer": "44",
+      "id": "m18_051"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "统计表：苹果11个、香蕉15个、橘子12个、葡萄15个。哪种水果最多？",
+      "answer": "香蕉",
+      "id": "m18_052"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "小组跳绳比赛：小明11下、小红6下、小刚6下、小丽5下。第一名是谁？",
+      "answer": "小明",
+      "id": "m18_053"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "5个同学排队，小丽排在第5个，他前面有几人？后面有几人？",
+      "answer": "前面4人，后面0人",
+      "id": "m18_054"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "水果店有苹果6个、梨7个、香蕉2个、橘子5个。一共有多少个水果？",
+      "answer": "20",
+      "id": "m18_055"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "小明调查了班级同学喜欢的颜色：红色20人、蓝色6人、绿色8人、黄色12人。一共调查了多少人？",
+      "answer": "46",
+      "id": "m18_056"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "统计表：苹果4个、香蕉10个、橘子8个、葡萄10个。哪种水果最多？",
+      "answer": "香蕉",
+      "id": "m18_057"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "小组跳绳比赛：小明9下、小红4下、小刚3下、小丽3下。第一名是谁？",
+      "answer": "小明",
+      "id": "m18_058"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "5个同学排队，小华排在第4个，他前面有几人？后面有几人？",
+      "answer": "前面3人，后面1人",
+      "id": "m18_059"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "水果店有苹果6个、梨5个、香蕉5个、橘子5个。一共有多少个水果？",
+      "answer": "21",
+      "id": "m18_060"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "小明调查了班级同学喜欢的颜色：红色14人、蓝色13人、绿色19人、黄色19人。一共调查了多少人？",
+      "answer": "65",
+      "id": "m18_061"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "统计表：苹果11个、香蕉6个、橘子10个、葡萄9个。哪种水果最多？",
+      "answer": "苹果",
+      "id": "m18_062"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "小组跳绳比赛：小明12下、小红11下、小刚10下、小丽4下。第一名是谁？",
+      "answer": "小明",
+      "id": "m18_063"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "5个同学排队，小华排在第4个，他前面有几人？后面有几人？",
+      "answer": "前面3人，后面1人",
+      "id": "m18_064"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "水果店有苹果7个、梨5个、香蕉7个、橘子2个。一共有多少个水果？",
+      "answer": "21",
+      "id": "m18_065"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "小明调查了班级同学喜欢的颜色：红色11人、蓝色14人、绿色9人、黄色11人。一共调查了多少人？",
+      "answer": "45",
+      "id": "m18_066"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "统计表：苹果9个、香蕉8个、橘子14个、葡萄12个。哪种水果最多？",
+      "answer": "橘子",
+      "id": "m18_067"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "小组跳绳比赛：小明9下、小红9下、小刚5下、小丽3下。第一名是谁？",
+      "answer": "小明",
+      "id": "m18_068"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "5个同学排队，小华排在第4个，他前面有几人？后面有几人？",
+      "answer": "前面3人，后面1人",
+      "id": "m18_069"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "水果店有苹果7个、梨6个、香蕉3个、橘子5个。一共有多少个水果？",
+      "answer": "21",
+      "id": "m18_070"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "小明调查了班级同学喜欢的颜色：红色15人、蓝色13人、绿色19人、黄色13人。一共调查了多少人？",
+      "answer": "60",
+      "id": "m18_071"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "统计表：苹果4个、香蕉8个、橘子7个、葡萄10个。哪种水果最多？",
+      "answer": "葡萄",
+      "id": "m18_072"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "小组跳绳比赛：小明10下、小红6下、小刚6下、小丽6下。第一名是谁？",
+      "answer": "小明",
+      "id": "m18_073"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "5个同学排队，小华排在第4个，他前面有几人？后面有几人？",
+      "answer": "前面3人，后面1人",
+      "id": "m18_074"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "水果店有苹果4个、梨8个、香蕉7个、橘子8个。一共有多少个水果？",
+      "answer": "27",
+      "id": "m18_075"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "小明调查了班级同学喜欢的颜色：红色12人、蓝色18人、绿色17人、黄色11人。一共调查了多少人？",
+      "answer": "58",
+      "id": "m18_076"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "统计表：苹果3个、香蕉15个、橘子7个、葡萄7个。哪种水果最多？",
+      "answer": "香蕉",
+      "id": "m18_077"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "小组跳绳比赛：小明11下、小红9下、小刚4下、小丽4下。第一名是谁？",
+      "answer": "小明",
+      "id": "m18_078"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "5个同学排队，小明排在第1个，他前面有几人？后面有几人？",
+      "answer": "前面0人，后面4人",
+      "id": "m18_079"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "水果店有苹果8个、梨6个、香蕉8个、橘子8个。一共有多少个水果？",
+      "answer": "30",
+      "id": "m18_080"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "小明调查了班级同学喜欢的颜色：红色12人、蓝色11人、绿色8人、黄色20人。一共调查了多少人？",
+      "answer": "51",
+      "id": "m18_081"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "统计表：苹果11个、香蕉5个、橘子3个、葡萄8个。哪种水果最多？",
+      "answer": "苹果",
+      "id": "m18_082"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "小组跳绳比赛：小明12下、小红7下、小刚7下、小丽3下。第一名是谁？",
+      "answer": "小明",
+      "id": "m18_083"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "5个同学排队，小明排在第1个，他前面有几人？后面有几人？",
+      "answer": "前面0人，后面4人",
+      "id": "m18_084"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "水果店有苹果4个、梨3个、香蕉3个、橘子2个。一共有多少个水果？",
+      "answer": "12",
+      "id": "m18_085"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "小明调查了班级同学喜欢的颜色：红色18人、蓝色20人、绿色5人、黄色19人。一共调查了多少人？",
+      "answer": "62",
+      "id": "m18_086"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "统计表：苹果11个、香蕉14个、橘子15个、葡萄7个。哪种水果最多？",
+      "answer": "橘子",
+      "id": "m18_087"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "小组跳绳比赛：小明10下、小红7下、小刚6下、小丽4下。第一名是谁？",
+      "answer": "小明",
+      "id": "m18_088"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "5个同学排队，小红排在第2个，他前面有几人？后面有几人？",
+      "answer": "前面1人，后面3人",
+      "id": "m18_089"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "水果店有苹果5个、梨8个、香蕉5个、橘子4个。一共有多少个水果？",
+      "answer": "22",
+      "id": "m18_090"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "小明调查了班级同学喜欢的颜色：红色7人、蓝色10人、绿色20人、黄色10人。一共调查了多少人？",
+      "answer": "47",
+      "id": "m18_091"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "统计表：苹果8个、香蕉8个、橘子13个、葡萄8个。哪种水果最多？",
+      "answer": "橘子",
+      "id": "m18_092"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "小组跳绳比赛：小明10下、小红9下、小刚8下、小丽4下。第一名是谁？",
+      "answer": "小明",
+      "id": "m18_093"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "5个同学排队，小刚排在第3个，他前面有几人？后面有几人？",
+      "answer": "前面2人，后面2人",
+      "id": "m18_094"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "水果店有苹果8个、梨5个、香蕉3个、橘子7个。一共有多少个水果？",
+      "answer": "23",
+      "id": "m18_095"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "小明调查了班级同学喜欢的颜色：红色18人、蓝色6人、绿色6人、黄色7人。一共调查了多少人？",
+      "answer": "37",
+      "id": "m18_096"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "统计表：苹果5个、香蕉3个、橘子13个、葡萄5个。哪种水果最多？",
+      "answer": "橘子",
+      "id": "m18_097"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "小组跳绳比赛：小明10下、小红9下、小刚9下、小丽5下。第一名是谁？",
+      "answer": "小明",
+      "id": "m18_098"
+    },
+    {
+      "difficulty": 1,
+      "type": "位置与统计",
+      "question": "5个同学排队，小丽排在第5个，他前面有几人？后面有几人？",
+      "answer": "前面4人，后面0人",
+      "id": "m18_099"
+    },
+    {
+      "difficulty": 2,
+      "type": "位置与统计",
+      "question": "水果店有苹果5个、梨3个、香蕉5个、橘子5个。一共有多少个水果？",
+      "answer": "18",
+      "id": "m18_100"
     }
   ],
   "m19": [
@@ -52960,6 +56071,76 @@
       "type": "比",
       "question": "化简比：8:21",
       "answer": "1:2"
+    },
+    {
+      "id": "m32_301",
+      "difficulty": 3,
+      "type": "百分数",
+      "question": "50% 用分数表示是多少？",
+      "answer": "1/2"
+    },
+    {
+      "id": "m32_302",
+      "difficulty": 3,
+      "type": "百分数",
+      "question": "25% 用小数表示是多少？",
+      "answer": "0.25"
+    },
+    {
+      "id": "m32_303",
+      "difficulty": 3,
+      "type": "百分数",
+      "question": "0.3 化成百分数是多少？",
+      "answer": "30%"
+    },
+    {
+      "id": "m32_304",
+      "difficulty": 3,
+      "type": "百分数",
+      "question": "3/4 化成百分数是多少？",
+      "answer": "75%"
+    },
+    {
+      "id": "m32_305",
+      "difficulty": 3,
+      "type": "百分数",
+      "question": "100% 表示什么？",
+      "answer": "全部或整体"
+    },
+    {
+      "id": "m32_306",
+      "difficulty": 3,
+      "type": "百分数",
+      "question": "20是100的百分之几？",
+      "answer": "20%"
+    },
+    {
+      "id": "m32_307",
+      "difficulty": 3,
+      "type": "比例",
+      "question": "比的前项是6，后项是3，比值是多少？",
+      "answer": "2"
+    },
+    {
+      "id": "m32_308",
+      "difficulty": 3,
+      "type": "比例",
+      "question": "12:4 的比值是多少？",
+      "answer": "3"
+    },
+    {
+      "id": "m32_309",
+      "difficulty": 3,
+      "type": "比例",
+      "question": "3:6 = ? : 2, 填空",
+      "answer": "1"
+    },
+    {
+      "id": "m32_310",
+      "difficulty": 3,
+      "type": "比例",
+      "question": "比例尺1:100是什么意思？",
+      "answer": "图上1厘米代表实际100厘米"
     }
   ],
   "m33": [
@@ -62072,6 +65253,706 @@
       "type": "找规律",
       "question": "找规律，括号里应填什么图形？□ ○ □ ○ □ ?",
       "answer": "○"
+    },
+    {
+      "id": "m38_101",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：2 ? 8 11 14 17",
+      "answer": "5"
+    },
+    {
+      "id": "m38_102",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：4 9 14 19 ? 29",
+      "answer": "24"
+    },
+    {
+      "id": "m38_103",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：8 ? 18 23 28",
+      "answer": "13"
+    },
+    {
+      "id": "m38_104",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：1 ? 11 16",
+      "answer": "6"
+    },
+    {
+      "id": "m38_105",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：5 ? 7 8 9",
+      "answer": "6"
+    },
+    {
+      "id": "m38_106",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：8 11 ? 17",
+      "answer": "14"
+    },
+    {
+      "id": "m38_107",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：5 8 ? 14 17",
+      "answer": "11"
+    },
+    {
+      "id": "m38_108",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：2 5 ? 11",
+      "answer": "8"
+    },
+    {
+      "id": "m38_109",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：5 9 ? 17",
+      "answer": "13"
+    },
+    {
+      "id": "m38_110",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：1 4 ? 10 13",
+      "answer": "7"
+    },
+    {
+      "id": "m38_111",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：7 8 9 ? 11",
+      "answer": "10"
+    },
+    {
+      "id": "m38_112",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：8 9 10 ? 12",
+      "answer": "11"
+    },
+    {
+      "id": "m38_113",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：8 12 16 ? 24 28",
+      "answer": "20"
+    },
+    {
+      "id": "m38_114",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：7 12 17 ? 27",
+      "answer": "22"
+    },
+    {
+      "id": "m38_115",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：1 ? 11 16",
+      "answer": "6"
+    },
+    {
+      "id": "m38_116",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：1 ? 11 16 21 26",
+      "answer": "6"
+    },
+    {
+      "id": "m38_117",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：7 11 ? 19",
+      "answer": "15"
+    },
+    {
+      "id": "m38_118",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：4 5 6 7 ? 9",
+      "answer": "8"
+    },
+    {
+      "id": "m38_119",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：8 13 18 ? 28",
+      "answer": "23"
+    },
+    {
+      "id": "m38_120",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：7 10 13 16 ? 22",
+      "answer": "19"
+    },
+    {
+      "id": "m38_121",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：50 46 ? 38",
+      "answer": "42"
+    },
+    {
+      "id": "m38_122",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：42 ? 40 39",
+      "answer": "41"
+    },
+    {
+      "id": "m38_123",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：54 49 ? 39 34",
+      "answer": "44"
+    },
+    {
+      "id": "m38_124",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：37 34 31 28 ? 22",
+      "answer": "25"
+    },
+    {
+      "id": "m38_125",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：54 49 ? 39 34",
+      "answer": "44"
+    },
+    {
+      "id": "m38_126",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：60 59 ? 57 56",
+      "answer": "58"
+    },
+    {
+      "id": "m38_127",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：54 53 52 ? 50",
+      "answer": "51"
+    },
+    {
+      "id": "m38_128",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：57 ? 51 48 45",
+      "answer": "54"
+    },
+    {
+      "id": "m38_129",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：52 48 ? 40",
+      "answer": "44"
+    },
+    {
+      "id": "m38_130",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：56 ? 50 47",
+      "answer": "53"
+    },
+    {
+      "id": "m38_131",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：51 ? 47 45 43",
+      "answer": "49"
+    },
+    {
+      "id": "m38_132",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：30 29 28 ? 26",
+      "answer": "27"
+    },
+    {
+      "id": "m38_133",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：59 58 ? 56 55 54",
+      "answer": "57"
+    },
+    {
+      "id": "m38_134",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：40 ? 38 37 36 35",
+      "answer": "39"
+    },
+    {
+      "id": "m38_135",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：59 56 53 ? 47 44",
+      "answer": "50"
+    },
+    {
+      "id": "m38_136",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：3 6 ? 12 15",
+      "answer": "9"
+    },
+    {
+      "id": "m38_137",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：10 20 ? 40 50 60 70",
+      "answer": "30"
+    },
+    {
+      "id": "m38_138",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：3 6 9 ? 15 18",
+      "answer": "12"
+    },
+    {
+      "id": "m38_139",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：3 6 9 ? 15 18 21",
+      "answer": "12"
+    },
+    {
+      "id": "m38_140",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：2 4 6 ? 10 12",
+      "answer": "8"
+    },
+    {
+      "id": "m38_141",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：3 6 ? 12 15",
+      "answer": "9"
+    },
+    {
+      "id": "m38_142",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：10 ? 30 40 50 60",
+      "answer": "20"
+    },
+    {
+      "id": "m38_143",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：3 ? 9 12 15 18",
+      "answer": "6"
+    },
+    {
+      "id": "m38_144",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：2 ? 6 8 10 12",
+      "answer": "4"
+    },
+    {
+      "id": "m38_145",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：2 4 6 ? 10 12",
+      "answer": "8"
+    },
+    {
+      "id": "m38_146",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：5 ? 15 20 25",
+      "answer": "10"
+    },
+    {
+      "id": "m38_147",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：10 20 30 ? 50 60",
+      "answer": "40"
+    },
+    {
+      "id": "m38_148",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：5 10 ? 20 25 30",
+      "answer": "15"
+    },
+    {
+      "id": "m38_149",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：2 4 ? 8 10 12",
+      "answer": "6"
+    },
+    {
+      "id": "m38_150",
+      "difficulty": 1,
+      "type": "找规律",
+      "question": "按规律填数：3 ? 9 12 15",
+      "answer": "6"
+    },
+    {
+      "id": "m38_151",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律填数：4 15 8 18 12 ? 16 24 20 27 24 30 28 33",
+      "answer": "21"
+    },
+    {
+      "id": "m38_152",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律填数：1 16 5 18 9 20 13 ? 17 24",
+      "answer": "22"
+    },
+    {
+      "id": "m38_153",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律填数：2 20 4 24 6 ? 8 32 10 36",
+      "answer": "28"
+    },
+    {
+      "id": "m38_154",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律填数：2 20 5 22 8 24 11 ? 14 28",
+      "answer": "26"
+    },
+    {
+      "id": "m38_155",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律填数：2 12 6 14 ? 16 14 18 18 20 22 22 26 24",
+      "answer": "10"
+    },
+    {
+      "id": "m38_156",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律填数：4 16 7 ? 10 24 13 28 16 32 19 36",
+      "answer": "20"
+    },
+    {
+      "id": "m38_157",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律填数：4 12 7 15 ? 18 13 21 16 24",
+      "answer": "10"
+    },
+    {
+      "id": "m38_158",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律填数：4 16 7 19 ? 22 13 25 16 28 19 31",
+      "answer": "10"
+    },
+    {
+      "id": "m38_159",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律填数：3 17 7 20 11 23 ? 26 19 29",
+      "answer": "15"
+    },
+    {
+      "id": "m38_160",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律填数：3 13 ? 15 7 17 9 19 11 21",
+      "answer": "5"
+    },
+    {
+      "id": "m38_161",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律填数：4 15 8 18 ? 21 16 24 20 27 24 30 28 33",
+      "answer": "12"
+    },
+    {
+      "id": "m38_162",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律填数：1 12 4 15 7 18 10 21 13 24 16 ? 19 30",
+      "answer": "27"
+    },
+    {
+      "id": "m38_163",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律填数：2 19 4 23 6 ? 8 31 10 35 12 39",
+      "answer": "27"
+    },
+    {
+      "id": "m38_164",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律填数：3 14 7 18 ? 22 15 26 19 30 23 34 27 38",
+      "answer": "11"
+    },
+    {
+      "id": "m38_165",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律填数：1 11 ? 14 7 17 10 20 13 23",
+      "answer": "4"
+    },
+    {
+      "id": "m38_166",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律，接下去应填什么图形？○ △ ○ △ ○ ?",
+      "answer": "△"
+    },
+    {
+      "id": "m38_167",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律，接下去应填什么图形？□ ○ □ ○ □ ?",
+      "answer": "○"
+    },
+    {
+      "id": "m38_168",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律，接下去应填什么图形？★ ☆ ★ ☆ ★ ?",
+      "answer": "☆"
+    },
+    {
+      "id": "m38_169",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律，接下去应填什么图形？△ △ ○ △ △ ○ △ ?",
+      "answer": "△"
+    },
+    {
+      "id": "m38_170",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律，接下去应填什么图形？○ □ △ ○ □ △ ○ ?",
+      "answer": "□"
+    },
+    {
+      "id": "m38_171",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律，接下去应填什么图形？★ ★ ☆ ★ ★ ☆ ★ ?",
+      "answer": "★"
+    },
+    {
+      "id": "m38_172",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律，接下去应填什么图形？□ □ ○ □ □ ○ □ ?",
+      "answer": "□"
+    },
+    {
+      "id": "m38_173",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律，接下去应填什么图形？△ ○ △ ○ △ ? ○",
+      "answer": "△"
+    },
+    {
+      "id": "m38_174",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律，接下去应填什么图形？○ ○ □ ○ ○ □ ○ ?",
+      "answer": "○"
+    },
+    {
+      "id": "m38_175",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律，接下去应填什么图形？☆ △ □ ☆ △ □ ☆ ?",
+      "answer": "△"
+    },
+    {
+      "id": "m38_176",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律，接下去应填什么图形？○ ○ △ △ ○ ○ △ ?",
+      "answer": "△"
+    },
+    {
+      "id": "m38_177",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律，接下去应填什么图形？□ ○ △ □ ○ △ □ ?",
+      "answer": "○"
+    },
+    {
+      "id": "m38_178",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律，接下去应填什么图形？★ ★ ★ ☆ ★ ★ ★ ?",
+      "answer": "☆"
+    },
+    {
+      "id": "m38_179",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律，接下去应填什么图形？○ ○ ○ □ ○ ○ ○ ?",
+      "answer": "□"
+    },
+    {
+      "id": "m38_180",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律，接下去应填什么图形？△ □ ○ △ □ ○ △ ?",
+      "answer": "□"
+    },
+    {
+      "id": "m38_181",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律，接下去应填什么图形？● ○ ● ○ ● ? ○",
+      "answer": "●"
+    },
+    {
+      "id": "m38_182",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律，接下去应填什么图形？■ □ ■ □ ■ ?",
+      "answer": "□"
+    },
+    {
+      "id": "m38_183",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律，接下去应填什么图形？◆ ◇ ◆ ◇ ◆ ?",
+      "answer": "◇"
+    },
+    {
+      "id": "m38_184",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律，接下去应填什么图形？◆ ◆ ◇ ◆ ◆ ◇ ◆ ?",
+      "answer": "◆"
+    },
+    {
+      "id": "m38_185",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "找规律，接下去应填什么图形？○ ■ ○ ■ ○ ? ■",
+      "answer": "○"
+    },
+    {
+      "id": "m38_186",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "按规律填数：1 5 ? 13 17 ? 25",
+      "answer": "9和21"
+    },
+    {
+      "id": "m38_187",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "按规律填数：2 4 ? 8 10 ? 14",
+      "answer": "6和12"
+    },
+    {
+      "id": "m38_188",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "按规律填数：5 9 ? 17 21 ? 29",
+      "answer": "13和25"
+    },
+    {
+      "id": "m38_189",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "按规律填数：3 9 ? 21 27 ? 39",
+      "answer": "15和33"
+    },
+    {
+      "id": "m38_190",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "按规律填数：1 5 ? 13 17 ? 25",
+      "answer": "9和21"
+    },
+    {
+      "id": "m38_191",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "按规律填数：3 6 ? 12 15 ? 21",
+      "answer": "9和18"
+    },
+    {
+      "id": "m38_192",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "按规律填数：3 7 ? 15 19 ? 27",
+      "answer": "11和23"
+    },
+    {
+      "id": "m38_193",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "按规律填数：1 3 ? 7 9 ? 13",
+      "answer": "5和11"
+    },
+    {
+      "id": "m38_194",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "按规律填数：4 8 ? 16 20 ? 28",
+      "answer": "12和24"
+    },
+    {
+      "id": "m38_195",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "按规律填数：4 6 ? 10 12 ? 16",
+      "answer": "8和14"
+    },
+    {
+      "id": "m38_196",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "按规律填数：1 3 ? 7 9 ? 13",
+      "answer": "5和11"
+    },
+    {
+      "id": "m38_197",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "按规律填数：2 4 ? 8 10 ? 14",
+      "answer": "6和12"
+    },
+    {
+      "id": "m38_198",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "按规律填数：3 5 ? 9 11 ? 15",
+      "answer": "7和13"
+    },
+    {
+      "id": "m38_199",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "按规律填数：1 7 ? 19 25 ? 37",
+      "answer": "13和31"
+    },
+    {
+      "id": "m38_200",
+      "difficulty": 2,
+      "type": "找规律",
+      "question": "按规律填数：5 9 ? 17 21 ? 29",
+      "answer": "13和25"
     }
   ],
   "m39": [

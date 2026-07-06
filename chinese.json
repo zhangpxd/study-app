@@ -2864,6 +2864,181 @@
         "健全"
       ],
       "sentence": "身体要健康。"
+    },
+    {
+      "id": "c1_206",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "长(chang)可以组什么词？长(zhang)可以组什么词？",
+      "answer": "chang: 长江/长短；zhang: 长大/生长"
+    },
+    {
+      "id": "c1_207",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "干(gan)和干(gan)分别组词？",
+      "answer": "gan: 干净/干燥；gan: 干活/干部"
+    },
+    {
+      "id": "c1_208",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "好(hao)和好(hao)分别组词？",
+      "answer": "hao: 好人/美好；hao: 好学/好奇"
+    },
+    {
+      "id": "c1_209",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "乐(le)和乐(yue)分别组词？",
+      "answer": "le: 快乐；yue: 音乐"
+    },
+    {
+      "id": "c1_210",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "行(xing)和行(hang)分别组词？",
+      "answer": "xing: 行走；hang: 银行"
+    },
+    {
+      "id": "c1_211",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "重(zhong)和重(chong)分别组词？",
+      "answer": "zhong: 重要/重量；chong: 重新/重复"
+    },
+    {
+      "id": "c1_212",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "发(fa)和发(fa)分别组词？",
+      "answer": "fa: 发现/发明；fa: 头发/理发"
+    },
+    {
+      "id": "c1_213",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "当(dang)和当(dang)分别组词？",
+      "answer": "dang: 当然/当时；dang: 上当/当成"
+    },
+    {
+      "id": "c1_214",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "种(zhong)和种(zhong)分别组词？",
+      "answer": "zhong: 种子/种类；zhong: 种树/种田"
+    },
+    {
+      "id": "c1_215",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "数(shu)和数(shu)分别组词？",
+      "answer": "shu: 数星星；shu: 数学/数字"
+    },
+    {
+      "id": "c1_216",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "选字填空：天气真()朗，小河的水很()。[清/晴]",
+      "answer": "晴/清"
+    },
+    {
+      "id": "c1_217",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "选字填空：我家离学校很()，走()校门就看到教室。[近/进]",
+      "answer": "近/进"
+    },
+    {
+      "id": "c1_218",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "选字填空：我()经写完作业了，自()的事情自()做。[已/己]",
+      "answer": "已/己/己"
+    },
+    {
+      "id": "c1_219",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "选字填空：我()学校门口等你，不要()迟到了。[在/再]",
+      "answer": "在/再"
+    },
+    {
+      "id": "c1_220",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "选字填空：我正在()()业，妈妈在()饭。[做/作]",
+      "answer": "做/作/做"
+    },
+    {
+      "id": "c1_221",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "选字填空：请()在那()位上。[坐/座]",
+      "answer": "坐/座"
+    },
+    {
+      "id": "c1_222",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "选字填空：我口()了，想()水。[渴/喝]",
+      "answer": "渴/喝"
+    },
+    {
+      "id": "c1_223",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "选字填空：大()的鼻子()一根管子。[象/像]",
+      "answer": "象/像"
+    },
+    {
+      "id": "c1_224",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "选字填空：蜜()在花丛中飞，远处是高高的山()。[蜂/峰]",
+      "answer": "蜂/峰"
+    },
+    {
+      "id": "c1_225",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "选字填空：树丛很()，()蜂在里面忙碌。[密/蜜]",
+      "answer": "密/蜜"
+    },
+    {
+      "id": "c1_226",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "选字填空：公()里有一个()形花坛。[园/圆]",
+      "answer": "园/圆"
+    },
+    {
+      "id": "c1_227",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "选字填空：走()教室，桌子离门很()。[进/近]",
+      "answer": "进/近"
+    },
+    {
+      "id": "c1_228",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "选字填空：我经()去那条()长的路上散步。[常/长]",
+      "answer": "常/长"
+    },
+    {
+      "id": "c1_229",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "选字填空：我()成作业后就去()。[完/玩]",
+      "answer": "完/玩"
+    },
+    {
+      "id": "c1_230",
+      "difficulty": 2,
+      "type": "生字",
+      "question": "选字填空：()门关上，我们去公园()。[把/吧]",
+      "answer": "把/吧"
     }
   ],
   "c2": [
@@ -3310,6 +3485,391 @@
       "instruction": "用下面的词语造一个句子",
       "word": "像",
       "answer": "弯弯的月亮像小船。"
+    },
+    {
+      "difficulty": 1,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：蝴蝶  花丛中  飞舞  在",
+      "answer": "蝴蝶在花丛中飞舞",
+      "id": "c2_056"
+    },
+    {
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：星星  亮晶晶  夜空中",
+      "answer": "夜空中星星亮晶晶",
+      "id": "c2_057"
+    },
+    {
+      "difficulty": 1,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：蝴蝶  花丛中  飞舞  在",
+      "answer": "蝴蝶在花丛中飞舞",
+      "id": "c2_058"
+    },
+    {
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：公鸡  打鸣  天亮  了",
+      "answer": "公鸡打鸣天亮了",
+      "id": "c2_059"
+    },
+    {
+      "difficulty": 1,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：小明  看书  在  教室里",
+      "answer": "小明在教室里看书",
+      "id": "c2_060"
+    },
+    {
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：彩虹  雨后  出现了",
+      "answer": "雨后彩虹出现了",
+      "id": "c2_061"
+    },
+    {
+      "difficulty": 1,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：公鸡  打鸣  天亮  了",
+      "answer": "公鸡打鸣天亮了",
+      "id": "c2_062"
+    },
+    {
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：小鸟  在  树枝上  唱歌",
+      "answer": "小鸟在树枝上唱歌",
+      "id": "c2_063"
+    },
+    {
+      "difficulty": 1,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：小明  看书  在  教室里",
+      "answer": "小明在教室里看书",
+      "id": "c2_064"
+    },
+    {
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：蝴蝶  花丛中  飞舞  在",
+      "answer": "蝴蝶在花丛中飞舞",
+      "id": "c2_065"
+    },
+    {
+      "difficulty": 1,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：下雨了  外面  哗啦啦",
+      "answer": "外面哗啦啦下雨了",
+      "id": "c2_066"
+    },
+    {
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：风筝  飞  很高  天上",
+      "answer": "风筝飞天上很高",
+      "id": "c2_067"
+    },
+    {
+      "difficulty": 1,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：我们  学校  去  一起",
+      "answer": "我们一起去学校",
+      "id": "c2_068"
+    },
+    {
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：枕头  软软的  真舒服",
+      "answer": "软软的枕头真舒服",
+      "id": "c2_069"
+    },
+    {
+      "difficulty": 1,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：下雨了  外面  哗啦啦",
+      "answer": "外面哗啦啦下雨了",
+      "id": "c2_070"
+    },
+    {
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：爱  我  北京  天安门",
+      "answer": "我爱北京天安门",
+      "id": "c2_071"
+    },
+    {
+      "difficulty": 1,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：妹妹  笑  开心地",
+      "answer": "妹妹开心地笑",
+      "id": "c2_072"
+    },
+    {
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：公鸡  打鸣  天亮  了",
+      "answer": "公鸡打鸣天亮了",
+      "id": "c2_073"
+    },
+    {
+      "difficulty": 1,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：水珠  荷叶上  圆圆的",
+      "answer": "荷叶上圆圆的水珠",
+      "id": "c2_074"
+    },
+    {
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：苹果  红红的  真好吃",
+      "answer": "红红的苹果真好吃",
+      "id": "c2_075"
+    },
+    {
+      "difficulty": 1,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：彩虹  雨后  出现了",
+      "answer": "雨后彩虹出现了",
+      "id": "c2_076"
+    },
+    {
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：同学们  操场上  在  跑步",
+      "answer": "同学们在操场上跑步",
+      "id": "c2_077"
+    },
+    {
+      "difficulty": 1,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：小狗  一只  有  我家",
+      "answer": "我家有一只小狗",
+      "id": "c2_078"
+    },
+    {
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：小鱼  在  游来游去  水里",
+      "answer": "小鱼在水里游来游去",
+      "id": "c2_079"
+    },
+    {
+      "difficulty": 1,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：兔子  耳朵  长长的  有",
+      "answer": "兔子有长长的耳朵",
+      "id": "c2_080"
+    },
+    {
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：是  我  小学生",
+      "answer": "我是小学生",
+      "id": "c2_081"
+    },
+    {
+      "difficulty": 1,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：今天  天气  真好",
+      "answer": "今天天气真好",
+      "id": "c2_082"
+    },
+    {
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：月亮  像  小船  弯弯的",
+      "answer": "弯弯的月亮像小船",
+      "id": "c2_083"
+    },
+    {
+      "difficulty": 1,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：蚂蚁  搬家  要下雨了",
+      "answer": "蚂蚁搬家要下雨了",
+      "id": "c2_084"
+    },
+    {
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：爸爸  上班  去  开车",
+      "answer": "爸爸开车去上班",
+      "id": "c2_085"
+    },
+    {
+      "difficulty": 1,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：小鱼  在  游来游去  水里",
+      "answer": "小鱼在水里游来游去",
+      "id": "c2_086"
+    },
+    {
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：爱  我  北京  天安门",
+      "answer": "我爱北京天安门",
+      "id": "c2_087"
+    },
+    {
+      "difficulty": 1,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：青蛙  池塘里  呱呱叫",
+      "answer": "青蛙在池塘里呱呱叫",
+      "id": "c2_088"
+    },
+    {
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：同学们  操场上  在  跑步",
+      "answer": "同学们在操场上跑步",
+      "id": "c2_089"
+    },
+    {
+      "difficulty": 1,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：弟弟  玩具  玩  在",
+      "answer": "弟弟在玩玩具",
+      "id": "c2_090"
+    },
+    {
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：兔子  耳朵  长长的  有",
+      "answer": "兔子有长长的耳朵",
+      "id": "c2_091"
+    },
+    {
+      "difficulty": 1,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：兔子  耳朵  长长的  有",
+      "answer": "兔子有长长的耳朵",
+      "id": "c2_092"
+    },
+    {
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：今天  天气  真好",
+      "answer": "今天天气真好",
+      "id": "c2_093"
+    },
+    {
+      "difficulty": 1,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：小鱼  在  游来游去  水里",
+      "answer": "小鱼在水里游来游去",
+      "id": "c2_094"
+    },
+    {
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：妹妹  笑  开心地",
+      "answer": "妹妹开心地笑",
+      "id": "c2_095"
+    },
+    {
+      "difficulty": 1,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：青蛙  池塘里  呱呱叫",
+      "answer": "青蛙在池塘里呱呱叫",
+      "id": "c2_096"
+    },
+    {
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：月亮  像  小船  弯弯的",
+      "answer": "弯弯的月亮像小船",
+      "id": "c2_097"
+    },
+    {
+      "difficulty": 1,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：小鱼  在  游来游去  水里",
+      "answer": "小鱼在水里游来游去",
+      "id": "c2_098"
+    },
+    {
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：是  我  小学生",
+      "answer": "我是小学生",
+      "id": "c2_099"
+    },
+    {
+      "difficulty": 1,
+      "type": "句子练习",
+      "question": "请把下列词语整理成通顺的句子：老师  认真  讲课  在",
+      "answer": "老师在认真讲课",
+      "id": "c2_100"
+    },
+    {
+      "id": "c2_101",
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "仿写：小鸟在枝头唱歌。 鱼儿在水里()。",
+      "answer": "游来游去"
+    },
+    {
+      "id": "c2_102",
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "仿写：雪白的云朵。 ()的桃花。",
+      "answer": "粉红"
+    },
+    {
+      "id": "c2_103",
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "仿写：湖水像一面镜子。 月亮像()。",
+      "answer": "一只小船"
+    },
+    {
+      "id": "c2_104",
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "仿写：弯弯的月儿像小船。 红红的太阳像()。",
+      "answer": "一个大火球"
+    },
+    {
+      "id": "c2_105",
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "用一边...一边...造句：我一边走路一边唱歌。",
+      "answer": "用\"一边...一边...\"写句子即可"
+    },
+    {
+      "id": "c2_106",
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "用如果...就...造句：如果下雨，我就不出门。",
+      "answer": "用\"如果...就...\"写句子即可"
+    },
+    {
+      "id": "c2_107",
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "用不但...而且...造句",
+      "answer": "用\"不但...而且...\"写句子即可"
+    },
+    {
+      "id": "c2_108",
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "仿写：他是我的好朋友。 她是我的()。",
+      "answer": "好老师（合理即可）"
+    },
+    {
+      "id": "c2_109",
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "仿写：平静的湖面。 ()的森林。",
+      "answer": "茂密"
+    },
+    {
+      "id": "c2_110",
+      "difficulty": 2,
+      "type": "句子练习",
+      "question": "仿写：苹果很甜。 西瓜()甜。",
+      "answer": "更"
     }
   ],
   "c3": [
@@ -3582,6 +4142,636 @@
       "keywords": "跳舞 音乐 舞台 优美",
       "example": "文艺汇演上，小丽在舞台上跳舞。她的舞姿优美，观众都热烈鼓掌。",
       "image": "scenes/dancing.png"
+    },
+    {
+      "id": "c3_031",
+      "difficulty": 2,
+      "scene": "春天",
+      "image": "scenes/spring_run.svg",
+      "prompt": "图上画了什么季节？有什么？小朋友在做什么？",
+      "keywords": "春天 花 草 小鸟 风筝 太阳",
+      "example": "春天来了，花儿开了，小草绿了。小朋友在草地上放风筝，非常开心。"
+    },
+    {
+      "id": "c3_032",
+      "difficulty": 2,
+      "scene": "夏天",
+      "image": "scenes/summer_swim.svg",
+      "prompt": "图上画了什么季节？小朋友在做什么？",
+      "keywords": "夏天 游泳 太阳 冰淇淋 热",
+      "example": "夏天很热，小朋友们在游泳池里游泳。游完泳还可以吃冰淇淋。"
+    },
+    {
+      "id": "c3_033",
+      "difficulty": 2,
+      "scene": "秋天",
+      "image": "scenes/autumn_leaves.svg",
+      "prompt": "图上画了什么季节？地上有什么？",
+      "keywords": "秋天 落叶 黄色 丰收 凉爽",
+      "example": "秋天到了，树上的叶子变黄了，一片一片落下来。"
+    },
+    {
+      "id": "c3_034",
+      "difficulty": 2,
+      "scene": "冬天",
+      "image": "scenes/winter_snow.svg",
+      "prompt": "图上画了什么季节？小朋友在做什么？",
+      "keywords": "冬天 下雪 堆雪人 冷 棉袄",
+      "example": "下雪啦！小朋友们穿着厚厚的棉袄在外面堆雪人。"
+    },
+    {
+      "id": "c3_035",
+      "difficulty": 2,
+      "scene": "我的妈妈",
+      "image": "scenes/mom_cook.svg",
+      "prompt": "图上画的是谁？她在做什么？",
+      "keywords": "妈妈 做饭 围裙 厨房 香",
+      "example": "妈妈系着围裙在厨房做饭。她做的饭菜很香。"
+    },
+    {
+      "id": "c3_036",
+      "difficulty": 2,
+      "scene": "我的爸爸",
+      "image": "scenes/dad_work.svg",
+      "prompt": "图上画的是谁？他在做什么？",
+      "keywords": "爸爸 上班 开车 高大 辛苦",
+      "example": "爸爸每天开车去上班，工作很辛苦。"
+    },
+    {
+      "id": "c3_037",
+      "difficulty": 2,
+      "scene": "我的好朋友",
+      "image": "scenes/friend_play.svg",
+      "prompt": "图上画了几个小朋友？他们在做什么？",
+      "keywords": "朋友 一起玩 笑 分享 开心",
+      "example": "我和好朋友一起在草地上玩，非常开心。"
+    },
+    {
+      "id": "c3_038",
+      "difficulty": 2,
+      "scene": "放学后",
+      "image": "scenes/afterschool_homework.svg",
+      "prompt": "图上画了什么时候？小朋友在做什么？",
+      "keywords": "放学 回家 写作业 书包 晚饭",
+      "example": "放学后，我先认真写作业，然后吃妈妈做的晚饭。"
+    },
+    {
+      "id": "c3_039",
+      "difficulty": 2,
+      "scene": "一次考试",
+      "image": "scenes/exam_class.svg",
+      "prompt": "图上的小朋友在做什么？表情怎么样？",
+      "keywords": "考试 紧张 认真 分数 100",
+      "example": "考试时我很紧张，但我认真做题，考了100分。"
+    },
+    {
+      "id": "c3_040",
+      "difficulty": 2,
+      "scene": "帮助别人",
+      "image": "scenes/help_seat.svg",
+      "prompt": "图上发生了什么事？小朋友做了什么？",
+      "keywords": "帮助 让座 老人 谢谢 善良",
+      "example": "公交车上，我给老爷爷让座，爷爷夸我是好孩子。"
+    },
+    {
+      "id": "c3_041",
+      "difficulty": 2,
+      "scene": "下雨了",
+      "image": "scenes/rain_umbrella.svg",
+      "prompt": "图上画了什么天气？人们打着什么？",
+      "keywords": "下雨 雨伞 雨衣 水花 彩虹",
+      "example": "放学下起了大雨，同学们撑着雨伞回家。"
+    },
+    {
+      "id": "c3_042",
+      "difficulty": 2,
+      "scene": "我的书包",
+      "image": "scenes/bag_clean.svg",
+      "prompt": "图上画的是什么？里面有什么？",
+      "keywords": "书包 文具 课本 铅笔 橡皮",
+      "example": "我的书包很漂亮，里面装着课本和文具。"
+    },
+    {
+      "id": "c3_043",
+      "difficulty": 2,
+      "scene": "周末",
+      "image": "scenes/weekend_park.svg",
+      "prompt": "图上小朋友在哪里？在做什么？",
+      "keywords": "周末 公园 划船 开心 休息",
+      "example": "周末爸爸带我去公园划船，玩得非常开心。"
+    },
+    {
+      "id": "c3_044",
+      "difficulty": 2,
+      "scene": "我的房间",
+      "image": "scenes/room_tidy.svg",
+      "prompt": "图上画的是什么地方？有什么？",
+      "keywords": "房间 床 书桌 台灯 整齐",
+      "example": "这是我的房间，有一张床、书桌和台灯，很整齐。"
+    },
+    {
+      "id": "c3_045",
+      "difficulty": 2,
+      "scene": "春天来了",
+      "image": "scenes/spring_birds.svg",
+      "prompt": "图上画了什么季节？有哪些景物？",
+      "keywords": "春天 燕子 桃花 绿草 温暖",
+      "example": "春天来了，燕子飞回来了，桃花也开了。"
+    },
+    {
+      "id": "c3_046",
+      "difficulty": 2,
+      "scene": "春天",
+      "image": "scenes/spring_run.svg",
+      "prompt": "图上画了什么季节？有什么？小朋友在做什么？",
+      "keywords": "春天 花 草 小鸟 风筝 太阳",
+      "example": "春天来了，花儿开了，小草绿了。小朋友在草地上放风筝，非常开心。"
+    },
+    {
+      "id": "c3_047",
+      "difficulty": 2,
+      "scene": "夏天",
+      "image": "scenes/summer_swim.svg",
+      "prompt": "图上画了什么季节？小朋友在做什么？",
+      "keywords": "夏天 游泳 太阳 冰淇淋 热",
+      "example": "夏天很热，小朋友们在游泳池里游泳。游完泳还可以吃冰淇淋。"
+    },
+    {
+      "id": "c3_048",
+      "difficulty": 2,
+      "scene": "秋天",
+      "image": "scenes/autumn_leaves.svg",
+      "prompt": "图上画了什么季节？地上有什么？",
+      "keywords": "秋天 落叶 黄色 丰收 凉爽",
+      "example": "秋天到了，树上的叶子变黄了，一片一片落下来。"
+    },
+    {
+      "id": "c3_049",
+      "difficulty": 2,
+      "scene": "冬天",
+      "image": "scenes/winter_snow.svg",
+      "prompt": "图上画了什么季节？小朋友在做什么？",
+      "keywords": "冬天 下雪 堆雪人 冷 棉袄",
+      "example": "下雪啦！小朋友们穿着厚厚的棉袄在外面堆雪人。"
+    },
+    {
+      "id": "c3_050",
+      "difficulty": 2,
+      "scene": "我的妈妈",
+      "image": "scenes/mom_cook.svg",
+      "prompt": "图上画的是谁？她在做什么？",
+      "keywords": "妈妈 做饭 围裙 厨房 香",
+      "example": "妈妈系着围裙在厨房做饭。她做的饭菜很香。"
+    },
+    {
+      "id": "c3_051",
+      "difficulty": 2,
+      "scene": "我的爸爸",
+      "image": "scenes/dad_work.svg",
+      "prompt": "图上画的是谁？他在做什么？",
+      "keywords": "爸爸 上班 开车 高大 辛苦",
+      "example": "爸爸每天开车去上班，工作很辛苦。"
+    },
+    {
+      "id": "c3_052",
+      "difficulty": 2,
+      "scene": "我的好朋友",
+      "image": "scenes/friend_play.svg",
+      "prompt": "图上画了几个小朋友？他们在做什么？",
+      "keywords": "朋友 一起玩 笑 分享 开心",
+      "example": "我和好朋友一起在草地上玩，非常开心。"
+    },
+    {
+      "id": "c3_053",
+      "difficulty": 2,
+      "scene": "放学后",
+      "image": "scenes/afterschool_homework.svg",
+      "prompt": "图上画了什么时候？小朋友在做什么？",
+      "keywords": "放学 回家 写作业 书包 晚饭",
+      "example": "放学后，我先认真写作业，然后吃妈妈做的晚饭。"
+    },
+    {
+      "id": "c3_054",
+      "difficulty": 2,
+      "scene": "一次考试",
+      "image": "scenes/exam_class.svg",
+      "prompt": "图上的小朋友在做什么？表情怎么样？",
+      "keywords": "考试 紧张 认真 分数 100",
+      "example": "考试时我很紧张，但我认真做题，考了100分。"
+    },
+    {
+      "id": "c3_055",
+      "difficulty": 2,
+      "scene": "帮助别人",
+      "image": "scenes/help_seat.svg",
+      "prompt": "图上发生了什么事？小朋友做了什么？",
+      "keywords": "帮助 让座 老人 谢谢 善良",
+      "example": "公交车上，我给老爷爷让座，爷爷夸我是好孩子。"
+    },
+    {
+      "id": "c3_056",
+      "difficulty": 2,
+      "scene": "下雨了",
+      "image": "scenes/rain_umbrella.svg",
+      "prompt": "图上画了什么天气？人们打着什么？",
+      "keywords": "下雨 雨伞 雨衣 水花 彩虹",
+      "example": "放学下起了大雨，同学们撑着雨伞回家。"
+    },
+    {
+      "id": "c3_057",
+      "difficulty": 2,
+      "scene": "我的书包",
+      "image": "scenes/bag_clean.svg",
+      "prompt": "图上画的是什么？里面有什么？",
+      "keywords": "书包 文具 课本 铅笔 橡皮",
+      "example": "我的书包很漂亮，里面装着课本和文具。"
+    },
+    {
+      "id": "c3_058",
+      "difficulty": 2,
+      "scene": "周末",
+      "image": "scenes/weekend_park.svg",
+      "prompt": "图上小朋友在哪里？在做什么？",
+      "keywords": "周末 公园 划船 开心 休息",
+      "example": "周末爸爸带我去公园划船，玩得非常开心。"
+    },
+    {
+      "id": "c3_059",
+      "difficulty": 2,
+      "scene": "我的房间",
+      "image": "scenes/room_tidy.svg",
+      "prompt": "图上画的是什么地方？有什么？",
+      "keywords": "房间 床 书桌 台灯 整齐",
+      "example": "这是我的房间，有一张床、书桌和台灯，很整齐。"
+    },
+    {
+      "id": "c3_060",
+      "difficulty": 2,
+      "scene": "春天来了",
+      "image": "scenes/spring_birds.svg",
+      "prompt": "图上画了什么季节？有哪些景物？",
+      "keywords": "春天 燕子 桃花 绿草 温暖",
+      "example": "春天来了，燕子飞回来了，桃花也开了。"
+    },
+    {
+      "id": "c3_061",
+      "difficulty": 2,
+      "scene": "春天",
+      "image": "scenes/spring_run.svg",
+      "prompt": "图上画了什么季节？有什么？小朋友在做什么？",
+      "keywords": "春天 花 草 小鸟 风筝 太阳",
+      "example": "春天来了，花儿开了，小草绿了。小朋友在草地上放风筝，非常开心。"
+    },
+    {
+      "id": "c3_062",
+      "difficulty": 2,
+      "scene": "夏天",
+      "image": "scenes/summer_swim.svg",
+      "prompt": "图上画了什么季节？小朋友在做什么？",
+      "keywords": "夏天 游泳 太阳 冰淇淋 热",
+      "example": "夏天很热，小朋友们在游泳池里游泳。游完泳还可以吃冰淇淋。"
+    },
+    {
+      "id": "c3_063",
+      "difficulty": 2,
+      "scene": "秋天",
+      "image": "scenes/autumn_leaves.svg",
+      "prompt": "图上画了什么季节？地上有什么？",
+      "keywords": "秋天 落叶 黄色 丰收 凉爽",
+      "example": "秋天到了，树上的叶子变黄了，一片一片落下来。"
+    },
+    {
+      "id": "c3_064",
+      "difficulty": 2,
+      "scene": "冬天",
+      "image": "scenes/winter_snow.svg",
+      "prompt": "图上画了什么季节？小朋友在做什么？",
+      "keywords": "冬天 下雪 堆雪人 冷 棉袄",
+      "example": "下雪啦！小朋友们穿着厚厚的棉袄在外面堆雪人。"
+    },
+    {
+      "id": "c3_065",
+      "difficulty": 2,
+      "scene": "我的妈妈",
+      "image": "scenes/mom_cook.svg",
+      "prompt": "图上画的是谁？她在做什么？",
+      "keywords": "妈妈 做饭 围裙 厨房 香",
+      "example": "妈妈系着围裙在厨房做饭。她做的饭菜很香。"
+    },
+    {
+      "id": "c3_066",
+      "difficulty": 2,
+      "scene": "我的爸爸",
+      "image": "scenes/dad_work.svg",
+      "prompt": "图上画的是谁？他在做什么？",
+      "keywords": "爸爸 上班 开车 高大 辛苦",
+      "example": "爸爸每天开车去上班，工作很辛苦。"
+    },
+    {
+      "id": "c3_067",
+      "difficulty": 2,
+      "scene": "我的好朋友",
+      "image": "scenes/friend_play.svg",
+      "prompt": "图上画了几个小朋友？他们在做什么？",
+      "keywords": "朋友 一起玩 笑 分享 开心",
+      "example": "我和好朋友一起在草地上玩，非常开心。"
+    },
+    {
+      "id": "c3_068",
+      "difficulty": 2,
+      "scene": "放学后",
+      "image": "scenes/afterschool_homework.svg",
+      "prompt": "图上画了什么时候？小朋友在做什么？",
+      "keywords": "放学 回家 写作业 书包 晚饭",
+      "example": "放学后，我先认真写作业，然后吃妈妈做的晚饭。"
+    },
+    {
+      "id": "c3_069",
+      "difficulty": 2,
+      "scene": "一次考试",
+      "image": "scenes/exam_class.svg",
+      "prompt": "图上的小朋友在做什么？表情怎么样？",
+      "keywords": "考试 紧张 认真 分数 100",
+      "example": "考试时我很紧张，但我认真做题，考了100分。"
+    },
+    {
+      "id": "c3_070",
+      "difficulty": 2,
+      "scene": "帮助别人",
+      "image": "scenes/help_seat.svg",
+      "prompt": "图上发生了什么事？小朋友做了什么？",
+      "keywords": "帮助 让座 老人 谢谢 善良",
+      "example": "公交车上，我给老爷爷让座，爷爷夸我是好孩子。"
+    },
+    {
+      "id": "c3_071",
+      "difficulty": 2,
+      "scene": "下雨了",
+      "image": "scenes/rain_umbrella.svg",
+      "prompt": "图上画了什么天气？人们打着什么？",
+      "keywords": "下雨 雨伞 雨衣 水花 彩虹",
+      "example": "放学下起了大雨，同学们撑着雨伞回家。"
+    },
+    {
+      "id": "c3_072",
+      "difficulty": 2,
+      "scene": "我的书包",
+      "image": "scenes/bag_clean.svg",
+      "prompt": "图上画的是什么？里面有什么？",
+      "keywords": "书包 文具 课本 铅笔 橡皮",
+      "example": "我的书包很漂亮，里面装着课本和文具。"
+    },
+    {
+      "id": "c3_073",
+      "difficulty": 2,
+      "scene": "周末",
+      "image": "scenes/weekend_park.svg",
+      "prompt": "图上小朋友在哪里？在做什么？",
+      "keywords": "周末 公园 划船 开心 休息",
+      "example": "周末爸爸带我去公园划船，玩得非常开心。"
+    },
+    {
+      "id": "c3_074",
+      "difficulty": 2,
+      "scene": "我的房间",
+      "image": "scenes/room_tidy.svg",
+      "prompt": "图上画的是什么地方？有什么？",
+      "keywords": "房间 床 书桌 台灯 整齐",
+      "example": "这是我的房间，有一张床、书桌和台灯，很整齐。"
+    },
+    {
+      "id": "c3_075",
+      "difficulty": 2,
+      "scene": "春天来了",
+      "image": "scenes/spring_birds.svg",
+      "prompt": "图上画了什么季节？有哪些景物？",
+      "keywords": "春天 燕子 桃花 绿草 温暖",
+      "example": "春天来了，燕子飞回来了，桃花也开了。"
+    },
+    {
+      "id": "c3_076",
+      "difficulty": 2,
+      "scene": "春天",
+      "image": "scenes/spring_run.svg",
+      "prompt": "图上画了什么季节？有什么？小朋友在做什么？",
+      "keywords": "春天 花 草 小鸟 风筝 太阳",
+      "example": "春天来了，花儿开了，小草绿了。小朋友在草地上放风筝，非常开心。"
+    },
+    {
+      "id": "c3_077",
+      "difficulty": 2,
+      "scene": "夏天",
+      "image": "scenes/summer_swim.svg",
+      "prompt": "图上画了什么季节？小朋友在做什么？",
+      "keywords": "夏天 游泳 太阳 冰淇淋 热",
+      "example": "夏天很热，小朋友们在游泳池里游泳。游完泳还可以吃冰淇淋。"
+    },
+    {
+      "id": "c3_078",
+      "difficulty": 2,
+      "scene": "秋天",
+      "image": "scenes/autumn_leaves.svg",
+      "prompt": "图上画了什么季节？地上有什么？",
+      "keywords": "秋天 落叶 黄色 丰收 凉爽",
+      "example": "秋天到了，树上的叶子变黄了，一片一片落下来。"
+    },
+    {
+      "id": "c3_079",
+      "difficulty": 2,
+      "scene": "冬天",
+      "image": "scenes/winter_snow.svg",
+      "prompt": "图上画了什么季节？小朋友在做什么？",
+      "keywords": "冬天 下雪 堆雪人 冷 棉袄",
+      "example": "下雪啦！小朋友们穿着厚厚的棉袄在外面堆雪人。"
+    },
+    {
+      "id": "c3_080",
+      "difficulty": 2,
+      "scene": "我的妈妈",
+      "image": "scenes/mom_cook.svg",
+      "prompt": "图上画的是谁？她在做什么？",
+      "keywords": "妈妈 做饭 围裙 厨房 香",
+      "example": "妈妈系着围裙在厨房做饭。她做的饭菜很香。"
+    },
+    {
+      "id": "c3_081",
+      "difficulty": 2,
+      "scene": "我的爸爸",
+      "image": "scenes/dad_work.svg",
+      "prompt": "图上画的是谁？他在做什么？",
+      "keywords": "爸爸 上班 开车 高大 辛苦",
+      "example": "爸爸每天开车去上班，工作很辛苦。"
+    },
+    {
+      "id": "c3_082",
+      "difficulty": 2,
+      "scene": "我的好朋友",
+      "image": "scenes/friend_play.svg",
+      "prompt": "图上画了几个小朋友？他们在做什么？",
+      "keywords": "朋友 一起玩 笑 分享 开心",
+      "example": "我和好朋友一起在草地上玩，非常开心。"
+    },
+    {
+      "id": "c3_083",
+      "difficulty": 2,
+      "scene": "放学后",
+      "image": "scenes/afterschool_homework.svg",
+      "prompt": "图上画了什么时候？小朋友在做什么？",
+      "keywords": "放学 回家 写作业 书包 晚饭",
+      "example": "放学后，我先认真写作业，然后吃妈妈做的晚饭。"
+    },
+    {
+      "id": "c3_084",
+      "difficulty": 2,
+      "scene": "一次考试",
+      "image": "scenes/exam_class.svg",
+      "prompt": "图上的小朋友在做什么？表情怎么样？",
+      "keywords": "考试 紧张 认真 分数 100",
+      "example": "考试时我很紧张，但我认真做题，考了100分。"
+    },
+    {
+      "id": "c3_085",
+      "difficulty": 2,
+      "scene": "帮助别人",
+      "image": "scenes/help_seat.svg",
+      "prompt": "图上发生了什么事？小朋友做了什么？",
+      "keywords": "帮助 让座 老人 谢谢 善良",
+      "example": "公交车上，我给老爷爷让座，爷爷夸我是好孩子。"
+    },
+    {
+      "id": "c3_086",
+      "difficulty": 2,
+      "scene": "下雨了",
+      "image": "scenes/rain_umbrella.svg",
+      "prompt": "图上画了什么天气？人们打着什么？",
+      "keywords": "下雨 雨伞 雨衣 水花 彩虹",
+      "example": "放学下起了大雨，同学们撑着雨伞回家。"
+    },
+    {
+      "id": "c3_087",
+      "difficulty": 2,
+      "scene": "我的书包",
+      "image": "scenes/bag_clean.svg",
+      "prompt": "图上画的是什么？里面有什么？",
+      "keywords": "书包 文具 课本 铅笔 橡皮",
+      "example": "我的书包很漂亮，里面装着课本和文具。"
+    },
+    {
+      "id": "c3_088",
+      "difficulty": 2,
+      "scene": "周末",
+      "image": "scenes/weekend_park.svg",
+      "prompt": "图上小朋友在哪里？在做什么？",
+      "keywords": "周末 公园 划船 开心 休息",
+      "example": "周末爸爸带我去公园划船，玩得非常开心。"
+    },
+    {
+      "id": "c3_089",
+      "difficulty": 2,
+      "scene": "我的房间",
+      "image": "scenes/room_tidy.svg",
+      "prompt": "图上画的是什么地方？有什么？",
+      "keywords": "房间 床 书桌 台灯 整齐",
+      "example": "这是我的房间，有一张床、书桌和台灯，很整齐。"
+    },
+    {
+      "id": "c3_090",
+      "difficulty": 2,
+      "scene": "春天来了",
+      "image": "scenes/spring_birds.svg",
+      "prompt": "图上画了什么季节？有哪些景物？",
+      "keywords": "春天 燕子 桃花 绿草 温暖",
+      "example": "春天来了，燕子飞回来了，桃花也开了。"
+    },
+    {
+      "id": "c3_091",
+      "difficulty": 2,
+      "scene": "春天",
+      "image": "scenes/spring_run.svg",
+      "prompt": "图上画了什么季节？有什么？小朋友在做什么？",
+      "keywords": "春天 花 草 小鸟 风筝 太阳",
+      "example": "春天来了，花儿开了，小草绿了。小朋友在草地上放风筝，非常开心。"
+    },
+    {
+      "id": "c3_092",
+      "difficulty": 2,
+      "scene": "夏天",
+      "image": "scenes/summer_swim.svg",
+      "prompt": "图上画了什么季节？小朋友在做什么？",
+      "keywords": "夏天 游泳 太阳 冰淇淋 热",
+      "example": "夏天很热，小朋友们在游泳池里游泳。游完泳还可以吃冰淇淋。"
+    },
+    {
+      "id": "c3_093",
+      "difficulty": 2,
+      "scene": "秋天",
+      "image": "scenes/autumn_leaves.svg",
+      "prompt": "图上画了什么季节？地上有什么？",
+      "keywords": "秋天 落叶 黄色 丰收 凉爽",
+      "example": "秋天到了，树上的叶子变黄了，一片一片落下来。"
+    },
+    {
+      "id": "c3_094",
+      "difficulty": 2,
+      "scene": "冬天",
+      "image": "scenes/winter_snow.svg",
+      "prompt": "图上画了什么季节？小朋友在做什么？",
+      "keywords": "冬天 下雪 堆雪人 冷 棉袄",
+      "example": "下雪啦！小朋友们穿着厚厚的棉袄在外面堆雪人。"
+    },
+    {
+      "id": "c3_095",
+      "difficulty": 2,
+      "scene": "我的妈妈",
+      "image": "scenes/mom_cook.svg",
+      "prompt": "图上画的是谁？她在做什么？",
+      "keywords": "妈妈 做饭 围裙 厨房 香",
+      "example": "妈妈系着围裙在厨房做饭。她做的饭菜很香。"
+    },
+    {
+      "id": "c3_096",
+      "difficulty": 2,
+      "scene": "我的爸爸",
+      "image": "scenes/dad_work.svg",
+      "prompt": "图上画的是谁？他在做什么？",
+      "keywords": "爸爸 上班 开车 高大 辛苦",
+      "example": "爸爸每天开车去上班，工作很辛苦。"
+    },
+    {
+      "id": "c3_097",
+      "difficulty": 2,
+      "scene": "我的好朋友",
+      "image": "scenes/friend_play.svg",
+      "prompt": "图上画了几个小朋友？他们在做什么？",
+      "keywords": "朋友 一起玩 笑 分享 开心",
+      "example": "我和好朋友一起在草地上玩，非常开心。"
+    },
+    {
+      "id": "c3_098",
+      "difficulty": 2,
+      "scene": "放学后",
+      "image": "scenes/afterschool_homework.svg",
+      "prompt": "图上画了什么时候？小朋友在做什么？",
+      "keywords": "放学 回家 写作业 书包 晚饭",
+      "example": "放学后，我先认真写作业，然后吃妈妈做的晚饭。"
+    },
+    {
+      "id": "c3_099",
+      "difficulty": 2,
+      "scene": "一次考试",
+      "image": "scenes/exam_class.svg",
+      "prompt": "图上的小朋友在做什么？表情怎么样？",
+      "keywords": "考试 紧张 认真 分数 100",
+      "example": "考试时我很紧张，但我认真做题，考了100分。"
+    },
+    {
+      "id": "c3_100",
+      "difficulty": 2,
+      "scene": "帮助别人",
+      "image": "scenes/help_seat.svg",
+      "prompt": "图上发生了什么事？小朋友做了什么？",
+      "keywords": "帮助 让座 老人 谢谢 善良",
+      "example": "公交车上，我给老爷爷让座，爷爷夸我是好孩子。"
     }
   ],
   "c4": [
@@ -11438,6 +12628,286 @@
       "type": "词语运用",
       "question": "\"的、地、得\" 填空：高兴（ ）跳了起来",
       "answer": "得"
+    },
+    {
+      "difficulty": 1,
+      "type": "词语运用",
+      "question": "选词填空（急忙 连忙）：看到老师来了，我___站起来。快迟到了，我___跑。",
+      "answer": "急忙/连忙",
+      "id": "c6_071"
+    },
+    {
+      "difficulty": 2,
+      "type": "词语运用",
+      "question": "选词填空（无论 都）：___多么困难,他___不放弃。",
+      "answer": "无论/都",
+      "id": "c6_072"
+    },
+    {
+      "difficulty": 1,
+      "type": "词语运用",
+      "question": "选词填空（常常 往常）：我___去公园玩。今天和___一样。",
+      "answer": "常常/往常",
+      "id": "c6_073"
+    },
+    {
+      "difficulty": 2,
+      "type": "词语运用",
+      "question": "选词填空（如果 就）：___明天不下雨，我们___去春游。",
+      "answer": "如果/就",
+      "id": "c6_074"
+    },
+    {
+      "difficulty": 1,
+      "type": "词语运用",
+      "question": "选词填空（急忙 连忙）：看到老师来了，我___站起来。快迟到了，我___跑。",
+      "answer": "急忙/连忙",
+      "id": "c6_075"
+    },
+    {
+      "difficulty": 2,
+      "type": "词语运用",
+      "question": "选词填空（非常 特别）：这道题___难。今天___开心。",
+      "answer": "非常/特别",
+      "id": "c6_076"
+    },
+    {
+      "difficulty": 1,
+      "type": "词语运用",
+      "question": "选词填空（常常 往常）：我___去公园玩。今天和___一样。",
+      "answer": "常常/往常",
+      "id": "c6_077"
+    },
+    {
+      "difficulty": 2,
+      "type": "词语运用",
+      "question": "选词填空（常常 往常）：我___去公园玩。今天和___一样。",
+      "answer": "常常/往常",
+      "id": "c6_078"
+    },
+    {
+      "difficulty": 1,
+      "type": "词语运用",
+      "question": "选词填空（温暖 暖和）：春天的阳光很___。穿上棉袄就___了。",
+      "answer": "温暖/暖和",
+      "id": "c6_079"
+    },
+    {
+      "difficulty": 2,
+      "type": "词语运用",
+      "question": "选词填空（非常 特别）：这道题___难。今天___开心。",
+      "answer": "非常/特别",
+      "id": "c6_080"
+    },
+    {
+      "difficulty": 1,
+      "type": "词语运用",
+      "question": "选词填空（美丽 漂亮）：花园里的花真___，像一个___的公主。",
+      "answer": "美丽/漂亮",
+      "id": "c6_081"
+    },
+    {
+      "difficulty": 2,
+      "type": "词语运用",
+      "question": "选词填空（急忙 连忙）：看到老师来了，我___站起来。快迟到了，我___跑。",
+      "answer": "急忙/连忙",
+      "id": "c6_082"
+    },
+    {
+      "difficulty": 1,
+      "type": "词语运用",
+      "question": "选词填空（认真 仔细）：上课要___听讲。做作业要___检查。",
+      "answer": "认真/仔细",
+      "id": "c6_083"
+    },
+    {
+      "difficulty": 2,
+      "type": "词语运用",
+      "question": "选词填空（非常 特别）：这道题___难。今天___开心。",
+      "answer": "非常/特别",
+      "id": "c6_084"
+    },
+    {
+      "difficulty": 1,
+      "type": "词语运用",
+      "question": "选词填空（发明 发现）：爱迪生___了电灯。我___地上有一枚硬币。",
+      "answer": "发明/发现",
+      "id": "c6_085"
+    },
+    {
+      "difficulty": 2,
+      "type": "词语运用",
+      "question": "选词填空（无论 都）：___多么困难,他___不放弃。",
+      "answer": "无论/都",
+      "id": "c6_086"
+    },
+    {
+      "difficulty": 1,
+      "type": "词语运用",
+      "question": "选词填空（只要 就）：___认真学习，___能进步。",
+      "answer": "只要/就",
+      "id": "c6_087"
+    },
+    {
+      "difficulty": 2,
+      "type": "词语运用",
+      "question": "选词填空（虽然 但是）：___题目很难，___我做对了。",
+      "answer": "虽然/但是",
+      "id": "c6_088"
+    },
+    {
+      "difficulty": 1,
+      "type": "词语运用",
+      "question": "选词填空（果然 突然）：天气预报说会下雨，___下起了大雨。我___猜对了。",
+      "answer": "果然/突然",
+      "id": "c6_089"
+    },
+    {
+      "difficulty": 2,
+      "type": "词语运用",
+      "question": "选词填空（急忙 连忙）：看到老师来了，我___站起来。快迟到了，我___跑。",
+      "answer": "急忙/连忙",
+      "id": "c6_090"
+    },
+    {
+      "difficulty": 1,
+      "type": "词语运用",
+      "question": "选词填空（高兴 兴奋）：考了100分我很___。看到礼物他___地跳起来。",
+      "answer": "高兴/兴奋",
+      "id": "c6_091"
+    },
+    {
+      "difficulty": 2,
+      "type": "词语运用",
+      "question": "选词填空（渐渐 慢慢）：天气___热了。乌龟___地爬。",
+      "answer": "渐渐/慢慢",
+      "id": "c6_092"
+    },
+    {
+      "difficulty": 1,
+      "type": "词语运用",
+      "question": "选词填空（高兴 兴奋）：考了100分我很___。看到礼物他___地跳起来。",
+      "answer": "高兴/兴奋",
+      "id": "c6_093"
+    },
+    {
+      "difficulty": 2,
+      "type": "词语运用",
+      "question": "选词填空（如果 就）：___明天不下雨，我们___去春游。",
+      "answer": "如果/就",
+      "id": "c6_094"
+    },
+    {
+      "difficulty": 1,
+      "type": "词语运用",
+      "question": "选词填空（发明 发现）：爱迪生___了电灯。我___地上有一枚硬币。",
+      "answer": "发明/发现",
+      "id": "c6_095"
+    },
+    {
+      "difficulty": 2,
+      "type": "词语运用",
+      "question": "选词填空（只要 就）：___认真学习，___能进步。",
+      "answer": "只要/就",
+      "id": "c6_096"
+    },
+    {
+      "difficulty": 1,
+      "type": "词语运用",
+      "question": "选词填空（常常 往常）：我___去公园玩。今天和___一样。",
+      "answer": "常常/往常",
+      "id": "c6_097"
+    },
+    {
+      "difficulty": 2,
+      "type": "词语运用",
+      "question": "选词填空（发明 发现）：爱迪生___了电灯。我___地上有一枚硬币。",
+      "answer": "发明/发现",
+      "id": "c6_098"
+    },
+    {
+      "difficulty": 1,
+      "type": "词语运用",
+      "question": "选词填空（因为 所以）：___下雨了，___运动会取消。",
+      "answer": "因为/所以",
+      "id": "c6_099"
+    },
+    {
+      "difficulty": 2,
+      "type": "词语运用",
+      "question": "选词填空（如果 就）：___明天不下雨，我们___去春游。",
+      "answer": "如果/就",
+      "id": "c6_100"
+    },
+    {
+      "id": "c6_101",
+      "difficulty": 1,
+      "type": "词语搭配",
+      "question": "填量词：一()鱼 一()书 一()鸟",
+      "answer": "条/本/只"
+    },
+    {
+      "id": "c6_102",
+      "difficulty": 1,
+      "type": "词语搭配",
+      "question": "填量词：一()马 一()花 一()桌子",
+      "answer": "匹/朵/张"
+    },
+    {
+      "id": "c6_103",
+      "difficulty": 1,
+      "type": "词语搭配",
+      "question": "填量词：一()桥 一()房子 一()画",
+      "answer": "座/间/幅"
+    },
+    {
+      "id": "c6_104",
+      "difficulty": 1,
+      "type": "词语搭配",
+      "question": "填量词：一()星星 一()树 一()风",
+      "answer": "颗/棵/阵"
+    },
+    {
+      "id": "c6_105",
+      "difficulty": 1,
+      "type": "词语搭配",
+      "question": "填量词：一()眼睛 一()手 一()雨伞",
+      "answer": "双/只/把"
+    },
+    {
+      "id": "c6_106",
+      "difficulty": 1,
+      "type": "词语搭配",
+      "question": "填量词：一()牛奶 一()水 一()笔",
+      "answer": "杯/瓶/支"
+    },
+    {
+      "id": "c6_107",
+      "difficulty": 1,
+      "type": "词语搭配",
+      "question": "填量词：一()帽子 一()歌 一()路",
+      "answer": "顶/首/条"
+    },
+    {
+      "id": "c6_108",
+      "difficulty": 1,
+      "type": "词语搭配",
+      "question": "填量词：一()飞机 一()火车 一()轮船",
+      "answer": "架/列/艘"
+    },
+    {
+      "id": "c6_109",
+      "difficulty": 1,
+      "type": "词语搭配",
+      "question": "填量词：一()镜子 一()白云 一()橡皮",
+      "answer": "面/朵/块"
+    },
+    {
+      "id": "c6_110",
+      "difficulty": 1,
+      "type": "词语搭配",
+      "question": "填量词：一()灯 一()葡萄 一()纸",
+      "answer": "盏/串/张"
     }
   ],
   "c7": [
@@ -13542,6 +15012,41 @@
       "type": "古诗文",
       "question": "古诗填空：请写出《《静夜思》》中你最喜欢的一句诗，并说说为什么喜欢。",
       "answer": "请自由发挥，言之有理即可。"
+    },
+    {
+      "id": "c8_151",
+      "difficulty": 2,
+      "type": "古诗文",
+      "question": "默写：村居 草长莺飞二月天，()。儿童散学归来早，()。",
+      "answer": "拂堤杨柳醉春烟/忙趁东风放纸鸢"
+    },
+    {
+      "id": "c8_152",
+      "difficulty": 2,
+      "type": "古诗文",
+      "question": "默写：咏柳 碧玉妆成一树高，()。不知细叶谁裁出，()。",
+      "answer": "万条垂下绿丝绦/二月春风似剪刀"
+    },
+    {
+      "id": "c8_153",
+      "difficulty": 2,
+      "type": "古诗文",
+      "question": "补全：离离原上草，()。野火烧不尽，()。",
+      "answer": "一岁一枯荣/春风吹又生"
+    },
+    {
+      "id": "c8_154",
+      "difficulty": 2,
+      "type": "古诗文",
+      "question": "默写：望庐山瀑布 日照香炉生紫烟，()。飞流直下三千尺，()。",
+      "answer": "遥看瀑布挂前川/疑是银河落九天"
+    },
+    {
+      "id": "c8_155",
+      "difficulty": 2,
+      "type": "古诗文",
+      "question": "补全：毕竟西湖六月中，()。接天莲叶无穷碧，()。",
+      "answer": "风光不与四时同/映日荷花别样红"
     }
   ],
   "c12": [

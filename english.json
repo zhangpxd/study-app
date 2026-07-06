@@ -2159,6 +2159,146 @@
       "word": "zoo",
       "meaning": "动物园",
       "sentence": "Let's go to the zoo."
+    },
+    {
+      "id": "e1_241",
+      "difficulty": 1,
+      "type": "单词",
+      "question": "大写A的小写是什么？",
+      "answer": "a"
+    },
+    {
+      "id": "e1_242",
+      "difficulty": 1,
+      "type": "单词",
+      "question": "小写b的大写是什么？",
+      "answer": "B"
+    },
+    {
+      "id": "e1_243",
+      "difficulty": 1,
+      "type": "单词",
+      "question": "大写F的小写是什么？",
+      "answer": "f"
+    },
+    {
+      "id": "e1_244",
+      "difficulty": 1,
+      "type": "单词",
+      "question": "小写g的大写是什么？",
+      "answer": "G"
+    },
+    {
+      "id": "e1_245",
+      "difficulty": 1,
+      "type": "单词",
+      "question": "补全字母：a b c d () f g",
+      "answer": "e"
+    },
+    {
+      "id": "e1_246",
+      "difficulty": 1,
+      "type": "单词",
+      "question": "补全字母：A B C () E",
+      "answer": "D"
+    },
+    {
+      "id": "e1_247",
+      "difficulty": 1,
+      "type": "单词",
+      "question": "将下列字母按顺序排列：d b a c",
+      "answer": "a b c d"
+    },
+    {
+      "id": "e1_248",
+      "difficulty": 1,
+      "type": "单词",
+      "question": "补全字母：m n () p q",
+      "answer": "o"
+    },
+    {
+      "id": "e1_249",
+      "difficulty": 1,
+      "type": "单词",
+      "question": "字母表共有多少个字母？",
+      "answer": "26个"
+    },
+    {
+      "id": "e1_250",
+      "difficulty": 1,
+      "type": "单词",
+      "question": "按顺序写出前5个大写字母",
+      "answer": "A B C D E"
+    },
+    {
+      "id": "e1_251",
+      "difficulty": 1,
+      "type": "单词",
+      "question": "选出不同类：A.cat B.dog C.apple D.bird",
+      "answer": "C"
+    },
+    {
+      "id": "e1_252",
+      "difficulty": 1,
+      "type": "单词",
+      "question": "选出不同类：A.red B.blue C.book D.green",
+      "answer": "C"
+    },
+    {
+      "id": "e1_253",
+      "difficulty": 1,
+      "type": "单词",
+      "question": "选出不同类：A.father B.mother C.teacher D.brother",
+      "answer": "C"
+    },
+    {
+      "id": "e1_254",
+      "difficulty": 1,
+      "type": "单词",
+      "question": "选出不同类：A.one B.two C.three D.book",
+      "answer": "D"
+    },
+    {
+      "id": "e1_255",
+      "difficulty": 1,
+      "type": "单词",
+      "question": "选出不同类：A.pencil B.ruler C.eraser D.banana",
+      "answer": "D"
+    },
+    {
+      "id": "e1_256",
+      "difficulty": 1,
+      "type": "单词",
+      "question": "选出不同类：A.eye B.nose C.hand D.desk",
+      "answer": "D"
+    },
+    {
+      "id": "e1_257",
+      "difficulty": 1,
+      "type": "单词",
+      "question": "选出不同类：A.rice B.milk C.egg D.face",
+      "answer": "D"
+    },
+    {
+      "id": "e1_258",
+      "difficulty": 1,
+      "type": "单词",
+      "question": "选出不同类：A.big B.small C.long D.dog",
+      "answer": "D"
+    },
+    {
+      "id": "e1_259",
+      "difficulty": 1,
+      "type": "单词",
+      "question": "选出不同类：A.run B.jump C.desk D.walk",
+      "answer": "C"
+    },
+    {
+      "id": "e1_260",
+      "difficulty": 1,
+      "type": "单词",
+      "question": "选出不同类：A.spring B.summer C.Monday D.winter",
+      "answer": "C"
     }
   ],
   "e2": [
@@ -3401,6 +3541,111 @@
       "instruction": "用动词过去式填空",
       "question": "They ___ (be) happy.",
       "answer": "were"
+    },
+    {
+      "id": "e2_156",
+      "difficulty": 2,
+      "type": "句子",
+      "question": "连词成句：name is My Tom.",
+      "answer": "My name is Tom."
+    },
+    {
+      "id": "e2_157",
+      "difficulty": 2,
+      "type": "句子",
+      "question": "连词成句：have I a pen.",
+      "answer": "I have a pen."
+    },
+    {
+      "id": "e2_158",
+      "difficulty": 2,
+      "type": "句子",
+      "question": "连词成句：you How are?",
+      "answer": "How are you?"
+    },
+    {
+      "id": "e2_159",
+      "difficulty": 2,
+      "type": "句子",
+      "question": "连词成句：is This my book.",
+      "answer": "This is my book."
+    },
+    {
+      "id": "e2_160",
+      "difficulty": 2,
+      "type": "句子",
+      "question": "连词成句：like I apples.",
+      "answer": "I like apples."
+    },
+    {
+      "id": "e2_161",
+      "difficulty": 2,
+      "type": "句子",
+      "question": "连词成句：color What is it?",
+      "answer": "What color is it?"
+    },
+    {
+      "id": "e2_162",
+      "difficulty": 2,
+      "type": "句子",
+      "question": "连词成句：is He my father.",
+      "answer": "He is my father."
+    },
+    {
+      "id": "e2_163",
+      "difficulty": 2,
+      "type": "句子",
+      "question": "连词成句：a It is cat.",
+      "answer": "It is a cat."
+    },
+    {
+      "id": "e2_164",
+      "difficulty": 2,
+      "type": "句子",
+      "question": "连词成句：old How you are?",
+      "answer": "How old are you?"
+    },
+    {
+      "id": "e2_165",
+      "difficulty": 2,
+      "type": "句子",
+      "question": "连词成句：can I see a bird.",
+      "answer": "I can see a bird."
+    },
+    {
+      "id": "e2_166",
+      "difficulty": 2,
+      "type": "句子",
+      "question": "连词成句：is Where the book?",
+      "answer": "Where is the book?"
+    },
+    {
+      "id": "e2_167",
+      "difficulty": 2,
+      "type": "句子",
+      "question": "连词成句：Do like you milk?",
+      "answer": "Do you like milk?"
+    },
+    {
+      "id": "e2_168",
+      "difficulty": 2,
+      "type": "句子",
+      "question": "连词成句：have I two eyes.",
+      "answer": "I have two eyes."
+    },
+    {
+      "id": "e2_169",
+      "difficulty": 2,
+      "type": "句子",
+      "question": "连词成句：is It red a apple.",
+      "answer": "It is a red apple."
+    },
+    {
+      "id": "e2_170",
+      "difficulty": 2,
+      "type": "句子",
+      "question": "连词成句：fine I am thank you.",
+      "answer": "I am fine, thank you."
     }
   ],
   "e3": [
@@ -3863,6 +4108,272 @@
       "type": "发音辨音",
       "question": "哪个单词的o发音不同？A. hot B. box C. go",
       "answer": "C. go"
+    },
+    {
+      "id": "e3_063",
+      "difficulty": 1,
+      "type": "发音辨音",
+      "question": "找出与cat中a发音相同的一组词：hat mat bat。a发什么音？",
+      "answer": "/ae/短音a"
+    },
+    {
+      "id": "e3_064",
+      "difficulty": 2,
+      "type": "发音辨音",
+      "question": "找出与cake中a发音相同的一组词：gate lake name。a发什么音？",
+      "answer": "/ei/长音a"
+    },
+    {
+      "id": "e3_065",
+      "difficulty": 1,
+      "type": "发音辨音",
+      "question": "找出与bed中e发音相同的一组词：red pen hen。e发什么音？",
+      "answer": "/e/短音e"
+    },
+    {
+      "id": "e3_066",
+      "difficulty": 2,
+      "type": "发音辨音",
+      "question": "找出与he中e发音相同的一组词：she we me。e发什么音？",
+      "answer": "/i:/长音e"
+    },
+    {
+      "id": "e3_067",
+      "difficulty": 1,
+      "type": "发音辨音",
+      "question": "找出与big中i发音相同的一组词：pig sit lid。i发什么音？",
+      "answer": "/i/短音i"
+    },
+    {
+      "id": "e3_068",
+      "difficulty": 2,
+      "type": "发音辨音",
+      "question": "找出与bike中i发音相同的一组词：like ride time。i发什么音？",
+      "answer": "/ai/长音i"
+    },
+    {
+      "id": "e3_069",
+      "difficulty": 1,
+      "type": "发音辨音",
+      "question": "找出与dog中o发音相同的一组词：hot box not。o发什么音？",
+      "answer": "/o/短音o"
+    },
+    {
+      "id": "e3_070",
+      "difficulty": 2,
+      "type": "发音辨音",
+      "question": "找出与home中o发音相同的一组词：nose hope rose。o发什么音？",
+      "answer": "/ou/长音o"
+    },
+    {
+      "id": "e3_071",
+      "difficulty": 1,
+      "type": "发音辨音",
+      "question": "找出与cup中u发音相同的一组词：sun run fun。u发什么音？",
+      "answer": "/a/短音u"
+    },
+    {
+      "id": "e3_072",
+      "difficulty": 2,
+      "type": "发音辨音",
+      "question": "找出与cute中u发音相同的一组词：use tube mute。u发什么音？",
+      "answer": "/ju:/长音u"
+    },
+    {
+      "id": "e3_073",
+      "difficulty": 1,
+      "type": "发音辨音",
+      "question": "找出这些词共同的辅音组合：ship shop fish dish。sh发什么音？",
+      "answer": "/sh/"
+    },
+    {
+      "id": "e3_074",
+      "difficulty": 2,
+      "type": "发音辨音",
+      "question": "找出这些词共同的辅音组合：chip chat chin chop。ch发什么音？",
+      "answer": "/ch/"
+    },
+    {
+      "id": "e3_075",
+      "difficulty": 1,
+      "type": "发音辨音",
+      "question": "找出这些词共同的辅音组合：thing think thank bath。th发什么音？",
+      "answer": "/th/清辅音"
+    },
+    {
+      "id": "e3_076",
+      "difficulty": 2,
+      "type": "发音辨音",
+      "question": "找出这些词共同的辅音组合：this that they mother。th发什么音？",
+      "answer": "/dh/浊辅音"
+    },
+    {
+      "id": "e3_077",
+      "difficulty": 1,
+      "type": "发音辨音",
+      "question": "找出这些词共同的辅音组合：sing wing ring king。ng发什么音？",
+      "answer": "/ng/"
+    },
+    {
+      "id": "e3_078",
+      "difficulty": 2,
+      "type": "发音辨音",
+      "question": "找出bl开头词共同的辅音组合：blue black blow bleed。bl怎么读？",
+      "answer": "/bl/"
+    },
+    {
+      "id": "e3_079",
+      "difficulty": 1,
+      "type": "发音辨音",
+      "question": "找出gr开头词共同的辅音组合：green grass grow great。gr怎么读？",
+      "answer": "/gr/"
+    },
+    {
+      "id": "e3_080",
+      "difficulty": 2,
+      "type": "发音辨音",
+      "question": "找出cl开头词共同的辅音组合：clock clean climb class。cl怎么读？",
+      "answer": "/kl/"
+    },
+    {
+      "id": "e3_081",
+      "difficulty": 1,
+      "type": "发音辨音",
+      "question": "找出fl开头词共同的辅音组合：fly flag flower flat。fl怎么读？",
+      "answer": "/fl/"
+    },
+    {
+      "id": "e3_082",
+      "difficulty": 2,
+      "type": "发音辨音",
+      "question": "找出tr开头词共同的辅音组合：tree train try trip。tr怎么读？",
+      "answer": "/tr/"
+    },
+    {
+      "id": "e3_083",
+      "difficulty": 1,
+      "type": "发音辨音",
+      "question": "找出与cat中a发音相同的一组词：hat mat bat。a发什么音？",
+      "answer": "/ae/短音a"
+    },
+    {
+      "id": "e3_084",
+      "difficulty": 2,
+      "type": "发音辨音",
+      "question": "找出与cake中a发音相同的一组词：gate lake name。a发什么音？",
+      "answer": "/ei/长音a"
+    },
+    {
+      "id": "e3_085",
+      "difficulty": 1,
+      "type": "发音辨音",
+      "question": "找出与bed中e发音相同的一组词：red pen hen。e发什么音？",
+      "answer": "/e/短音e"
+    },
+    {
+      "id": "e3_086",
+      "difficulty": 2,
+      "type": "发音辨音",
+      "question": "找出与he中e发音相同的一组词：she we me。e发什么音？",
+      "answer": "/i:/长音e"
+    },
+    {
+      "id": "e3_087",
+      "difficulty": 1,
+      "type": "发音辨音",
+      "question": "找出与big中i发音相同的一组词：pig sit lid。i发什么音？",
+      "answer": "/i/短音i"
+    },
+    {
+      "id": "e3_088",
+      "difficulty": 2,
+      "type": "发音辨音",
+      "question": "找出与bike中i发音相同的一组词：like ride time。i发什么音？",
+      "answer": "/ai/长音i"
+    },
+    {
+      "id": "e3_089",
+      "difficulty": 1,
+      "type": "发音辨音",
+      "question": "找出与dog中o发音相同的一组词：hot box not。o发什么音？",
+      "answer": "/o/短音o"
+    },
+    {
+      "id": "e3_090",
+      "difficulty": 2,
+      "type": "发音辨音",
+      "question": "找出与home中o发音相同的一组词：nose hope rose。o发什么音？",
+      "answer": "/ou/长音o"
+    },
+    {
+      "id": "e3_091",
+      "difficulty": 1,
+      "type": "发音辨音",
+      "question": "找出与cup中u发音相同的一组词：sun run fun。u发什么音？",
+      "answer": "/a/短音u"
+    },
+    {
+      "id": "e3_092",
+      "difficulty": 2,
+      "type": "发音辨音",
+      "question": "找出与cute中u发音相同的一组词：use tube mute。u发什么音？",
+      "answer": "/ju:/长音u"
+    },
+    {
+      "id": "e3_093",
+      "difficulty": 1,
+      "type": "发音辨音",
+      "question": "找出这些词共同的辅音组合：ship shop fish dish。sh发什么音？",
+      "answer": "/sh/"
+    },
+    {
+      "id": "e3_094",
+      "difficulty": 2,
+      "type": "发音辨音",
+      "question": "找出这些词共同的辅音组合：chip chat chin chop。ch发什么音？",
+      "answer": "/ch/"
+    },
+    {
+      "id": "e3_095",
+      "difficulty": 1,
+      "type": "发音辨音",
+      "question": "找出这些词共同的辅音组合：thing think thank bath。th发什么音？",
+      "answer": "/th/清辅音"
+    },
+    {
+      "id": "e3_096",
+      "difficulty": 2,
+      "type": "发音辨音",
+      "question": "找出这些词共同的辅音组合：this that they mother。th发什么音？",
+      "answer": "/dh/浊辅音"
+    },
+    {
+      "id": "e3_097",
+      "difficulty": 1,
+      "type": "发音辨音",
+      "question": "找出这些词共同的辅音组合：sing wing ring king。ng发什么音？",
+      "answer": "/ng/"
+    },
+    {
+      "id": "e3_098",
+      "difficulty": 2,
+      "type": "发音辨音",
+      "question": "找出bl开头词共同的辅音组合：blue black blow bleed。bl怎么读？",
+      "answer": "/bl/"
+    },
+    {
+      "id": "e3_099",
+      "difficulty": 1,
+      "type": "发音辨音",
+      "question": "找出gr开头词共同的辅音组合：green grass grow great。gr怎么读？",
+      "answer": "/gr/"
+    },
+    {
+      "id": "e3_100",
+      "difficulty": 2,
+      "type": "发音辨音",
+      "question": "找出cl开头词共同的辅音组合：clock clean climb class。cl怎么读？",
+      "answer": "/kl/"
     }
   ],
   "e4": [
@@ -4145,6 +4656,566 @@
       "scene": "祝贺",
       "question": "别人过生日怎么说？",
       "answer": "Happy birthday!"
+    },
+    {
+      "id": "e4_036",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: ___ is your name?\nB: My name is Tom.",
+      "answer": "What"
+    },
+    {
+      "id": "e4_037",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: How are you?\nB: ___ fine, thank you.",
+      "answer": "I am"
+    },
+    {
+      "id": "e4_038",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: ___ is this?\nB: It is a pencil.",
+      "answer": "What"
+    },
+    {
+      "id": "e4_039",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: What color is the apple?\nB: It is ___.",
+      "answer": "red"
+    },
+    {
+      "id": "e4_040",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: ___ old are you?\nB: I am seven.",
+      "answer": "How"
+    },
+    {
+      "id": "e4_041",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: ___ do you go to school?\nB: By bus.",
+      "answer": "How"
+    },
+    {
+      "id": "e4_042",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: Can I ___ some water?\nB: Sure, here you are.",
+      "answer": "have"
+    },
+    {
+      "id": "e4_043",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: ___ you like apples?\nB: Yes, I do.",
+      "answer": "Do"
+    },
+    {
+      "id": "e4_044",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: Where is the cat?\nB: It is ___ the table.",
+      "answer": "under"
+    },
+    {
+      "id": "e4_045",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: ___ books do you have?\nB: I have three.",
+      "answer": "How many"
+    },
+    {
+      "id": "e4_046",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: Is this ___ pen?\nB: Yes, it is my pen.",
+      "answer": "your"
+    },
+    {
+      "id": "e4_047",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: ___ is your birthday?\nB: It is in May.",
+      "answer": "When"
+    },
+    {
+      "id": "e4_048",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: Who is that ___?\nB: She is my teacher.",
+      "answer": "woman"
+    },
+    {
+      "id": "e4_049",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: What do you ___ for lunch?\nB: I have rice.",
+      "answer": "have"
+    },
+    {
+      "id": "e4_050",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: ___ do you like summer?\nB: Because I can swim.",
+      "answer": "Why"
+    },
+    {
+      "id": "e4_051",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: Let us ___ to the park.\nB: Good idea!",
+      "answer": "go"
+    },
+    {
+      "id": "e4_052",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: ___ you got any pets?\nB: Yes, I have a dog.",
+      "answer": "Have"
+    },
+    {
+      "id": "e4_053",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: What is the weather ___ today?\nB: It is sunny.",
+      "answer": "like"
+    },
+    {
+      "id": "e4_054",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: ___ is the library?\nB: It is next to the gym.",
+      "answer": "Where"
+    },
+    {
+      "id": "e4_055",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: Would you like ___ milk?\nB: No, thank you.",
+      "answer": "some"
+    },
+    {
+      "id": "e4_056",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: What does your father ___?\nB: He is a doctor.",
+      "answer": "do"
+    },
+    {
+      "id": "e4_057",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: Does she ___ English?\nB: Yes, she does.",
+      "answer": "speak"
+    },
+    {
+      "id": "e4_058",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: ___ there a restaurant near here?\nB: Yes, there is.",
+      "answer": "Is"
+    },
+    {
+      "id": "e4_059",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: How ___ is the dress?\nB: It is 50 yuan.",
+      "answer": "much"
+    },
+    {
+      "id": "e4_060",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: ___ me help you.\nB: Thank you very much.",
+      "answer": "Let"
+    },
+    {
+      "id": "e4_061",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: Please ___ down.\nB: Thank you.",
+      "answer": "sit"
+    },
+    {
+      "id": "e4_062",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: Nice to ___ you.\nB: Nice to meet you, too.",
+      "answer": "meet"
+    },
+    {
+      "id": "e4_063",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: ___ you tomorrow!\nB: See you!",
+      "answer": "See"
+    },
+    {
+      "id": "e4_064",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: I am ___. I want some water.",
+      "answer": "thirsty"
+    },
+    {
+      "id": "e4_065",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: ___ is the pen? It is two yuan.\nB: OK, I will take it.",
+      "answer": "How much"
+    },
+    {
+      "id": "e4_066",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: What time is it?\nB: It is ___ oclock.",
+      "answer": "eight"
+    },
+    {
+      "id": "e4_067",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: ___ are you from?\nB: I am from China.",
+      "answer": "Where"
+    },
+    {
+      "id": "e4_068",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: Can you ___ a bike?\nB: Yes, I can.",
+      "answer": "ride"
+    },
+    {
+      "id": "e4_069",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: ___ do you usually get up?\nB: At 7 oclock.",
+      "answer": "When"
+    },
+    {
+      "id": "e4_070",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: I like ___ very much.\nB: Me too!",
+      "answer": "music"
+    },
+    {
+      "id": "e4_071",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: ___ day is it today?\nB: It is Monday.",
+      "answer": "What"
+    },
+    {
+      "id": "e4_072",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: May I ___ your pencil?\nB: Of course.",
+      "answer": "use"
+    },
+    {
+      "id": "e4_073",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: ___ is your favorite fruit?\nB: I like bananas.",
+      "answer": "What"
+    },
+    {
+      "id": "e4_074",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: Dont ___ late for school.\nB: OK, I wont.",
+      "answer": "be"
+    },
+    {
+      "id": "e4_075",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: ___ you like some tea?\nB: Yes, please.",
+      "answer": "Would"
+    },
+    {
+      "id": "e4_076",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: Can you ___ English?\nB: A little.",
+      "answer": "speak"
+    },
+    {
+      "id": "e4_077",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: ___ is the boy?\nB: He is my brother.",
+      "answer": "Who"
+    },
+    {
+      "id": "e4_078",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: What ___ are the bananas?\nB: They are yellow.",
+      "answer": "color"
+    },
+    {
+      "id": "e4_079",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: How many ___ do you have?\nB: I have two.",
+      "answer": "pens"
+    },
+    {
+      "id": "e4_080",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: ___ is your mother?\nB: She is in the kitchen.",
+      "answer": "Where"
+    },
+    {
+      "id": "e4_081",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: I ___ a new bike.\nB: Congratulations!",
+      "answer": "have"
+    },
+    {
+      "id": "e4_082",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: What are ___ doing?\nB: I am reading.",
+      "answer": "you"
+    },
+    {
+      "id": "e4_083",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: ___ is the book?\nB: It is on the desk.",
+      "answer": "Where"
+    },
+    {
+      "id": "e4_084",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: Does he ___ football?\nB: Yes, he does.",
+      "answer": "play"
+    },
+    {
+      "id": "e4_085",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: ___ open the window?\nB: Of course.",
+      "answer": "May I"
+    },
+    {
+      "id": "e4_086",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: My name ___ Lucy.\nB: Hello, Lucy!",
+      "answer": "is"
+    },
+    {
+      "id": "e4_087",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: ___ is your name?\nB: My name is Tom.",
+      "answer": "What"
+    },
+    {
+      "id": "e4_088",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: How are you?\nB: ___ fine, thank you.",
+      "answer": "I am"
+    },
+    {
+      "id": "e4_089",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: ___ is this?\nB: It is a pencil.",
+      "answer": "What"
+    },
+    {
+      "id": "e4_090",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: What color is the apple?\nB: It is ___.",
+      "answer": "red"
+    },
+    {
+      "id": "e4_091",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: ___ old are you?\nB: I am seven.",
+      "answer": "How"
+    },
+    {
+      "id": "e4_092",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: ___ do you go to school?\nB: By bus.",
+      "answer": "How"
+    },
+    {
+      "id": "e4_093",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: Can I ___ some water?\nB: Sure, here you are.",
+      "answer": "have"
+    },
+    {
+      "id": "e4_094",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: ___ you like apples?\nB: Yes, I do.",
+      "answer": "Do"
+    },
+    {
+      "id": "e4_095",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: Where is the cat?\nB: It is ___ the table.",
+      "answer": "under"
+    },
+    {
+      "id": "e4_096",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: ___ books do you have?\nB: I have three.",
+      "answer": "How many"
+    },
+    {
+      "id": "e4_097",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: Is this ___ pen?\nB: Yes, it is my pen.",
+      "answer": "your"
+    },
+    {
+      "id": "e4_098",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: ___ is your birthday?\nB: It is in May.",
+      "answer": "When"
+    },
+    {
+      "id": "e4_099",
+      "difficulty": 2,
+      "type": "对话",
+      "question": "A: Who is that ___?\nB: She is my teacher.",
+      "answer": "woman"
+    },
+    {
+      "id": "e4_100",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "A: What do you ___ for lunch?\nB: I have rice.",
+      "answer": "have"
+    },
+    {
+      "id": "e4_101",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "别人对你说Thank you，你应该说：A.Sorry B.You are welcome C.Yes",
+      "answer": "B"
+    },
+    {
+      "id": "e4_102",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "你想问对方名字：A.How are you? B.What is your name? C.How old are you?",
+      "answer": "B"
+    },
+    {
+      "id": "e4_103",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "你想说\"我有一支铅笔\"：A.I have a pencil. B.I like pencil. C.This is pencil.",
+      "answer": "A"
+    },
+    {
+      "id": "e4_104",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "你想知道这是什么东西：A.What is this? B.Who is this? C.Where is this?",
+      "answer": "A"
+    },
+    {
+      "id": "e4_105",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "别人问How are you，你回答：A.I am five. B.I am fine. C.I am Tom.",
+      "answer": "B"
+    },
+    {
+      "id": "e4_106",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "介绍朋友给妈妈：A.This is my friend. B.That is my mom. C.He is my teacher.",
+      "answer": "A"
+    },
+    {
+      "id": "e4_107",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "问别人年龄：A.How are you? B.How old are you? C.Who are you?",
+      "answer": "B"
+    },
+    {
+      "id": "e4_108",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "问别人喜欢什么颜色：A.What color do you like? B.What is your name? C.How are you?",
+      "answer": "A"
+    },
+    {
+      "id": "e4_109",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "想喝一点水：A.Can I have some water? B.Give me water. C.Water is good.",
+      "answer": "A"
+    },
+    {
+      "id": "e4_110",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "Open your book的意思是：A.合上书 B.打开书 C.看书",
+      "answer": "B"
+    },
+    {
+      "id": "e4_111",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "很高兴见到你：A.Nice to meet you. B.How are you? C.Goodbye.",
+      "answer": "A"
+    },
+    {
+      "id": "e4_112",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "问对方能不能跑：A.Can you run? B.Do you run? C.Are you run?",
+      "answer": "A"
+    },
+    {
+      "id": "e4_113",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "喜欢苹果时回答Do you like apples?：A.Yes, I do. B.No. C.I am fine.",
+      "answer": "A"
+    },
+    {
+      "id": "e4_114",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "我有一个新书包：A.I have a new schoolbag. B.I like my schoolbag. C.This is my bag.",
+      "answer": "A"
+    },
+    {
+      "id": "e4_115",
+      "difficulty": 1,
+      "type": "对话",
+      "question": "想知道东西在哪里：A.What is it? B.Where is it? C.Who is it?",
+      "answer": "B"
     }
   ],
   "e5": [
@@ -4534,6 +5605,405 @@
       "prompt": "月亮",
       "keywords": "moon, round, bright, night",
       "example": "The moon is round. It is bright at night. I like to look at it."
+    },
+    {
+      "id": "e5_044",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Family: 请用3-5句话用英文介绍你的家庭。How many people? Who are they?",
+      "answer": "(围绕My Family写3-5句英文即可)"
+    },
+    {
+      "id": "e5_045",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My School: 请用3-5句话用英文介绍你的学校。What is your school like?",
+      "answer": "(围绕My School写3-5句英文即可)"
+    },
+    {
+      "id": "e5_046",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Best Friend: 请用3-5句话用英文介绍你最好的朋友。Who is he/she?",
+      "answer": "(围绕My Best Friend写3-5句英文即可)"
+    },
+    {
+      "id": "e5_047",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Favorite Food: 请用3-5句话用英文介绍你最喜欢的食物。What? Why?",
+      "answer": "(围绕My Favorite Food写3-5句英文即可)"
+    },
+    {
+      "id": "e5_048",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Favorite Animal: 请用3-5句话用英文介绍你最喜欢的动物。What? What color?",
+      "answer": "(围绕My Favorite Animal写3-5句英文即可)"
+    },
+    {
+      "id": "e5_049",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Weekend: 请用3-5句话用英文介绍你的周末。What do you do?",
+      "answer": "(围绕My Weekend写3-5句英文即可)"
+    },
+    {
+      "id": "e5_050",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Hobby: 请用3-5句话用英文介绍你的爱好。What? Why?",
+      "answer": "(围绕My Hobby写3-5句英文即可)"
+    },
+    {
+      "id": "e5_051",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "Four Seasons: 请用3-5句话用英文介绍四季。Which season do you like best?",
+      "answer": "(围绕Four Seasons写3-5句英文即可)"
+    },
+    {
+      "id": "e5_052",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Birthday: 请用3-5句话用英文介绍你的生日。When? What do you do?",
+      "answer": "(围绕My Birthday写3-5句英文即可)"
+    },
+    {
+      "id": "e5_053",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Dream Job: 请用3-5句话用英文介绍你的梦想职业。What? Why?",
+      "answer": "(围绕My Dream Job写3-5句英文即可)"
+    },
+    {
+      "id": "e5_054",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Classroom: 请用3-5句话用英文介绍你的教室。What is in your classroom?",
+      "answer": "(围绕My Classroom写3-5句英文即可)"
+    },
+    {
+      "id": "e5_055",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "Going Shopping: 请用3-5句话用英文写一次购物经历。Where? What did you buy?",
+      "answer": "(围绕Going Shopping写3-5句英文即可)"
+    },
+    {
+      "id": "e5_056",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "A Picnic: 请用3-5句话用英文写一次野餐。Where? What food?",
+      "answer": "(围绕A Picnic写3-5句英文即可)"
+    },
+    {
+      "id": "e5_057",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Morning Routine: 请用3-5句话用英文介绍你的早晨。When do you get up?",
+      "answer": "(围绕My Morning Routine写3-5句英文即可)"
+    },
+    {
+      "id": "e5_058",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Favorite Sport: 请用3-5句话用英文介绍你喜欢的运动。What sport? Why?",
+      "answer": "(围绕My Favorite Sport写3-5句英文即可)"
+    },
+    {
+      "id": "e5_059",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Family: 请用3-5句话用英文介绍你的家庭。How many people? Who are they?",
+      "answer": "(围绕My Family写3-5句英文即可)"
+    },
+    {
+      "id": "e5_060",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My School: 请用3-5句话用英文介绍你的学校。What is your school like?",
+      "answer": "(围绕My School写3-5句英文即可)"
+    },
+    {
+      "id": "e5_061",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Best Friend: 请用3-5句话用英文介绍你最好的朋友。Who is he/she?",
+      "answer": "(围绕My Best Friend写3-5句英文即可)"
+    },
+    {
+      "id": "e5_062",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Favorite Food: 请用3-5句话用英文介绍你最喜欢的食物。What? Why?",
+      "answer": "(围绕My Favorite Food写3-5句英文即可)"
+    },
+    {
+      "id": "e5_063",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Favorite Animal: 请用3-5句话用英文介绍你最喜欢的动物。What? What color?",
+      "answer": "(围绕My Favorite Animal写3-5句英文即可)"
+    },
+    {
+      "id": "e5_064",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Weekend: 请用3-5句话用英文介绍你的周末。What do you do?",
+      "answer": "(围绕My Weekend写3-5句英文即可)"
+    },
+    {
+      "id": "e5_065",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Hobby: 请用3-5句话用英文介绍你的爱好。What? Why?",
+      "answer": "(围绕My Hobby写3-5句英文即可)"
+    },
+    {
+      "id": "e5_066",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "Four Seasons: 请用3-5句话用英文介绍四季。Which season do you like best?",
+      "answer": "(围绕Four Seasons写3-5句英文即可)"
+    },
+    {
+      "id": "e5_067",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Birthday: 请用3-5句话用英文介绍你的生日。When? What do you do?",
+      "answer": "(围绕My Birthday写3-5句英文即可)"
+    },
+    {
+      "id": "e5_068",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Dream Job: 请用3-5句话用英文介绍你的梦想职业。What? Why?",
+      "answer": "(围绕My Dream Job写3-5句英文即可)"
+    },
+    {
+      "id": "e5_069",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Classroom: 请用3-5句话用英文介绍你的教室。What is in your classroom?",
+      "answer": "(围绕My Classroom写3-5句英文即可)"
+    },
+    {
+      "id": "e5_070",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "Going Shopping: 请用3-5句话用英文写一次购物经历。Where? What did you buy?",
+      "answer": "(围绕Going Shopping写3-5句英文即可)"
+    },
+    {
+      "id": "e5_071",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "A Picnic: 请用3-5句话用英文写一次野餐。Where? What food?",
+      "answer": "(围绕A Picnic写3-5句英文即可)"
+    },
+    {
+      "id": "e5_072",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Morning Routine: 请用3-5句话用英文介绍你的早晨。When do you get up?",
+      "answer": "(围绕My Morning Routine写3-5句英文即可)"
+    },
+    {
+      "id": "e5_073",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Favorite Sport: 请用3-5句话用英文介绍你喜欢的运动。What sport? Why?",
+      "answer": "(围绕My Favorite Sport写3-5句英文即可)"
+    },
+    {
+      "id": "e5_074",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Family: 请用3-5句话用英文介绍你的家庭。How many people? Who are they?",
+      "answer": "(围绕My Family写3-5句英文即可)"
+    },
+    {
+      "id": "e5_075",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My School: 请用3-5句话用英文介绍你的学校。What is your school like?",
+      "answer": "(围绕My School写3-5句英文即可)"
+    },
+    {
+      "id": "e5_076",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Best Friend: 请用3-5句话用英文介绍你最好的朋友。Who is he/she?",
+      "answer": "(围绕My Best Friend写3-5句英文即可)"
+    },
+    {
+      "id": "e5_077",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Favorite Food: 请用3-5句话用英文介绍你最喜欢的食物。What? Why?",
+      "answer": "(围绕My Favorite Food写3-5句英文即可)"
+    },
+    {
+      "id": "e5_078",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Favorite Animal: 请用3-5句话用英文介绍你最喜欢的动物。What? What color?",
+      "answer": "(围绕My Favorite Animal写3-5句英文即可)"
+    },
+    {
+      "id": "e5_079",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Weekend: 请用3-5句话用英文介绍你的周末。What do you do?",
+      "answer": "(围绕My Weekend写3-5句英文即可)"
+    },
+    {
+      "id": "e5_080",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Hobby: 请用3-5句话用英文介绍你的爱好。What? Why?",
+      "answer": "(围绕My Hobby写3-5句英文即可)"
+    },
+    {
+      "id": "e5_081",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "Four Seasons: 请用3-5句话用英文介绍四季。Which season do you like best?",
+      "answer": "(围绕Four Seasons写3-5句英文即可)"
+    },
+    {
+      "id": "e5_082",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Birthday: 请用3-5句话用英文介绍你的生日。When? What do you do?",
+      "answer": "(围绕My Birthday写3-5句英文即可)"
+    },
+    {
+      "id": "e5_083",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Dream Job: 请用3-5句话用英文介绍你的梦想职业。What? Why?",
+      "answer": "(围绕My Dream Job写3-5句英文即可)"
+    },
+    {
+      "id": "e5_084",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Classroom: 请用3-5句话用英文介绍你的教室。What is in your classroom?",
+      "answer": "(围绕My Classroom写3-5句英文即可)"
+    },
+    {
+      "id": "e5_085",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "Going Shopping: 请用3-5句话用英文写一次购物经历。Where? What did you buy?",
+      "answer": "(围绕Going Shopping写3-5句英文即可)"
+    },
+    {
+      "id": "e5_086",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "A Picnic: 请用3-5句话用英文写一次野餐。Where? What food?",
+      "answer": "(围绕A Picnic写3-5句英文即可)"
+    },
+    {
+      "id": "e5_087",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Morning Routine: 请用3-5句话用英文介绍你的早晨。When do you get up?",
+      "answer": "(围绕My Morning Routine写3-5句英文即可)"
+    },
+    {
+      "id": "e5_088",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Favorite Sport: 请用3-5句话用英文介绍你喜欢的运动。What sport? Why?",
+      "answer": "(围绕My Favorite Sport写3-5句英文即可)"
+    },
+    {
+      "id": "e5_089",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Family: 请用3-5句话用英文介绍你的家庭。How many people? Who are they?",
+      "answer": "(围绕My Family写3-5句英文即可)"
+    },
+    {
+      "id": "e5_090",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My School: 请用3-5句话用英文介绍你的学校。What is your school like?",
+      "answer": "(围绕My School写3-5句英文即可)"
+    },
+    {
+      "id": "e5_091",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Best Friend: 请用3-5句话用英文介绍你最好的朋友。Who is he/she?",
+      "answer": "(围绕My Best Friend写3-5句英文即可)"
+    },
+    {
+      "id": "e5_092",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Favorite Food: 请用3-5句话用英文介绍你最喜欢的食物。What? Why?",
+      "answer": "(围绕My Favorite Food写3-5句英文即可)"
+    },
+    {
+      "id": "e5_093",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Favorite Animal: 请用3-5句话用英文介绍你最喜欢的动物。What? What color?",
+      "answer": "(围绕My Favorite Animal写3-5句英文即可)"
+    },
+    {
+      "id": "e5_094",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Weekend: 请用3-5句话用英文介绍你的周末。What do you do?",
+      "answer": "(围绕My Weekend写3-5句英文即可)"
+    },
+    {
+      "id": "e5_095",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Hobby: 请用3-5句话用英文介绍你的爱好。What? Why?",
+      "answer": "(围绕My Hobby写3-5句英文即可)"
+    },
+    {
+      "id": "e5_096",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "Four Seasons: 请用3-5句话用英文介绍四季。Which season do you like best?",
+      "answer": "(围绕Four Seasons写3-5句英文即可)"
+    },
+    {
+      "id": "e5_097",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Birthday: 请用3-5句话用英文介绍你的生日。When? What do you do?",
+      "answer": "(围绕My Birthday写3-5句英文即可)"
+    },
+    {
+      "id": "e5_098",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Dream Job: 请用3-5句话用英文介绍你的梦想职业。What? Why?",
+      "answer": "(围绕My Dream Job写3-5句英文即可)"
+    },
+    {
+      "id": "e5_099",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "My Classroom: 请用3-5句话用英文介绍你的教室。What is in your classroom?",
+      "answer": "(围绕My Classroom写3-5句英文即可)"
+    },
+    {
+      "id": "e5_100",
+      "difficulty": 2,
+      "type": "小作文",
+      "question": "Going Shopping: 请用3-5句话用英文写一次购物经历。Where? What did you buy?",
+      "answer": "(围绕Going Shopping写3-5句英文即可)"
     }
   ],
   "e6": [

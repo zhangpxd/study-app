@@ -399,6 +399,14 @@
             <div v-else-if="isMoneyQ(q)" style="text-align:center;margin:8px 0;">
               <img src="geometry/money.svg" style="max-width:160px;border-radius:8px;" alt="人民币">
             </div>
+            <!-- 拨珠子 -->
+            <div v-else-if="isAbacusQ(q)" style="text-align:center;margin:8px 0;">
+              <img src="geometry/abacus.svg" style="max-width:200px;border-radius:8px;" alt="计数器">
+            </div>
+            <!-- 统计图 -->
+            <div v-else-if="isStatsQ(q)" style="text-align:center;margin:8px 0;">
+              <img src="geometry/bar_chart.svg" style="max-width:200px;border-radius:8px;" alt="统计图">
+            </div>
 
             <!-- 生字 -->
             <div v-if="q.character">
@@ -1599,7 +1607,7 @@ const store = new Vuex.Store({
       var items = [];
       var abilityWeights = {
         chinese: { c1: 4, c2: 3, c3: 1, c4: 1, c5: 4, c6: 2, c7: 3, c8: 3, c9: 1, c10: 1, c11: 1, c12: 2, c13: 2 },
-        math: { m1: 5, m2: 4, m3: 2, m4: 2, m5: 3, m6: 2, m7: 2, m8: 2, m9: 2, m10: 2, m11: 2, m12: 2,
+        math: { m1: 5, m2: 4, m3: 2, m4: 2, m5: 3, m6: 2, m7: 2, m8: 2, m9: 2, m10: 2,
                 m13: 3, m14: 2, m15: 3, m16: 2, m17: 2, m18: 1,
                 m19: 2, m20: 3, m21: 2, m22: 2, m23: 2, m24: 1,
                 m25: 3, m26: 2, m27: 2, m28: 2, m29: 2, m30: 1,
@@ -2236,14 +2244,21 @@ var app = Vue.createApp({
              t.indexOf('时=') >= 0 || t.indexOf('分=') >= 0 || t.indexOf('秒=') >= 0;
     },
     isCompareQ: function(q) {
-      var t = (q.question || '') + (q.type || '');
-      // 只在明确是比大小类题目时配图，不匹配含"圆/边"等词的应用题
-      return (t.indexOf('比大小') >= 0 || t.indexOf('比多少') >= 0 || t.indexOf('比轻重') >= 0 || t.indexOf('比长短') >= 0);
+      var t = (q.question || '') + (q.answer || '') + (q.type || '');
+      return (t.indexOf('比大小') >= 0 || t.indexOf('比多少') >= 0 || t.indexOf('比轻重') >= 0 || t.indexOf('比长短') >= 0)
+        && t.indexOf('分数') === -1 && t.indexOf('小数') === -1;
     },
     isMoneyQ: function(q) {
       var t = (q.question || '') + (q.answer || '');
       // 只匹配明确涉及人民币的题目
       return t.indexOf('元') >= 0 && (t.indexOf('角') >= 0 || t.indexOf('分') >= 0) || t.indexOf('人民币') >= 0;
+    },
+    isAbacusQ: function(q) {
+      return q.type === '拨珠子';
+    },
+    isStatsQ: function(q) {
+      var t = (q.type || '') + (q.question || '');
+      return t.indexOf('统计') >= 0 || t.indexOf('条形图') >= 0;
     },
     onImageError: function(q) {
       q.image = ''; // 图片加载失败时清空，降级显示文字
