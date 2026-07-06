@@ -1860,7 +1860,7 @@ var app = Vue.createApp({
       var englishExtra = this.vdSubject === 'english' ? ' PEP' : '';
       var gradeText = this.vdGrade + '年级' + this.vdSemester + '册';
       var keyword = '人教版 ' + gradeText + subCN + englishExtra + ' 教学视频';
-      return 'https://search.bilibili.com/all?keyword=' + encodeURIComponent(keyword);
+      return 'https://m.bilibili.com/search?keyword=' + encodeURIComponent(keyword);
     },
     vdFilteredChapters: function() {
       try {
@@ -1892,7 +1892,7 @@ var app = Vue.createApp({
       var subCN = subMap[this.vdSubject] || '';
       var gradeText = this.vdGrade + '年级' + this.vdSemester + '册';
       var kw = '人教版 ' + gradeText + subCN + ' ' + chapterName;
-      window.location.href = 'https://search.bilibili.com/all?keyword=' + encodeURIComponent(kw);
+      window.location.href = 'https://m.bilibili.com/search?keyword=' + encodeURIComponent(kw);
     },
     goToBook: function(link) { window.location.href = link; },
     goToday: function() {
